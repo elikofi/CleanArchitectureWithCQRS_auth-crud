@@ -52,5 +52,10 @@ namespace CleanArchCQRS.API.Controllers
             }
             return BadRequest();
         }
+        [HttpDelete("DeleteById")]
+        public async Task<IActionResult> DeleteById(Guid BlogId)
+        {
+            return Ok();
+        }
     }
 }
