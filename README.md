@@ -46,7 +46,13 @@ I'm using CA because it has some amazing benefits such as separation of concerns
 CQRS, which is Command Query Responsibility Segregation is a design pattern which enables developers to group all database commands (data modification) into a folder and all queries (reading of data) into another folder to reduce complexity, improve security, make data models flexible, enhance testing, optimize performance, separation of concerns and then improve scalability.
 
 
-## Why MediatR?
+## Why MediatR and Mapster?
+MediatR is used to manage commands, queries and notifications/Events which in turn helps in organizing the code in a clean, maintainable and testable manner.
+Mapster is used for object mapping where we can map the DTO to the entity for data manipulation in the software.
+
+##Setting Up The Project.
+
+
 
 
 
