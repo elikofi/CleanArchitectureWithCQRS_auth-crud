@@ -1,8 +1,8 @@
 # Clean Architecture with CQRS, Mapster and MediatR.
 
-## This is a simple CRUD application in .NET 8 where I took advantage of some archtectual styles and design patterns. This project uses Clean architecture which is paired with domain driven design. Also, the main design pattern used in this project is the CQRS also known as the Command Query Responsibility Segregation.
+#### This is a simple CRUD application in .NET 8 where I took advantage of some archtectual styles and design patterns. This project uses Clean architecture which is paired with domain driven design. Also, the main design pattern used in this project is the CQRS also known as the Command Query Responsibility Segregation.
 
-## Why Clean Architecture, CQRS, Mapster and MediatR?
+## Why Clean Architecture?
 I'm using CA because it has some amazing benefits such as separation of concerns (different laters of the software application handle different responsibilities) which helps in making the software understandable, testable, maintainable and easier to develop. It also organises the code into layers with clear responsibilities, reducing dependencies and increasing flexibility and robustness. Dependencies in CA happen inward and this ensures that low-level modules do not depend on high-level modules. In CA, there are mainly four different layers.
 
 ### Layers in Clean Architecture.
@@ -36,4 +36,45 @@ I'm using CA because it has some amazing benefits such as separation of concerns
     * Depending on your usecase, you can install the Microsoft.Extensions.Identity.Stores nuget package.
  
 * API Layer
-    * 
+    * This layer acts as a bridge between the outside world and the application's core business logic and it converts data from external sources (like HTTP requests) into a format that the inner layers can process and vice versa.
+    * The API layer handles requests, calls the use cases for handling the logic, and then handles the formatting of the responses.
+    * Controllers: are found in this layer and they are responsible for routing incoming requests to the appropriate handler, parse input data and validate it, invokes the relevant use case with the parsed data, and then preparing and sending the response back to the client.
+ 
+
+
+## Why CQRS?
+CQRS, which is Command Query Responsibility Segregation is a design pattern which enables developers to group all database commands (data modification) into a folder and all queries (reading of data) into another folder to reduce complexity, improve security, make data models flexible, enhance testing, optimize performance, separation of concerns and then improve scalability.
+
+
+## Why MediatR?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
