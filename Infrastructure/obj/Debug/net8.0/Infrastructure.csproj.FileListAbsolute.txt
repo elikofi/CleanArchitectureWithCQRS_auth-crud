@@ -17,3 +17,4 @@ C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infr
 C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
 C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
 C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
+C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
