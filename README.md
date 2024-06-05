@@ -4,7 +4,9 @@
 
 ## Why Clean Architecture, CQRS, Mapster and MediatR?
 I'm using CA because it has some amazing benefits such as separation of concerns (different laters of the software application handle different responsibilities) which helps in making the software understandable, testable, maintainable and easier to develop. It also organises the code into layers with clear responsibilities, reducing dependencies and increasing flexibility and robustness. Dependencies in CA happen inward and this ensures that low-level modules do not depend on high-level modules. In CA, there are mainly four different layers.
+
 ### Layers in Clean Architecture.
+
 * Infrastructure Layer
     This layer has dependency on the Application layer and this layer also communicates with the database.
     The infrastructure layer is a class library in the main solution explorer which can contain these classes or folders.
@@ -13,6 +15,8 @@ I'm using CA because it has some amazing benefits such as separation of concerns
     * Migration folder for all the entity framework core migrations for the application.
     * Repository folder where all the implementations of the interfaces created in the domain layer for the domain entity will be done.
     * Dependency Injection class where all the DI configurations will be done.
+    * All nuget packages for database communications should be installed. Here are the ones I used:
+        * EntityFrameworkCore, EFCore.Tools, Microsoft.Extensions.Configuration.Abstractions, Npgsql, Npgsql.EFCore.PostgreSQL.
 
 
 * Application Layer
@@ -22,6 +26,14 @@ I'm using CA because it has some amazing benefits such as separation of concerns
     * Commands and Queries folders or classes for the business entities.
     * Common folder where shared classes can be created in. Examples of such classes are; Mappings, exceptions and Behaviours.
     * * Dependency Injection class where all the DI configurations will be done.
-    * All nuget packages for mappings and dependency injection should be installed here.
-* 0.1
-    * Initial Release
+    * All nuget packages for mappings and dependency injection should be installed here. Here are the ones I used:
+        * FluentValidation.DependencyInjectionExtensions, Mapster, MediatR, Microsoft.Extensinos.DI.Abstractions.  
+
+
+* Domain Layer
+    * This layer is the inner-most layer in the clean architecture structure and doesn't have dependency on any other layer.
+    * It is also a class library which contains all the Business Entities, interfaces, value objects, domain errors and domain events.
+    * Depending on your usecase, you can install the Microsoft.Extensions.Identity.Stores nuget package.
+ 
+* API Layer
+    * 
