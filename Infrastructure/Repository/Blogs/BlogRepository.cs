@@ -2,6 +2,7 @@
 using Domain.Repository;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Repository.Blogs
 {
@@ -39,15 +40,23 @@ namespace Infrastructure.Repository.Blogs
 
         public async Task<bool> UpdateAsync(Blog blog)
         {
-            var findBlog =  context.Blogs.Find(blog.Id);
-            if (findBlog!.Id == blog.Id)
+            try
             {
+                if (blog is null)
+                    throw new ArgumentNullException(nameof(blog), "Blog object cannot be null.");
+
                 context.Blogs.Update(blog);
                 await context.SaveChangesAsync();
                 return true;
             }
-            return false;
-             
+            catch (Exception)
+            {
+                
+                throw;
+            }
+
+            
+
         }
     }
 }

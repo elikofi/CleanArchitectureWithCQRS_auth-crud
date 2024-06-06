@@ -1,8 +1,6 @@
 using Application;
-using Application.Blogs.Queries.GetBlogById;
 using Infrastructure;
-using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +17,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//configuring Serilog
+builder.Host.UseSerilog((context, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,7 +30,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseSerilogRequestLogging();
+
 app.UseHttpsRedirection();
+ 
 
 app.UseAuthorization();
 

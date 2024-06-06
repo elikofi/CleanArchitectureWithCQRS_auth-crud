@@ -118,3 +118,12 @@ C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Clea
 C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\bin\Debug\net8.0\Mapster.dll
 C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\bin\Debug\net8.0\Mapster.Core.dll
 C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\obj\Debug\net8.0\CleanArchCQRS.API.sourcelink.json
+C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\bin\Debug\net8.0\Serilog.dll
+C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\CleanArchCQRS.API\bin\Debug\net8.0\Serilog.Sinks.File.dll
