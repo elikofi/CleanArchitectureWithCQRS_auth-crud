@@ -55,7 +55,9 @@ namespace CleanArchCQRS.API.Controllers
         [HttpDelete("DeleteById")]
         public async Task<IActionResult> DeleteById(Guid BlogId)
         {
-            return Ok();
+            var blog = await mediator.Send(BlogId);
+            //to be continued
+            return  Ok();
         }
     }
 }
