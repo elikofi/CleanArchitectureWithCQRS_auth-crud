@@ -51,6 +51,9 @@ MediatR is used to manage commands, queries and notifications/Events which in tu
 Mapster is used for object mapping where we can map the DTO to the entity for data manipulation in the software.
 
 ##Setting Up The Project.
+    * Create an empty solution.
+    * Add API project to the solution.
+    * Add three new class libraries to the solution namely, application, domain and infrastructure.
 
 
 
