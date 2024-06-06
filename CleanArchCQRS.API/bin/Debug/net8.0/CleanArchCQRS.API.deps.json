@@ -9,6 +9,7 @@
       "CleanArchCQRS.API/1.0.0": {
         "dependencies": {
           "Application": "1.0.0",
+          "Contracts": "1.0.0",
           "Infrastructure": "1.0.0",
           "MediatR": "12.2.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.4",
@@ -28,6 +29,14 @@
           "lib/net8.0/Autofac.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.0.0"
+          }
+        }
+      },
+      "ErrorOr/2.0.1": {
+        "runtime": {
+          "lib/net6.0/ErrorOr.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
           }
         }
       },
@@ -769,6 +778,7 @@
       "Application/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
+          "FluentValidation": "11.9.1",
           "FluentValidation.DependencyInjectionExtensions": "11.9.1",
           "Mapster": "7.4.0",
           "MediatR": "12.2.0",
@@ -779,8 +789,17 @@
           "Application.dll": {}
         }
       },
+      "Contracts/1.0.0": {
+        "dependencies": {
+          "Application": "1.0.0"
+        },
+        "runtime": {
+          "Contracts.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "dependencies": {
+          "ErrorOr": "2.0.1",
           "MediatR": "12.2.0"
         },
         "runtime": {
@@ -813,6 +832,13 @@
       "sha512": "sha512-qxVqJcl3fixxa5aZc9TmIuYTwooI9GCL5RzfUiTZtTlbAF3NcWz7bPeEyJEAyS/0qGhSyGnXeku2eiu/7L+3qw==",
       "path": "autofac/8.0.0",
       "hashPath": "autofac.8.0.0.nupkg.sha512"
+    },
+    "ErrorOr/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aje9lUVEAsusPFmaRcVM5EUqWBofd7hYtb9N8+ycgPYrtOzyFajMpzRgIO4uuiCllNLBc3x48+cpA+4v4koUDQ==",
+      "path": "erroror/2.0.1",
+      "hashPath": "erroror.2.0.1.nupkg.sha512"
     },
     "FluentValidation/11.9.1": {
       "type": "package",
@@ -1284,6 +1310,11 @@
       "hashPath": "system.threading.channels.6.0.0.nupkg.sha512"
     },
     "Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

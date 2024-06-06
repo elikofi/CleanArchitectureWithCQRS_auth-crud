@@ -2,6 +2,8 @@
 using FluentValidation;
 using System.Reflection;
 using MapsterMapper;
+using MediatR;
+using Application.Common.Behaviours;
 
 namespace Application
 {
@@ -12,6 +14,7 @@ namespace Application
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddMediatR(config => config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
             services.AddScoped<IMapper, Mapper>();
+            services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
 
             return services;
         }

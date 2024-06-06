@@ -14,5 +14,7 @@ namespace Domain.Repository
         Task<Blog> CreateAsync(Blog blog);
         Task<bool> UpdateAsync(Blog blog);
         Task<bool> DeleteAsync(Guid id);
+
+        Blog? GetByName(string name);
     }
 }

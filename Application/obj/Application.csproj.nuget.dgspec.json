@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Clean Arch\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Application\\Application.csproj": {}
+    "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Clean Arch\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Application\\Application.csproj": {
+    "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Clean Arch\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\User\\Desktop\\Clean Arch\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Clean Arch\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Application\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -30,8 +30,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\Clean Arch\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Clean Arch\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj"
+              "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj"
               }
             }
           }
@@ -51,6 +51,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.1, )"
+            },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[11.9.1, )"
@@ -92,14 +96,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\Clean Arch\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj": {
+    "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Clean Arch\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\User\\Desktop\\Clean Arch\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Clean Arch\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -135,6 +139,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "ErrorOr": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"

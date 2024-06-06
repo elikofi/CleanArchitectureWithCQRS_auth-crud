@@ -3,15 +3,69 @@ using Application.Blogs.Commands.UpdateBlog;
 using Application.Blogs.Queries.GetAllBlogs;
 using Application.Blogs.Queries.GetBlogById;
 using Domain.Entity;
+using ErrorOr;
+using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Application.Common.Http;
+using Contracts.Blogs;
 
 namespace CleanArchCQRS.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogController(IMediator mediator) : ControllerBase
+    public class BlogController(IMediator mediator, IMapper mapper) : ControllerBase
     {
+        protected IActionResult Problem(List<Error> errors)
+        {
+            //if there are no errors
+            if (errors.Count is 0)
+            {
+                return Problem();
+            }
+            //if all the errors are validation errors, return a validation problem
+            if (errors.All(error => error.Type == ErrorType.Validation))
+            {
+                return ValidationProblem(errors);
+            }
+
+            HttpContext.Items[HttpContextItemKeys.Errors] = errors;
+
+            return Problem(errors[0]);
+        }
+
+        private ObjectResult Problem(Error error)
+        {
+            var statusCode = error.Type switch
+            {
+                ErrorType.Conflict => StatusCodes.Status409Conflict,
+                ErrorType.Validation => StatusCodes.Status400BadRequest,
+                ErrorType.NotFound => StatusCodes.Status404NotFound,
+                _ => StatusCodes.Status500InternalServerError,
+            };
+
+            return Problem(statusCode: statusCode, title: error.Description);
+        }
+
+        private ActionResult ValidationProblem(List<Error> errors)
+        {
+            var modeltStateDictionary = new ModelStateDictionary();
+
+            foreach (var error in errors)
+            {
+                modeltStateDictionary.AddModelError(
+                    error.Code,//key
+                    error.Description); //value
+            }
+
+            return ValidationProblem(modeltStateDictionary);
+        }
+
+
+
+
+    //
         [HttpGet("GetBlogById")]
         public async Task<IActionResult> GetBlogById(Guid BlogId)
         {
@@ -25,12 +79,15 @@ namespace CleanArchCQRS.API.Controllers
         }
 
         [HttpPost("CreateNewBlog")]
-        public async Task<IActionResult> Create([FromBody] CreateBlogCommand command)
+        public async Task<IActionResult> Create([FromBody] CreateBlogRequest request)
         {
             if(ModelState.IsValid)
             {
-                var createdBlog = await mediator.Send(new CreateBlogCommand(command.Name, command.Description, command.Author));
-                return Ok(createdBlog);
+                var command = mapper.Map<CreateBlogCommand>(request);
+
+                ErrorOr<Blog> blog = await mediator.Send(command);
+
+                return blog.Match(blog => Ok(mapper.Map<Blog>(blog)), errors => Problem(errors));
             }
 
             return BadRequest();

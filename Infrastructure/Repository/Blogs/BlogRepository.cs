@@ -38,6 +38,11 @@ namespace Infrastructure.Repository.Blogs
             return blog!;
         }
 
+        public Blog? GetByName(string name)
+        {
+            return context.Blogs.SingleOrDefault(x => x.Name == name);
+        }
+
         public async Task<bool> UpdateAsync(Blog blog)
         {
             try
