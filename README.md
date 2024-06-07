@@ -52,8 +52,12 @@ Mapster is used for object mapping where we can map the DTO to the entity for da
 
 ##Setting Up The Project.
     * Create an empty solution.
-    * Add API project to the solution.
-    * Add three new class libraries to the solution namely, application, domain and infrastructure.
+    * Add API project to the solution. Framework I used in this project is .NET8
+    * Add four new class libraries to the solution namely: application, domain, contracts and infrastructure.
+    * Install the various nuget packages needed for each class library and also set up the project references.
+
+### References.
+In clean architecture, the outmost projects reference the innermost projects, hence, the domain layer which is the innermost project has no project reference. The Application Layer, which is directly outside the Domain Layer has a project reference to the Domain Layer, the Infrastructure Layer, which is directly outside the Application Layer has a project reference to the Application Layer, the Contracts Layer which is also directly outside the Application Layer also has direct reference to the Application Layer. Note: The Infrastructure Layer and the Contracts Layer form the Presentation Layer of the Clean Architecture Project. Finally, the API Layer, is the main layer which will interact with the outside world and serve as a bridge between the outside world and the business logic: hence, it will have references to the Infrastructure, Application and Contracts Layers of the Project.
 
 
 
