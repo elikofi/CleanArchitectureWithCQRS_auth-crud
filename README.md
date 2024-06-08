@@ -50,14 +50,39 @@ CQRS, which is Command Query Responsibility Segregation is a design pattern whic
 MediatR is used to manage commands, queries and notifications/Events which in turn helps in organizing the code in a clean, maintainable and testable manner.
 Mapster is used for object mapping where we can map the DTO to the entity for data manipulation in the software.
 
-##Setting Up The Project.
-    * Create an empty solution.
-    * Add API project to the solution. Framework I used in this project is .NET8
-    * Add four new class libraries to the solution namely: application, domain, contracts and infrastructure.
-    * Install the various nuget packages needed for each class library and also set up the project references.
+
+
+## Setting Up The Project using Visual Studio for Windows.
+* Create an empty solution.
+* Add API project to the solution. Framework I used in this project is .NET8
+* Add four new class libraries to the solution namely: application, domain, contracts and infrastructure.
+* Install the various nuget packages needed for each class library and also set up the project references.
 
 ### References.
 In clean architecture, the outmost projects reference the innermost projects, hence, the domain layer which is the innermost project has no project reference. The Application Layer, which is directly outside the Domain Layer has a project reference to the Domain Layer, the Infrastructure Layer, which is directly outside the Application Layer has a project reference to the Application Layer, the Contracts Layer which is also directly outside the Application Layer also has direct reference to the Application Layer. Note: The Infrastructure Layer and the Contracts Layer form the Presentation Layer of the Clean Architecture Project. Finally, the API Layer, is the main layer which will interact with the outside world and serve as a bridge between the outside world and the business logic: hence, it will have references to the Infrastructure, Application and Contracts Layers of the Project.
+
+
+## Setting up the project Using Visual Studio Code and the donet CLI.
+* Navigate to the folder you want to create the project in and run the following commands respectively:
+  ```
+  dotnet new sln -o SolutionName
+  ```
+  ```
+  dotnet new webapi -o ApiName
+  ```
+  ```
+  dotnet new classlib -o ContractsName
+  ```
+  ```
+  dotnet new classlib -o InfrastructureName
+  ```
+  ```
+  dotnet new classlib -o ApplicationName
+  ```
+  ```
+  dotnet new classlib -o DomainName
+  ```
+  
 
 
 
