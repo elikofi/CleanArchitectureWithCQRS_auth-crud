@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\Blogs API\\CleanArchCQRS\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\blogs api\\cleanarchcqrs\\cleanarchcqrs.api\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\cleanarchcqrs.api\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|solutionrelative:cleanarchcqrs.api\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\blogs api\\cleanarchcqrs\\cleanarchcqrs.api\\controllers\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\cleanarchcqrs.api\\controllers\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|solutionrelative:cleanarchcqrs.api\\controllers\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 273,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BlogController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\Blogs API\\CleanArchCQRS\\CleanArchCQRS.API\\Controllers\\BlogController.cs",
-              "RelativeDocumentMoniker": "CleanArchCQRS.API\\Controllers\\BlogController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\Blogs API\\CleanArchCQRS\\CleanArchCQRS.API\\Controllers\\BlogController.cs",
-              "RelativeToolTip": "CleanArchCQRS.API\\Controllers\\BlogController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T07:13:07.842Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -43,16 +30,28 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlogController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\BlogController.cs",
+              "RelativeDocumentMoniker": "CleanArchCQRS.API\\Controllers\\BlogController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\BlogController.cs",
+              "RelativeToolTip": "CleanArchCQRS.API\\Controllers\\BlogController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T07:13:07.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ApiController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\Blogs API\\CleanArchCQRS\\CleanArchCQRS.API\\Controllers\\ApiController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\ApiController.cs",
               "RelativeDocumentMoniker": "CleanArchCQRS.API\\Controllers\\ApiController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\Blogs API\\CleanArchCQRS\\CleanArchCQRS.API\\Controllers\\ApiController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\ApiController.cs",
               "RelativeToolTip": "CleanArchCQRS.API\\Controllers\\ApiController.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAB8AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T07:25:39.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T07:25:39.555Z"
             }
           ]
         }

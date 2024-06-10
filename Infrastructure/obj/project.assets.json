@@ -2671,32 +2671,36 @@
     ]
   },
   "packageFolders": {
-    "/Users/elijahamoako/.nuget/packages/": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/Infrastructure.csproj",
-      "packagesPath": "/Users/elijahamoako/.nuget/packages/",
-      "outputPath": "/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/",
+      "projectPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/elijahamoako/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/acsint/_packaging/generic_api/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Application/Application.csproj": {
-              "projectPath": "/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Application/Application.csproj"
+            "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Application.csproj"
             }
           }
         }
@@ -2755,7 +2759,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

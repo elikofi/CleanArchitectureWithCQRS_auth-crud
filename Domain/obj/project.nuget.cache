@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "LkzsCGaA7Qs=",
+  "dgSpecHash": "hAGQiNSnbr4=",
   "success": true,
-  "projectFilePath": "/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/Domain.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\CleanArchitectureWithCQRS_auth-crud\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
-    "/Users/elijahamoako/.nuget/packages/erroror/2.0.1/erroror.2.0.1.nupkg.sha512",
-    "/Users/elijahamoako/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
-    "/Users/elijahamoako/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
-    "/Users/elijahamoako/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\erroror\\2.0.1\\erroror.2.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }
