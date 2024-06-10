@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Application.Common.Http;
 using Contracts.Blogs;
+using Application.Blogs.Commands.DeleteBlog;
 
 namespace CleanArchCQRS.API.Controllers
 {
@@ -47,22 +48,28 @@ namespace CleanArchCQRS.API.Controllers
         }
 
         [HttpPut("UpdateBlogById")]
-        public async Task<IActionResult> UpdateBlog([FromBody] UpdateBlogCommand command)
+        public async Task<IActionResult> UpdateBlog([FromBody] UpdateBlogRequest request)
         {
             if (ModelState.IsValid)
             {
-                var updateBlog = await mediator.Send(command);
+                var command = mapper.Map<UpdateBlogCommand>(request);
+
+                ErrorOr<bool> updateBlog = await mediator.Send(command);
+                 
                 return updateBlog.Match(updateBlog => Ok(mapper.Map<bool>(updateBlog)), errors => Problem(errors));
 
             }
             return BadRequest();
         }
         [HttpDelete("DeleteById")]
-        public async Task<IActionResult> DeleteById(Guid BlogId)
+        public async Task<IActionResult> DeleteById([FromBody]DeleteBlogRequest request)
         {
-            var blog = await mediator.Send(BlogId);
-            //to be continued..
-            return Ok();
+            var command = mapper.Map<DeleteBlogCommand>(request);
+
+            ErrorOr<bool> deletedBlog = await mediator.Send(command);
+
+
+            return deletedBlog.Match(deletedBlog => Ok(mapper.Map<bool>(deletedBlog)), errors => Problem(errors));
         }
     }
 }

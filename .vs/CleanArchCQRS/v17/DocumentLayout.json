@@ -7,8 +7,12 @@
       "RelativeMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|solutionrelative:cleanarchcqrs.api\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\cleanarchcqrs.api\\controllers\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|solutionrelative:cleanarchcqrs.api\\controllers\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\blogs\\commands\\deleteblog\\deleteblogcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\blogs\\commands\\deleteblog\\deleteblogcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\blogs\\commands\\deleteblog\\deleteblogcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\blogs\\commands\\deleteblog\\deleteblogcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 273,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +34,42 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeleteBlogCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Blogs\\Commands\\DeleteBlog\\DeleteBlogCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Blogs\\Commands\\DeleteBlog\\DeleteBlogCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Blogs\\Commands\\DeleteBlog\\DeleteBlogCommandHandler.cs",
+              "RelativeToolTip": "Application\\Blogs\\Commands\\DeleteBlog\\DeleteBlogCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T16:27:55.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DeleteBlogCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Blogs\\Commands\\DeleteBlog\\DeleteBlogCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Blogs\\Commands\\DeleteBlog\\DeleteBlogCommand.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Blogs\\Commands\\DeleteBlog\\DeleteBlogCommand.cs",
+              "RelativeToolTip": "Application\\Blogs\\Commands\\DeleteBlog\\DeleteBlogCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T16:27:08.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "BlogController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\BlogController.cs",
               "RelativeDocumentMoniker": "CleanArchCQRS.API\\Controllers\\BlogController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\BlogController.cs",
               "RelativeToolTip": "CleanArchCQRS.API\\Controllers\\BlogController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAAAywEMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T07:13:07.842Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApiController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\ApiController.cs",
-              "RelativeDocumentMoniker": "CleanArchCQRS.API\\Controllers\\ApiController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\ApiController.cs",
-              "RelativeToolTip": "CleanArchCQRS.API\\Controllers\\ApiController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB8AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T07:25:39.555Z"
             }
           ]
         }
