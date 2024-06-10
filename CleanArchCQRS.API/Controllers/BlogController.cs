@@ -15,57 +15,9 @@ namespace CleanArchCQRS.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogController(IMediator mediator, IMapper mapper) : ControllerBase
+    public class BlogController(IMediator mediator, IMapper mapper) : ApiController
     {
-        protected IActionResult Problem(List<Error> errors)
-        {
-            //if there are no errors
-            if (errors.Count is 0)
-            {
-                return Problem();
-            }
-            //if all the errors are validation errors, return a validation problem
-            if (errors.All(error => error.Type == ErrorType.Validation))
-            {
-                return ValidationProblem(errors);
-            }
 
-            HttpContext.Items[HttpContextItemKeys.Errors] = errors;
-
-            return Problem(errors[0]);
-        }
-
-        private ObjectResult Problem(Error error)
-        {
-            var statusCode = error.Type switch
-            {
-                ErrorType.Conflict => StatusCodes.Status409Conflict,
-                ErrorType.Validation => StatusCodes.Status400BadRequest,
-                ErrorType.NotFound => StatusCodes.Status404NotFound,
-                _ => StatusCodes.Status500InternalServerError,
-            };
-
-            return Problem(statusCode: statusCode, title: error.Description);
-        }
-
-        private ActionResult ValidationProblem(List<Error> errors)
-        {
-            var modeltStateDictionary = new ModelStateDictionary();
-
-            foreach (var error in errors)
-            {
-                modeltStateDictionary.AddModelError(
-                    error.Code,//key
-                    error.Description); //value
-            }
-
-            return ValidationProblem(modeltStateDictionary);
-        }
-
-
-
-
-    //
         [HttpGet("GetBlogById")]
         public async Task<IActionResult> GetBlogById(Guid BlogId)
         {
