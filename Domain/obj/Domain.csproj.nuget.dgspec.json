@@ -1,30 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj": {}
+    "/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj": {
+    "/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj",
+        "projectUniqueName": "/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR & CQRS\\Blogs API\\CleanArchCQRS\\Domain\\obj\\",
+        "projectPath": "/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/Domain.csproj",
+        "packagesPath": "/Users/elijahamoako/.nuget/packages/",
+        "outputPath": "/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/elijahamoako/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/acsint/_packaging/generic_api/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -72,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

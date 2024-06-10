@@ -1,40 +1,60 @@
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Application.dll
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Domain.dll
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Application.pdb
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Domain.pdb
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Application.dll
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Domain.dll
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Application.pdb
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\bin\Debug\net8.0\Domain.pdb
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Infrastructure.deps.json
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Infrastructure.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Infrastructure.pdb
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Application.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Domain.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Application.pdb
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Domain.pdb
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.AssemblyReference.cache
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfoInputs.cache
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfo.cs
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.CoreCompileInputs.cache
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastr.15EFFBFE.Up2Date
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/refint/Infrastructure.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.pdb
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/ref/Infrastructure.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Infrastructure.runtimeconfig.json
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.genruntimeconfig.cache
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.sourcelink.json
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Infrastructure.deps.json
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Infrastructure.runtimeconfig.json
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Infrastructure.dll
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Infrastructure.pdb
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Application.dll
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Domain.dll
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Application.pdb
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/bin/Debug/net8.0/Domain.pdb
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.AssemblyReference.cache
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfoInputs.cache
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfo.cs
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.CoreCompileInputs.cache
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.sourcelink.json
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastr.15EFFBFE.Up2Date
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.dll
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/refint/Infrastructure.dll
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.pdb
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/Infrastructure.genruntimeconfig.cache
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Infrastructure/obj/Debug/net8.0/ref/Infrastructure.dll
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/bin/Debug/net8.0/Infrastructure.deps.json
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/bin/Debug/net8.0/Infrastructure.runtimeconfig.json
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/bin/Debug/net8.0/Infrastructure.dll
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/bin/Debug/net8.0/Infrastructure.pdb
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/bin/Debug/net8.0/Application.dll
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/bin/Debug/net8.0/Domain.dll
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/bin/Debug/net8.0/Application.pdb
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/bin/Debug/net8.0/Domain.pdb
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.AssemblyReference.cache
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfoInputs.cache
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfo.cs
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.CoreCompileInputs.cache
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/Infrastructure.sourcelink.json
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/Infrastructure.dll
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/refint/Infrastructure.dll
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/Infrastructure.pdb
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/Infrastructure.genruntimeconfig.cache
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/ref/Infrastructure.dll
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Infrastructure/obj/Debug/net8.0/Infrastr.15EFFBFE.Up2Date

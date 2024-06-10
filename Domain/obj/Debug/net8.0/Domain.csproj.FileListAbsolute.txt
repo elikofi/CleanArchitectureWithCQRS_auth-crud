@@ -1,26 +1,39 @@
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\bin\Debug\net8.0\Domain.deps.json
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\bin\Debug\net8.0\Domain.dll
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\bin\Debug\net8.0\Domain.pdb
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.dll
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\refint\Domain.dll
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.pdb
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\ref\Domain.dll
-C:\Users\User\Desktop\Clean Arch\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.sourcelink.json
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\bin\Debug\net8.0\Domain.deps.json
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\bin\Debug\net8.0\Domain.dll
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\bin\Debug\net8.0\Domain.pdb
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.sourcelink.json
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.dll
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\refint\Domain.dll
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\Domain.pdb
-C:\Users\User\Desktop\My Projects\With MeditR & CQRS\Blogs API\CleanArchCQRS\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/bin/Debug/net8.0/Domain.deps.json
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/bin/Debug/net8.0/Domain.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/bin/Debug/net8.0/Domain.pdb
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.csproj.AssemblyReference.cache
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/refint/Domain.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.pdb
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/ref/Domain.dll
+C:/Users/User/Desktop/Clean Arch/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/bin/Debug/net8.0/Domain.deps.json
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/bin/Debug/net8.0/Domain.dll
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/bin/Debug/net8.0/Domain.pdb
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.csproj.AssemblyReference.cache
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.dll
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/refint/Domain.dll
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/Domain.pdb
+C:/Users/User/Desktop/My Projects/With MeditR & CQRS/Blogs API/CleanArchCQRS/Domain/obj/Debug/net8.0/ref/Domain.dll
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/bin/Debug/net8.0/Domain.deps.json
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/bin/Debug/net8.0/Domain.dll
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/bin/Debug/net8.0/Domain.pdb
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/obj/Debug/net8.0/Domain.csproj.AssemblyReference.cache
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/obj/Debug/net8.0/Domain.dll
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/obj/Debug/net8.0/refint/Domain.dll
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/obj/Debug/net8.0/Domain.pdb
+/Users/elijahamoako/Desktop/Portfolio/Software Architecture and Design Patterns/CleanArchitectureWithCQRS_auth-crud/Domain/obj/Debug/net8.0/ref/Domain.dll

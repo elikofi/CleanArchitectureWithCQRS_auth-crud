@@ -33,7 +33,7 @@ namespace CleanArchCQRS.API.Controllers
         [HttpPost("CreateNewBlog")]
         public async Task<IActionResult> Create([FromBody] CreateBlogRequest request)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var command = mapper.Map<CreateBlogCommand>(request);
 
@@ -43,21 +43,17 @@ namespace CleanArchCQRS.API.Controllers
             }
 
             return BadRequest();
-            
+
         }
 
         [HttpPut("UpdateBlogById")]
         public async Task<IActionResult> UpdateBlog([FromBody] UpdateBlogCommand command)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var updateBlog = await mediator.Send(command);
+                return updateBlog.Match(updateBlog => Ok(mapper.Map<bool>(updateBlog)), errors => Problem(errors));
 
-                if (updateBlog)
-                {
-                    return Ok("Updated!");
-                }
-                return NoContent();
             }
             return BadRequest();
         }
@@ -66,7 +62,7 @@ namespace CleanArchCQRS.API.Controllers
         {
             var blog = await mediator.Send(BlogId);
             //to be continued..
-            return  Ok();
+            return Ok();
         }
     }
 }
