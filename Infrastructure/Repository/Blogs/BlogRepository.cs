@@ -2,7 +2,6 @@
 using Domain.Repository;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Repository.Blogs
 {
