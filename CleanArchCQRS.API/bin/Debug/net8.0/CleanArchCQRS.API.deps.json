@@ -15,6 +15,9 @@
           "Microsoft.EntityFrameworkCore.Design": "8.0.4",
           "Microsoft.EntityFrameworkCore.Relational": "8.0.4",
           "Serilog.AspNetCore": "8.0.1",
+          "Serilog.Settings.Configuration": "8.0.1",
+          "Serilog.Sinks.Console": "6.0.0",
+          "Serilog.Sinks.File": "5.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -532,11 +535,11 @@
           }
         }
       },
-      "Serilog/3.1.1": {
+      "Serilog/4.0.0": {
         "runtime": {
-          "lib/net7.0/Serilog.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "3.1.1.0"
+          "lib/net8.0/Serilog.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
           }
         }
       },
@@ -544,12 +547,12 @@
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Logging": "8.0.0",
-          "Serilog": "3.1.1",
+          "Serilog": "4.0.0",
           "Serilog.Extensions.Hosting": "8.0.0",
           "Serilog.Extensions.Logging": "8.0.0",
           "Serilog.Formatting.Compact": "2.0.0",
-          "Serilog.Settings.Configuration": "8.0.0",
-          "Serilog.Sinks.Console": "5.0.0",
+          "Serilog.Settings.Configuration": "8.0.1",
+          "Serilog.Sinks.Console": "6.0.0",
           "Serilog.Sinks.Debug": "2.0.0",
           "Serilog.Sinks.File": "5.0.0"
         },
@@ -565,7 +568,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
           "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
-          "Serilog": "3.1.1",
+          "Serilog": "4.0.0",
           "Serilog.Extensions.Logging": "8.0.0"
         },
         "runtime": {
@@ -578,7 +581,7 @@
       "Serilog.Extensions.Logging/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Logging": "8.0.0",
-          "Serilog": "3.1.1"
+          "Serilog": "4.0.0"
         },
         "runtime": {
           "lib/net8.0/Serilog.Extensions.Logging.dll": {
@@ -589,7 +592,7 @@
       },
       "Serilog.Formatting.Compact/2.0.0": {
         "dependencies": {
-          "Serilog": "3.1.1"
+          "Serilog": "4.0.0"
         },
         "runtime": {
           "lib/net7.0/Serilog.Formatting.Compact.dll": {
@@ -598,33 +601,33 @@
           }
         }
       },
-      "Serilog.Settings.Configuration/8.0.0": {
+      "Serilog.Settings.Configuration/8.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Binder": "8.0.0",
           "Microsoft.Extensions.DependencyModel": "8.0.0",
-          "Serilog": "3.1.1"
+          "Serilog": "4.0.0"
         },
         "runtime": {
           "lib/net8.0/Serilog.Settings.Configuration.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
+            "assemblyVersion": "8.0.1.0",
+            "fileVersion": "8.0.1.0"
           }
         }
       },
-      "Serilog.Sinks.Console/5.0.0": {
+      "Serilog.Sinks.Console/6.0.0": {
         "dependencies": {
-          "Serilog": "3.1.1"
+          "Serilog": "4.0.0"
         },
         "runtime": {
-          "lib/net7.0/Serilog.Sinks.Console.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.0.0"
+          "lib/net8.0/Serilog.Sinks.Console.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
           }
         }
       },
       "Serilog.Sinks.Debug/2.0.0": {
         "dependencies": {
-          "Serilog": "3.1.1"
+          "Serilog": "4.0.0"
         },
         "runtime": {
           "lib/netstandard2.1/Serilog.Sinks.Debug.dll": {
@@ -635,7 +638,7 @@
       },
       "Serilog.Sinks.File/5.0.0": {
         "dependencies": {
-          "Serilog": "3.1.1"
+          "Serilog": "4.0.0"
         },
         "runtime": {
           "lib/net5.0/Serilog.Sinks.File.dll": {
@@ -1106,12 +1109,12 @@
       "path": "npgsql.entityframeworkcore.postgresql/8.0.4",
       "hashPath": "npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512"
     },
-    "Serilog/3.1.1": {
+    "Serilog/4.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-P6G4/4Kt9bT635bhuwdXlJ2SCqqn2nhh4gqFqQueCOr9bK/e7W9ll/IoX1Ter948cV2Z/5+5v8pAfJYUISY03A==",
-      "path": "serilog/3.1.1",
-      "hashPath": "serilog.3.1.1.nupkg.sha512"
+      "sha512": "sha512-2jDkUrSh5EofOp7Lx5Zgy0EB+7hXjjxE2ktTb1WVQmU00lDACR2TdROGKU0K1pDTBSJBN1PqgYpgOZF8mL7NJw==",
+      "path": "serilog/4.0.0",
+      "hashPath": "serilog.4.0.0.nupkg.sha512"
     },
     "Serilog.AspNetCore/8.0.1": {
       "type": "package",
@@ -1141,19 +1144,19 @@
       "path": "serilog.formatting.compact/2.0.0",
       "hashPath": "serilog.formatting.compact.2.0.0.nupkg.sha512"
     },
-    "Serilog.Settings.Configuration/8.0.0": {
+    "Serilog.Settings.Configuration/8.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nR0iL5HwKj5v6ULo3/zpP8NMcq9E2pxYA6XKTSWCbugVs4YqPyvaqaKOY+OMpPivKp7zMEpax2UKHnDodbRB0Q==",
-      "path": "serilog.settings.configuration/8.0.0",
-      "hashPath": "serilog.settings.configuration.8.0.0.nupkg.sha512"
+      "sha512": "sha512-KOEABqMUdEc8Lpq51Nmiv69Je53mKE6yle4ac2jt3QYiBI0FKKFZCVV6MnkD/z3FonNMjUs/vLOa1mrhzexgCA==",
+      "path": "serilog.settings.configuration/8.0.1",
+      "hashPath": "serilog.settings.configuration.8.0.1.nupkg.sha512"
     },
-    "Serilog.Sinks.Console/5.0.0": {
+    "Serilog.Sinks.Console/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IZ6bn79k+3SRXOBpwSOClUHikSkp2toGPCZ0teUkscv4dpDg9E2R2xVsNkLmwddE4OpNVO3N0xiYsAH556vN8Q==",
-      "path": "serilog.sinks.console/5.0.0",
-      "hashPath": "serilog.sinks.console.5.0.0.nupkg.sha512"
+      "sha512": "sha512-fQGWqVMClCP2yEyTXPIinSr5c+CBGUvBybPxjAGcf7ctDhadFhrQw03Mv8rJ07/wR5PDfFjewf2LimvXCDzpbA==",
+      "path": "serilog.sinks.console/6.0.0",
+      "hashPath": "serilog.sinks.console.6.0.0.nupkg.sha512"
     },
     "Serilog.Sinks.Debug/2.0.0": {
       "type": "package",
