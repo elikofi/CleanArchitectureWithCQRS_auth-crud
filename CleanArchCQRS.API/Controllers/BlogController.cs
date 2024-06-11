@@ -7,8 +7,6 @@ using ErrorOr;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Application.Common.Http;
 using Contracts.Blogs;
 using Application.Blogs.Commands.DeleteBlog;
 

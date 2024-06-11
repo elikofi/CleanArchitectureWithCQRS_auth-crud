@@ -10,19 +10,36 @@ namespace Infrastructure.Repository.Blogs
     {
         public async Task<Blog> CreateAsync(Blog blog)
         {
-            await context.Blogs.AddAsync(blog);
-            await context.SaveChangesAsync();
+            try
+            {
+                await context.Blogs.AddAsync(blog);
+                await context.SaveChangesAsync();
+                return blog;
+            }
+            catch (Exception)
+            {
 
-            return blog;
+                throw;
+            }
         }
 
         public async Task<bool> DeleteAsync(Guid id)
         {
-            var blog = await context.Blogs.FindAsync(id);
-            if (blog == null) { return false; }
-             context.Blogs.Remove(blog);
-            context.SaveChanges();
-            return true;
+            try
+            {
+                var blog = await context.Blogs.FindAsync(id);
+
+                if (blog == null) return false;
+
+                context.Blogs.Remove(blog);
+                context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public async Task<List<Blog>> GetAllBlogsAsync()
@@ -59,9 +76,6 @@ namespace Infrastructure.Repository.Blogs
                 
                 throw;
             }
-
-            
-
         }
     }
 }
