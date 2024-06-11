@@ -29,11 +29,13 @@ namespace Infrastructure.Repository.Blogs
             {
                 var blog = await context.Blogs.FindAsync(id);
 
-                if (blog == null) return false;
-
-                context.Blogs.Remove(blog);
-                context.SaveChanges();
-                return true;
+                if (blog is { })
+                {
+                    context.Blogs.Remove(blog);
+                    context.SaveChanges();
+                    return true;
+                }
+                return false;
             }
             catch (Exception)
             {
@@ -64,12 +66,14 @@ namespace Infrastructure.Repository.Blogs
         {
             try
             {
-                if (blog is null)
-                    throw new ArgumentNullException(nameof(blog), "Blog object cannot be null.");
+                if (blog is { })
+                {
+                    context.Blogs.Update(blog);
+                    await context.SaveChangesAsync();
+                    return true;
+                }
+                throw new ArgumentNullException(nameof(blog), "Blog object cannot be null.");
 
-                context.Blogs.Update(blog);
-                await context.SaveChangesAsync();
-                return true;
             }
             catch (Exception)
             {
