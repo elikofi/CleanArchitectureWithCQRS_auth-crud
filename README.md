@@ -88,7 +88,7 @@ In clean architecture, the outmost projects reference the innermost projects, he
   ```
   dotnet build
   ```
-* After building successfully, run the project and Swagger UI should open in the browser.
+* After building successfully, run the API project and Swagger UI should open in the browser.
 * CLI command for running the project.
   ```
   dotnet run
