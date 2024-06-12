@@ -83,7 +83,16 @@ In clean architecture, the outmost projects reference the innermost projects, he
   dotnet new classlib -o DomainName
   ```
   
-
+* After setting up all the projects, add Project references as described above and build the solution.
+* In the CLI you can run the command below to build the solution.
+  ```
+  dotnet build
+  ```
+* After building successfully, run the project and Swagger UI should open in the browser.
+* CLI command for running the project.
+  ```
+  dotnet run
+  ```
 
 
 
