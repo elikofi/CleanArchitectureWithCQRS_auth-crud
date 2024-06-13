@@ -1,4 +1,5 @@
 ﻿using Application.Blogs.Queries.GetAllBlogs;
+using ErrorOr;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,4 +9,4 @@ using System.Threading.Tasks;
 
 namespace Application.Blogs.Queries.GetBlogById;
 
-public record GetBlogByIdQuery(Guid BlogId) : IRequest<BlogsModel>;
+public record GetBlogByIdQuery(Guid Id) : IRequest<ErrorOr<BlogsModel>>;

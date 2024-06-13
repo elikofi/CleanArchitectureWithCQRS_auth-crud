@@ -18,9 +18,12 @@ namespace CleanArchCQRS.API.Controllers
     {
 
         [HttpGet("GetBlogById")]
-        public async Task<IActionResult> GetBlogById(Guid BlogId)
+        public async Task<IActionResult> GetBlogById(GetBlogByIdRequest request)
         {
-            return Ok(await mediator.Send(new GetBlogByIdQuery(BlogId)));
+            var command = mapper.Map<GetBlogByIdQuery>(request);
+            var req = await mediator.Send(command);
+            return req.Match(req => Ok(mapper.Map<BlogsModel>(req)), errors => Problem(errors));
+            
         }
 
         [HttpGet("GetAllBlogs")]
