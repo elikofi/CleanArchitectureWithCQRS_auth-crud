@@ -7,8 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Authentication\Commands\Register\" />
-    <Folder Include="Authentication\Queries\Login\" />
+    <Folder Include="Authentication\RoleManagement\Commands\MakeAdmin\" />
+    <Folder Include="Authentication\RoleManagement\Commands\MakeSuperAdmin\" />
+    <Folder Include="Authentication\RoleManagement\Commands\MakeSuperUser\" />
+    <Folder Include="Authentication\RoleManagement\Queries\GetRoles\" />
+    <Folder Include="Authentication\RoleManagement\Commands\SeedRoles\" />
+    <Folder Include="Authentication\RoleManagement\Queries\" />
+    <Folder Include="Authentication\UserManagement\Commands\Register\" />
+    <Folder Include="Authentication\UserManagement\" />
+    <Folder Include="Authentication\UserManagement\Queries\Login\" />
     <Folder Include="Common\Exceptions\" />
     <Folder Include="Common\Interfaces\Authentication\" />
     <Folder Include="Common\Mappings\" />
