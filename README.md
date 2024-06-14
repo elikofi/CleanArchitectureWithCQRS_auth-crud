@@ -93,6 +93,10 @@ In clean architecture, the outmost projects reference the innermost projects, he
   ```
   dotnet run
   ```
+Once the project is running, you are good to go.
+Now let's talk about the project into details step by step and once class library at a time. We are going to start with the Application Layer class library.
+
+## APPLICATION LAYER
 
 
 
