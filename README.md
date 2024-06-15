@@ -98,6 +98,15 @@ Now let's talk about the project into details step by step and once class librar
 
 ## APPLICATION LAYER
 
+The Application Layer is the class library where we have these various definitions in our project;
+    * Use Cases
+    * Commands and Queries
+    * External Interfaces
+    * Custom Exceptions
+    * Mappings
+    * Custom Errors
+
+
 
 
 
