@@ -106,6 +106,7 @@ The Application Layer is the class library where we have these various definitio
 * Custom Exceptions
 * Mappings
 * Custom Errors
+Verrify from the project files above to see how I structured my Application Layer in this project.
 
 
 
