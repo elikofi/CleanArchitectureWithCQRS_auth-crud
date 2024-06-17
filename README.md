@@ -109,6 +109,11 @@ The Application Layer is the class library where we have these various definitio
 Verrify from the project files above to see how I structured my Application Layer in this project.
 
 
+## CONTRACT LAYER
+
+The Contracts is also a class library where we have various records or classes for our requests to be used as controller method parameters.
+
+
 
 
 
