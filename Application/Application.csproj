@@ -14,8 +14,9 @@
     <Folder Include="Authentication\RoleManagement\Commands\SeedRoles\" />
     <Folder Include="Authentication\RoleManagement\Queries\" />
     <Folder Include="Authentication\UserManagement\Commands\Register\" />
-    <Folder Include="Authentication\UserManagement\" />
     <Folder Include="Authentication\UserManagement\Queries\Login\" />
+    <Folder Include="Authentication\UserManagement\Queries\GetAllUsers\" />
+    <Folder Include="Authentication\UserManagement\Queries\GetUserById\" />
     <Folder Include="Common\Exceptions\" />
     <Folder Include="Common\Interfaces\Authentication\" />
     <Folder Include="Common\Mappings\" />
