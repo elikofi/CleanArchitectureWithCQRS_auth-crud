@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D111AA4E-47E8-437E-8113-D898ED66FF42}|Infrastructure\\Infrastructure.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\infrastructure\\authentication\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D111AA4E-47E8-437E-8113-D898ED66FF42}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\authentication\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D111AA4E-47E8-437E-8113-D898ED66FF42}|Infrastructure\\Infrastructure.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\infrastructure\\authentication\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D111AA4E-47E8-437E-8113-D898ED66FF42}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\authentication\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\common\\interfaces\\services\\idatetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\services\\idatetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\common\\interfaces\\authentication\\ijwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\authentication\\ijwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5573D93-F289-47D7-9A5D-74C12EFDB309}|Domain\\Domain.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\domain\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5573D93-F289-47D7-9A5D-74C12EFDB309}|Domain\\Domain.csproj|solutionrelative:domain\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 258,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +39,71 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IDateTimeProvider.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Common\\Interfaces\\Services\\IDateTimeProvider.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\Services\\IDateTimeProvider.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Common\\Interfaces\\Services\\IDateTimeProvider.cs",
+              "RelativeToolTip": "Application\\Common\\Interfaces\\Services\\IDateTimeProvider.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T11:31:11.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JwtTokenGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\Authentication\\JwtTokenGenerator.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Authentication\\JwtTokenGenerator.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\Authentication\\JwtTokenGenerator.cs",
+              "RelativeToolTip": "Infrastructure\\Authentication\\JwtTokenGenerator.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAC8AAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T11:25:18.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\Authentication\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Authentication\\JwtSettings.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\Authentication\\JwtSettings.cs",
+              "RelativeToolTip": "Infrastructure\\Authentication\\JwtSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T11:24:58.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Domain\\Entity\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entity\\User.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Domain\\Entity\\User.cs",
+              "RelativeToolTip": "Domain\\Entity\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T11:19:24.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IJwtTokenGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Common\\Interfaces\\Authentication\\IJwtTokenGenerator.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\Authentication\\IJwtTokenGenerator.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Common\\Interfaces\\Authentication\\IJwtTokenGenerator.cs",
+              "RelativeToolTip": "Application\\Common\\Interfaces\\Authentication\\IJwtTokenGenerator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T11:16:53.931Z",
+              "EditorCaption": ""
             }
           ]
         }

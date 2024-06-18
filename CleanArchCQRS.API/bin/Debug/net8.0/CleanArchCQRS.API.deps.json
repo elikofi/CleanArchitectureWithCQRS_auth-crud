@@ -491,6 +491,47 @@
         }
       },
       "Microsoft.Extensions.Primitives/8.0.0": {},
+      "Microsoft.IdentityModel.Abstractions/7.6.1": {
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "assemblyVersion": "7.6.1.0",
+            "fileVersion": "7.6.1.50617"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/7.6.1": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "7.6.1"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
+            "assemblyVersion": "7.6.1.0",
+            "fileVersion": "7.6.1.50617"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/7.6.1": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "7.6.1"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Logging.dll": {
+            "assemblyVersion": "7.6.1.0",
+            "fileVersion": "7.6.1.50617"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/7.6.1": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "7.6.1"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Tokens.dll": {
+            "assemblyVersion": "7.6.1.0",
+            "fileVersion": "7.6.1.50617"
+          }
+        }
+      },
       "Microsoft.OpenApi/1.2.3": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -759,6 +800,18 @@
         }
       },
       "System.Diagnostics.DiagnosticSource/8.0.0": {},
+      "System.IdentityModel.Tokens.Jwt/7.6.1": {
+        "dependencies": {
+          "Microsoft.IdentityModel.JsonWebTokens": "7.6.1",
+          "Microsoft.IdentityModel.Tokens": "7.6.1"
+        },
+        "runtime": {
+          "lib/net8.0/System.IdentityModel.Tokens.Jwt.dll": {
+            "assemblyVersion": "7.6.1.0",
+            "fileVersion": "7.6.1.50617"
+          }
+        }
+      },
       "System.IO.Pipelines/6.0.3": {},
       "System.Reflection.Metadata/6.0.1": {
         "dependencies": {
@@ -815,7 +868,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.4",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Npgsql": "8.0.3",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
+          "System.IdentityModel.Tokens.Jwt": "7.6.1"
         },
         "runtime": {
           "Infrastructure.dll": {}
@@ -1081,6 +1135,34 @@
       "path": "microsoft.extensions.primitives/8.0.0",
       "hashPath": "microsoft.extensions.primitives.8.0.0.nupkg.sha512"
     },
+    "Microsoft.IdentityModel.Abstractions/7.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oiUHb2FqD0EM/nBzJnS/yzvrLX8jbhmMM0Y3Vc6U+yloYYdDpbQ8Idl5HrQDIrTG03X6BQkeTzhMj+CxrmyDYg==",
+      "path": "microsoft.identitymodel.abstractions/7.6.1",
+      "hashPath": "microsoft.identitymodel.abstractions.7.6.1.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.JsonWebTokens/7.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lUxNGzdGki+BawN7tH3UxrPGoGRZ1r1W9WDuIFw+vQjOiv2A3h/e0pvqEVr7gfkmlr6T/wxslQnhw/gu7Q1OYg==",
+      "path": "microsoft.identitymodel.jsonwebtokens/7.6.1",
+      "hashPath": "microsoft.identitymodel.jsonwebtokens.7.6.1.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Logging/7.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-93Lk4wOPTb0rXfqB8id4DLHLxHVfvPy6U7dbj+V2fPL0WRFjvoKtipdsnBW0kUjDkoIXJY43r93Eyhyk8snqmg==",
+      "path": "microsoft.identitymodel.logging/7.6.1",
+      "hashPath": "microsoft.identitymodel.logging.7.6.1.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Tokens/7.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H3uJ191Eibt1uTPH/OLs5n292WtugKuQxwN4zV6i1+qt94MNYJBPDhQVG3tgvCRissdu7aSKVbxyf7sYA1/jTQ==",
+      "path": "microsoft.identitymodel.tokens/7.6.1",
+      "hashPath": "microsoft.identitymodel.tokens.7.6.1.nupkg.sha512"
+    },
     "Microsoft.OpenApi/1.2.3": {
       "type": "package",
       "serviceable": true,
@@ -1262,6 +1344,13 @@
       "sha512": "sha512-c9xLpVz6PL9lp/djOWtk5KPDZq3cSYpmXoJQY524EOtuFl5z9ZtsotpsyrDW40U1DRnQSYvcPKEUV0X//u6gkQ==",
       "path": "system.diagnostics.diagnosticsource/8.0.0",
       "hashPath": "system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512"
+    },
+    "System.IdentityModel.Tokens.Jwt/7.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mISKxN3IbVHOc4ctSmtlSfkc1SNe58O+k+LjV6scR02POn9IzmkMY/FYFI7wNgX7m2z4kimSVAy5/kvKoiup9g==",
+      "path": "system.identitymodel.tokens.jwt/7.6.1",
+      "hashPath": "system.identitymodel.tokens.jwt.7.6.1.nupkg.sha512"
     },
     "System.IO.Pipelines/6.0.3": {
       "type": "package",

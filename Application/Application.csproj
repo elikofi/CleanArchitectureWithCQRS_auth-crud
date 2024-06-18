@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Common\Exceptions\**" />
+    <Compile Remove="Common\Mappings\**" />
+    <EmbeddedResource Remove="Common\Exceptions\**" />
+    <EmbeddedResource Remove="Common\Mappings\**" />
+    <None Remove="Common\Exceptions\**" />
+    <None Remove="Common\Mappings\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Authentication\RoleManagement\Commands\MakeAdmin\" />
     <Folder Include="Authentication\RoleManagement\Commands\MakeSuperAdmin\" />
     <Folder Include="Authentication\RoleManagement\Commands\MakeSuperUser\" />
@@ -17,9 +26,6 @@
     <Folder Include="Authentication\UserManagement\Queries\Login\" />
     <Folder Include="Authentication\UserManagement\Queries\GetAllUsers\" />
     <Folder Include="Authentication\UserManagement\Queries\GetUserById\" />
-    <Folder Include="Common\Exceptions\" />
-    <Folder Include="Common\Interfaces\Authentication\" />
-    <Folder Include="Common\Mappings\" />
   </ItemGroup>
 
   <ItemGroup>
