@@ -98,6 +98,22 @@ Now let's talk about the project into details step by step and once class librar
 
 ## APPLICATION LAYER
 
+The Application Layer is the class library where we have these various definitions in our project;
+
+* Use Cases
+* Commands and Queries
+* External Interfaces
+* Custom Exceptions
+* Mappings
+* Custom Errors
+Verrify from the project files above to see how I structured my Application Layer in this project.
+
+
+## CONTRACT LAYER
+
+The Contracts is also a class library where we have various records or classes for our requests to be used as controller method parameters.
+
+
 
 
 
