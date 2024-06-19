@@ -537,3 +537,5 @@ C:\Users\User\Desktop\My Projects\With MeditR & CQRS\CleanArchitectureWithCQRS_a
 C:\Users\User\Desktop\My Projects\With MeditR & CQRS\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\User\Desktop\My Projects\With MeditR & CQRS\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\User\Desktop\My Projects\With MeditR & CQRS\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\Desktop\My Projects\With MeditR & CQRS\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\User\Desktop\My Projects\With MeditR & CQRS\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\ScottBrady91.AspNetCore.Identity.BCryptPasswordHasher.dll

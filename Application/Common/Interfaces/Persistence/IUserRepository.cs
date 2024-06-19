@@ -9,6 +9,6 @@ namespace Application.Common.Interfaces.Persistence
 {
     public interface IUserRepository
     {
-        Task<User> RegisterAsync(User user, string role);
+        Task<string> RegisterAsync(User user, string role);
     }
 }
