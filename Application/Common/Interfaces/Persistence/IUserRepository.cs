@@ -1,14 +1,20 @@
-﻿using Domain.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.Authentication.Common;
+using Domain.Entity;
+
+
 
 namespace Application.Common.Interfaces.Persistence
 {
     public interface IUserRepository
     {
-        Task<string> RegisterAsync(User user, string role);
+        Task<User> RegisterAsync(User user, string role);
+        User? GetUserByEmail(string email);
+
+        //role management
+        Task<string> SeedRoles();
+
+
+        
+
     }
 }

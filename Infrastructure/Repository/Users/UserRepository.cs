@@ -1,5 +1,7 @@
-﻿using Application.Common.Interfaces.Persistence;
+﻿using Application.Authentication.Common;
+using Application.Common.Interfaces.Persistence;
 using Domain.Entity;
+using Infrastructure.Data;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -7,26 +9,17 @@ using Microsoft.Extensions.Configuration;
 
 namespace Infrastructure.Repository.Users
 {
-    public class UserRepository(UserManager<User> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration) : IUserRepository
+    public class UserRepository(UserManager<User> userManager, RoleManager<IdentityRole> roleManager, DatabaseContext context, IConfiguration configuration) : IUserRepository
     {
+        public User? GetUserByEmail(string email)
+        {
+            return context.Users.SingleOrDefault(u => u.Email == email);
+        }
 
-        public async Task<string> RegisterAsync(User user, string role)
+        public async Task<User> RegisterAsync(User user, string role)
         {
 			try
 			{
-				//check user exists
-				var userExists = await userManager.FindByEmailAsync(user.Email!);
-				if (userExists != null)
-				{
-					return "user is alread there";
-				}
-
-				var hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash, 12);
-					
-
-				//var passwordHasher = new BCryptPasswordHasher<User>();
-
-				//var hashedPassword = passwordHasher.HashPassword(user, user.PasswordHash!);
 
 
 				User newUser = new()
@@ -35,31 +28,60 @@ namespace Infrastructure.Repository.Users
 					LastName = user.LastName,
 					Email = user.Email,
 					UserName = user.UserName,
-					PasswordHash = hashedPassword,
 					EmailConfirmed = true,
-					TwoFactorEnabled = false
+					TwoFactorEnabled = false,
+					SecurityStamp = Guid.NewGuid().ToString()
 
 				};
 
-				var registeredUser = await userManager.CreateAsync(newUser, hashedPassword);
+				var registeredUser = await userManager.CreateAsync(newUser, user.PasswordHash!);
 
-				if(registeredUser is { })
+				if(registeredUser.Succeeded)
 				{
 					await userManager.AddToRoleAsync(newUser, role);
-					return "user created!";
+					return newUser ;
 				}
 
-
-
-
-
-				return "Unable to create user";
-			}
+                throw new Exception($"Failed to register user: {registeredUser.Errors.FirstOrDefault()?.Description}");
+            }
 			catch (Exception)
 			{
 
 				throw;
 			}
         }
+
+        public async Task<string> SeedRoles()
+        {
+            try
+            {
+                bool isSuperAdminRoleExists = await roleManager.RoleExistsAsync(UserRoles.SUPERADMIN);
+                bool isAdminRoleExists = await roleManager.RoleExistsAsync(UserRoles.ADMIN);
+                bool isUserRoleExists = await roleManager.RoleExistsAsync(UserRoles.USER);
+                bool isSuperUserRoleExists = await roleManager.RoleExistsAsync(UserRoles.SUPERUSER);
+
+                if (isSuperAdminRoleExists && isAdminRoleExists && isUserRoleExists && isSuperUserRoleExists)
+                {
+                    return "Roles seeding already done.";
+                }
+
+
+                await roleManager.CreateAsync(new IdentityRole(UserRoles.SUPERADMIN));
+                await roleManager.CreateAsync(new IdentityRole(UserRoles.ADMIN));
+                await roleManager.CreateAsync(new IdentityRole(UserRoles.USER));
+                await roleManager.CreateAsync(new IdentityRole(UserRoles.SUPERUSER));
+
+                return "seeded roles.!";
+            }
+            catch (Exception )
+            {
+				throw;
+            }
+        }
+
+
+        //SEED ROLES
+
+
     }
 }

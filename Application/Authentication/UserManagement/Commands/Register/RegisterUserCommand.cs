@@ -1,11 +1,9 @@
-﻿using Domain.Entity;
+﻿using Application.Authentication.Common;
+using ErrorOr;
 using MediatR;
-using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+
+
 
 namespace Application.Authentication.UserManagement.Commands.Register
 {
@@ -15,6 +13,6 @@ namespace Application.Authentication.UserManagement.Commands.Register
 		string Email,
 		string UserName,
 		string PasswordHash
-		) : IRequest<string>;
+		) : IRequest<ErrorOr<AuthenticationResult>>;
 }
 
