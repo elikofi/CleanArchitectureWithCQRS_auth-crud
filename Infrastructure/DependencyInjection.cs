@@ -1,6 +1,7 @@
 ﻿using Application.Common.Interfaces.Authentication;
 using Application.Common.Interfaces.Persistence;
 using Application.Common.Interfaces.Services;
+using Domain.Entity;
 using Domain.Repository;
 using Infrastructure.Authentication;
 using Infrastructure.Data;
@@ -8,6 +9,7 @@ using Infrastructure.Repository.Blogs;
 using Infrastructure.Repository.Users;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,6 +28,10 @@ namespace Infrastructure
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<DatabaseContext>()
+                .AddDefaultTokenProviders();
+
             services.AddDbContext<DatabaseContext>(options =>
             {
                 options.UseNpgsql(configuration.GetConnectionString("Default"));
@@ -41,7 +47,6 @@ namespace Infrastructure
             this IServiceCollection services,
             ConfigurationManager configuration)
         {
-            //Jwt settings in appsettings
             var jwtSettings = new JwtSettings();
             configuration.Bind(JwtSettings.SectionName, jwtSettings);
 
@@ -49,7 +54,7 @@ namespace Infrastructure
 
             services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 
-            services.AddAuthentication(defaultScheme: JwtBearerDefaults.AuthenticationScheme)//after adding the dependencies, it returns the auth builder
+            services.AddAuthentication(defaultScheme: JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,

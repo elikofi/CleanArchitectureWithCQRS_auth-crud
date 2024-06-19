@@ -3,6 +3,7 @@ using System;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20240619071938_SeedingRoles")]
+    partial class SeedingRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -87,6 +90,10 @@ namespace Infrastructure.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("character varying(256)");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("PasswordHash")
                         .HasColumnType("text");
 
@@ -146,28 +153,28 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "f1628089-9f29-4bb3-a458-c73171195be4",
+                            Id = "086234d9-6c37-4423-8e18-fdb1493c3dd8",
                             ConcurrencyStamp = "1",
                             Name = "SuperAdmin",
                             NormalizedName = "SuperAdmin"
                         },
                         new
                         {
-                            Id = "44e23f35-0d09-467d-bf64-22deea2fbb40",
+                            Id = "c2000fc0-2a44-403f-9682-d8bc1060d1b0",
                             ConcurrencyStamp = "2",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "5c1647b8-d913-4e9a-b28a-dd0860f59856",
+                            Id = "3e496beb-f7fb-4834-9160-7b8b644a30ea",
                             ConcurrencyStamp = "3",
                             Name = "SuperUser",
                             NormalizedName = "SuperUser"
                         },
                         new
                         {
-                            Id = "46e29ec8-9f5b-4c98-a85c-d16cb1a03748",
+                            Id = "01cf55b0-aa14-4cec-a2f1-0a938cf6f8c3",
                             ConcurrencyStamp = "4",
                             Name = "User",
                             NormalizedName = "User"
