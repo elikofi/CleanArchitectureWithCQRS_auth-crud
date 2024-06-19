@@ -1,4 +1,6 @@
-﻿using Application.Common.Interfaces.Persistence;
+﻿using Application.Authentication.UserManagement.Commands.Register;
+using Application.Common.Interfaces.Persistence;
+using Contracts.Authentication;
 using Domain.Entity;
 using MapsterMapper;
 using Microsoft.AspNetCore.Http;
@@ -12,9 +14,9 @@ namespace CleanArchCQRS.API.Controllers
     {
 
         [HttpPost("RegisterUser")]
-        public async Task<IActionResult> RegisterUser([FromBody] User model)
+        public async Task<IActionResult> RegisterUser([FromBody] RegisterUserRequest request)
         {
-            var user = mapper.Map<User>(model);
+            var user = mapper.Map<RegisterUserCommand>(request);
 
             return Ok(user);
         }

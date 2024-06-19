@@ -10,13 +10,15 @@ using System.Threading.Tasks;
 
 namespace Application.Authentication.UserManagement.Commands.Register
 {
-    public class RegisterUserCommandHandler(IUserRepository userRepository , IMapper mapper) : IRequestHandler<RegisterUserCommandHandler, string>
+    public class RegisterUserCommandHandler(IUserRepository userRepository , IMapper mapper) : IRequestHandler<RegisterUserCommand, string>
     {
-        public async Task<string> Handle(RegisterUserCommandHandler request, CancellationToken cancellationToken)
+        public async Task<string> Handle(RegisterUserCommand command , CancellationToken cancellationToken)
         {
-            var user = mapper.Map<User>(request);
+            var user = mapper.Map<User>(command);
 
-            var newUser = await userRepository.RegisterAsync(user, user.)
+            var newUser = await userRepository.RegisterAsync(user, "Admin");
+
+            return newUser;
         }
     }
 }
