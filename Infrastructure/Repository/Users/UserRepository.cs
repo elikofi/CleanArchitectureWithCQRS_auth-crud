@@ -1,4 +1,5 @@
 ﻿using Application.Authentication.Common;
+using Application.Common.Constants;
 using Application.Common.Interfaces.Persistence;
 using Domain.Entity;
 using Infrastructure.Data;
@@ -16,7 +17,7 @@ namespace Infrastructure.Repository.Users
             return context.Users.SingleOrDefault(u => u.Email == email);
         }
 
-        public async Task<User> RegisterAsync(User user, string role)
+        public async Task<string> RegisterAsync(User user, string role)
         {
 			try
 			{
@@ -39,10 +40,10 @@ namespace Infrastructure.Repository.Users
 				if(registeredUser.Succeeded)
 				{
 					await userManager.AddToRoleAsync(newUser, role);
-					return newUser ;
+					return ConstantResponses.RegisteredSuccessfully ;
 				}
 
-                throw new Exception($"Failed to register user: {registeredUser.Errors.FirstOrDefault()?.Description}");
+                throw new Exception($"{ConstantResponses.FailedRegistration} {registeredUser.Errors.FirstOrDefault()?.Description}");
             }
 			catch (Exception)
 			{
