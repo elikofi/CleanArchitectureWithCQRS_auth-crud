@@ -113,6 +113,10 @@ Verrify from the project files above to see how I structured my Application Laye
 
 The Contracts is also a class library where we have various records or classes for our requests to be used as controller method parameters.
 
+## DOMAIN LAYER 
+
+##
+
 
 
 
