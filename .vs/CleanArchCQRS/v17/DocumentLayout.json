@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\authentication\\usermanagement\\commands\\register\\registerusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\authentication\\usermanagement\\commands\\register\\registerusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\authentication\\usermanagement\\commands\\register\\registerusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\authentication\\usermanagement\\commands\\register\\registerusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D111AA4E-47E8-437E-8113-D898ED66FF42}|Infrastructure\\Infrastructure.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\infrastructure\\repository\\users\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D111AA4E-47E8-437E-8113-D898ED66FF42}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\users\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\cleanarchcqrs.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|solutionrelative:cleanarchcqrs.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\authentication\\usermanagement\\commands\\register\\registerusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\authentication\\usermanagement\\commands\\register\\registerusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A74C5DD0-336A-4420-97A2-4ACB676770EB}|Contracts\\Contracts.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\contracts\\authentication\\authenticationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A74C5DD0-336A-4420-97A2-4ACB676770EB}|Contracts\\Contracts.csproj|solutionrelative:contracts\\authentication\\authenticationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D111AA4E-47E8-437E-8113-D898ED66FF42}|Infrastructure\\Infrastructure.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\infrastructure\\repository\\users\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D111AA4E-47E8-437E-8113-D898ED66FF42}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\users\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\common\\interfaces\\persistence\\iuserrepository.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\persistence\\iuserrepository.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\authentication\\common\\authenticationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\authentication\\common\\authenticationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\authentication\\usermanagement\\commands\\register\\registerusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\authentication\\usermanagement\\commands\\register\\registerusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5573D93-F289-47D7-9A5D-74C12EFDB309}|Domain\\Domain.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\domain\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5573D93-F289-47D7-9A5D-74C12EFDB309}|Domain\\Domain.csproj|solutionrelative:domain\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\authentication\\usermanagement\\commands\\register\\registerusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\authentication\\usermanagement\\commands\\register\\registerusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|c:\\users\\user\\desktop\\my projects\\with meditr \u0026 cqrs\\cleanarchitecturewithcqrs_auth-crud\\application\\common\\interfaces\\persistence\\iuserrepository.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AA3E974F-0662-412C-A7F1-39B0E83B74F3}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\persistence\\iuserrepository.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 245,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,20 +54,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "CleanArchCQRS.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "CleanArchCQRS.API\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAAB0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T14:31:06.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthenticationResult.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Authentication\\Common\\AuthenticationResult.cs",
+              "RelativeDocumentMoniker": "Application\\Authentication\\Common\\AuthenticationResult.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Authentication\\Common\\AuthenticationResult.cs",
+              "RelativeToolTip": "Application\\Authentication\\Common\\AuthenticationResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T13:01:33.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "AuthenticationResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Contracts\\Authentication\\AuthenticationResponse.cs",
               "RelativeDocumentMoniker": "Contracts\\Authentication\\AuthenticationResponse.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Contracts\\Authentication\\AuthenticationResponse.cs",
               "RelativeToolTip": "Contracts\\Authentication\\AuthenticationResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "ViewState": "AQIAAAAAAABmZmZmZiYpwAoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T19:43:52.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Common\\Interfaces\\Persistence\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\Persistence\\IUserRepository.cs",
@@ -80,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "RegisterUserCommandValidator.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Authentication\\UserManagement\\Commands\\Register\\RegisterUserCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\Authentication\\UserManagement\\Commands\\Register\\RegisterUserCommandValidator.cs",
@@ -93,65 +119,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "RegisterUserCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Authentication\\UserManagement\\Commands\\Register\\RegisterUserCommandHandler.cs",
               "RelativeDocumentMoniker": "Application\\Authentication\\UserManagement\\Commands\\Register\\RegisterUserCommandHandler.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Authentication\\UserManagement\\Commands\\Register\\RegisterUserCommandHandler.cs",
               "RelativeToolTip": "Application\\Authentication\\UserManagement\\Commands\\Register\\RegisterUserCommandHandler.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACMAAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAYwB8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T14:39:00.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "RegisterUserCommand.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Authentication\\UserManagement\\Commands\\Register\\RegisterUserCommand.cs",
               "RelativeDocumentMoniker": "Application\\Authentication\\UserManagement\\Commands\\Register\\RegisterUserCommand.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Application\\Authentication\\UserManagement\\Commands\\Register\\RegisterUserCommand.cs",
               "RelativeToolTip": "Application\\Authentication\\UserManagement\\Commands\\Register\\RegisterUserCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T14:38:46.184Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "CleanArchCQRS.API\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "CleanArchCQRS.API\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAABIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T14:31:06.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Domain\\Entity\\User.cs",
-              "RelativeDocumentMoniker": "Domain\\Entity\\User.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Domain\\Entity\\User.cs",
-              "RelativeToolTip": "Domain\\Entity\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T07:44:18.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\Repository\\Users\\UserRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repository\\Users\\UserRepository.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\My Projects\\With MeditR \u0026 CQRS\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\Repository\\Users\\UserRepository.cs",
               "RelativeToolTip": "Infrastructure\\Repository\\Users\\UserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABIAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAqwA0AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T07:46:00.841Z",
               "EditorCaption": ""

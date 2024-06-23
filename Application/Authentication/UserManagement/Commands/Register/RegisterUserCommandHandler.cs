@@ -12,10 +12,9 @@ namespace Application.Authentication.UserManagement.Commands.Register
 {
     public class RegisterUserCommandHandler(
                                             IUserRepository userRepository, 
-                                            IMapper mapper, 
-                                            IJwtTokenGenerator jwtTokenGenerator) : IRequestHandler<RegisterUserCommand, ErrorOr<AuthenticationResult>>
+                                            IMapper mapper) : IRequestHandler<RegisterUserCommand, ErrorOr<string>>
     {
-        public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterUserCommand command , CancellationToken cancellationToken)
+        public async Task<ErrorOr<string>> Handle(RegisterUserCommand command , CancellationToken cancellationToken)
         {
             if (userRepository.GetUserByEmail(command.Email) is { })
             {
@@ -25,10 +24,10 @@ namespace Application.Authentication.UserManagement.Commands.Register
 
             var newUser = await userRepository.RegisterAsync(user, UserRoles.ADMIN);
 
-            var token = jwtTokenGenerator.GenerateToken(newUser);
+            //var token = jwtTokenGenerator.GenerateToken(newUser);
 
 
-            return new AuthenticationResult(newUser, token);
+            return newUser.ToString();
         }
     }
 

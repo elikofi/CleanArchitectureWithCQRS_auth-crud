@@ -13,6 +13,6 @@ namespace Application.Authentication.UserManagement.Commands.Register
 		string Email,
 		string UserName,
 		string PasswordHash
-		) : IRequest<ErrorOr<AuthenticationResult>>;
+		) : IRequest<ErrorOr<string>>;
 }
 

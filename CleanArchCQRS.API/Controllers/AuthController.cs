@@ -1,7 +1,9 @@
-﻿using Application.Authentication.UserManagement.Commands.Register;
+﻿using Application.Authentication.Common;
+using Application.Authentication.UserManagement.Commands.Register;
 using Application.Common.Interfaces.Persistence;
 using Contracts.Authentication;
 using Domain.Entity;
+using ErrorOr;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -11,7 +13,7 @@ namespace CleanArchCQRS.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController(IMediator mediator, IMapper mapper, IUserRepository userRepository) : ApiController
+    public class AuthController(ISender mediator, IMapper mapper, IUserRepository userRepository) : ApiController
     {
 
         [HttpPost("RegisterUser")]
@@ -19,11 +21,12 @@ namespace CleanArchCQRS.API.Controllers
         {
             var user = mapper.Map<RegisterUserCommand>(request);
 
-            var authResult = await mediator.Send(user);
+            ErrorOr<string> authResult = await mediator.Send(user);
 
             return authResult.Match(
-                authResult => Ok(mapper.Map<AuthenticationResponse>(authResult)),
+                authResult => Ok(mapper.Map<string>(authResult)),
                 errors => Problem(errors));
+
         }
 
         //SEEDING ROLES.
