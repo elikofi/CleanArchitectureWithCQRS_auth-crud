@@ -1,5 +1,6 @@
 ﻿using Application.Authentication.Common;
 using Application.Authentication.UserManagement.Commands.Register;
+using Application.Authentication.UserManagement.Queries.Login;
 using Application.Common.Interfaces.Persistence;
 using Contracts.Authentication;
 using Domain.Entity;
@@ -27,6 +28,19 @@ namespace CleanArchCQRS.API.Controllers
                 authResult => Ok(mapper.Map<string>(authResult)),
                 errors => Problem(errors));
 
+        }
+
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login([FromBody ] LoginRequest request)
+        {
+            var query = mapper.Map<LoginQuery>(request);
+
+            var signInResult = await mediator.Send(query);
+
+            return signInResult.Match(
+                //signInResult => Ok(mapper.Map<AuthenticationResponse>(signInResult)),
+                signInResult => Ok(signInResult),
+                errors => Problem(errors));
         }
 
         //SEEDING ROLES.
