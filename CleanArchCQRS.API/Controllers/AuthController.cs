@@ -16,7 +16,7 @@ namespace CleanArchCQRS.API.Controllers
     [ApiController]
     public class AuthController(ISender mediator, IMapper mapper, IUserRepository userRepository) : ApiController
     {
-
+        //Register
         [HttpPost("RegisterUser")]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterUserRequest request)
         {
@@ -30,6 +30,7 @@ namespace CleanArchCQRS.API.Controllers
 
         }
 
+        //Login
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody ] LoginRequest request)
         {
