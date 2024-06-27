@@ -1,18 +1,15 @@
 ﻿using Application.Authentication.Common;
-using Application.Authentication.UserManagement.Queries;
 using Application.Common.Constants;
 using Application.Common.Interfaces.Persistence;
 using Domain.Entity;
 using Infrastructure.Data;
-using Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
 using System.Security.Claims;
 
 
 namespace Infrastructure.Repository.Users
 {
-    public class UserRepository(UserManager<User> userManager, RoleManager<IdentityRole> roleManager, DatabaseContext context, IConfiguration configuration, SignInManager<User> signInManager) : IUserRepository
+    public class UserRepository(UserManager<User> userManager, RoleManager<IdentityRole> roleManager, DatabaseContext context, SignInManager<User> signInManager) : IUserRepository
     {
         public User? GetUserByEmail(string email)
         {
@@ -105,22 +102,12 @@ namespace Infrastructure.Repository.Users
                         authClaims.Add(new Claim(ClaimTypes.Role, userRole));
                     }
 
-                    //return new User
-                    //{
-                    //    Id = user.Id,
-                    //    Email = user.Email!,
-                    //    FirstName = user.FirstName,
-                    //    LastName = user.LastName,
-                    //    UserName = user.UserName!
-
-                    //};
                     return user;
                 }
             }
             throw new Exception();
         }
 
-        //SEED ROLES
 
 
     }

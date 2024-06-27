@@ -13,24 +13,12 @@ using System.Threading.Tasks;
 
 namespace Application.Authentication.UserManagement.Queries.Login
 {
-    public class LoginQueryHandler(IUserRepository userRepository, IMapper mapper, IJwtTokenGenerator tokenGenerator) : IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
+    public class LoginQueryHandler(IUserRepository userRepository, IJwtTokenGenerator tokenGenerator) : IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
     {
         public async Task<ErrorOr<AuthenticationResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
         {
-            //var user = mapper.Map<User>(query);
 
             var signIn = await userRepository.LoginAsync(query.UserName, query.Password);
-            //var si = mapper.Map<User>(signIn);
-
-            //var si = new User
-            //{
-            //    Id = signIn.Id,
-            //    Email = signIn.Email,
-            //    FirstName = signIn.FirstName,
-            //    LastName = signIn.LastName,
-            //    UserName = signIn.UserName,
-
-            //};
 
             var token = tokenGenerator.GenerateToken(signIn);
 
