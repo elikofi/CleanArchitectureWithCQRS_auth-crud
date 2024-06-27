@@ -23,7 +23,6 @@
     <Folder Include="Authentication\RoleManagement\Commands\SeedRoles\" />
     <Folder Include="Authentication\RoleManagement\Queries\" />
     <Folder Include="Authentication\UserManagement\Queries\GetAllUsers\" />
-    <Folder Include="Authentication\UserManagement\Queries\GetUserById\" />
   </ItemGroup>
 
   <ItemGroup>
