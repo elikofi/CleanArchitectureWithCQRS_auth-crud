@@ -1,11 +1,7 @@
-﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ErrorOr;
+using MediatR;
 
 namespace Application.Authentication.UserManagement.Queries.GetUserById
 {
-    public record GetUserByIdQuery(Guid Id) : IRequest<ErrorOr<>>
+    public record GetUserByIdQuery(string Id) : IRequest<ErrorOr<object>>;
 }

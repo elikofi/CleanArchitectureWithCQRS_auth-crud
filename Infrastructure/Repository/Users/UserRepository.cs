@@ -9,7 +9,11 @@ using System.Security.Claims;
 
 namespace Infrastructure.Repository.Users
 {
-    public class UserRepository(UserManager<User> userManager, RoleManager<IdentityRole> roleManager, DatabaseContext context, SignInManager<User> signInManager) : IUserRepository
+    public class UserRepository(
+        UserManager<User> userManager, 
+        RoleManager<IdentityRole> roleManager, 
+        DatabaseContext context, 
+        SignInManager<User> signInManager) : IUserRepository
     {
         public User? GetUserByEmail(string email)
         {
@@ -108,7 +112,12 @@ namespace Infrastructure.Repository.Users
             throw new Exception();
         }
 
-
-
+        public async Task<User> GetUserById(string Id)
+        {
+            var user = await userManager.FindByIdAsync(Id);
+            if (user == null)
+                return null!;
+            return user;
+        }
     }
 }
