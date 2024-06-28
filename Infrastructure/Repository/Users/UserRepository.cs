@@ -112,7 +112,7 @@ namespace Infrastructure.Repository.Users
             throw new Exception();
         }
 
-        public async Task<User> GetUserById(string Id)
+        public async Task<User> GetUserByIdAsync(string Id)
         {
             var user = await userManager.FindByIdAsync(Id);
             if (user == null)

@@ -1,5 +1,6 @@
 ﻿using Application.Authentication.Common;
 using Application.Authentication.UserManagement.Commands.Register;
+using Application.Authentication.UserManagement.Queries.GetUserById;
 using Application.Authentication.UserManagement.Queries.Login;
 using Application.Common.Interfaces.Persistence;
 using Contracts.Authentication;
@@ -50,6 +51,18 @@ namespace CleanArchCQRS.API.Controllers
         {
             var seedRoles = await userRepository.SeedRoles();
             return Ok(seedRoles);
+        }
+
+        [HttpGet("GetUserById")]
+        public async Task<IActionResult> GetUserByUserId(GetUserByIdQuery Id)
+        {
+            var user = await mediator.Send(Id);
+            if(user is { })
+            {
+                return user.Match(
+                    user => Ok(mapper.Map<User>(user)), errors => Problem(errors));
+            }
+            return NotFound();
         }
     }
 }
