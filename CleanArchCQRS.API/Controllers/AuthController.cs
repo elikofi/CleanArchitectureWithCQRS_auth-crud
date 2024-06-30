@@ -40,8 +40,7 @@ namespace CleanArchCQRS.API.Controllers
             var signInResult = await mediator.Send(query);
 
             return signInResult.Match(
-                //signInResult => Ok(mapper.Map<AuthenticationResponse>(signInResult)),
-                signInResult => Ok(signInResult),
+                signInResult => Ok(mapper.Map<AuthenticationResult>(signInResult)),
                 errors => Problem(errors));
         }
 

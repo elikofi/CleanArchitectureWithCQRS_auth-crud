@@ -84,7 +84,7 @@ namespace Infrastructure.Repository.Users
 			}
         }
 
-        public async Task<User> LoginAsync(string UserName, string Password)
+        public async Task<UserDTO> LoginAsync(string UserName, string Password)
         {
             var user = await userManager.FindByNameAsync(UserName);
             var signIn = await signInManager.PasswordSignInAsync(user!, Password, false, true);
@@ -106,7 +106,14 @@ namespace Infrastructure.Repository.Users
                         authClaims.Add(new Claim(ClaimTypes.Role, userRole));
                     }
 
-                    return user;
+                    return new UserDTO
+                    (
+                        Id: user.Id,
+                        FirstName: user.FirstName,
+                        LastName: user.LastName,
+                        UserName: user.UserName!,
+                        Email: user.Email!
+                    );
                 }
             }
             throw new Exception();

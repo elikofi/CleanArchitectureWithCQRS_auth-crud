@@ -8,11 +8,8 @@
 
   <ItemGroup>
     <Compile Remove="Common\Exceptions\**" />
-    <Compile Remove="Common\Mappings\**" />
     <EmbeddedResource Remove="Common\Exceptions\**" />
-    <EmbeddedResource Remove="Common\Mappings\**" />
     <None Remove="Common\Exceptions\**" />
-    <None Remove="Common\Mappings\**" />
   </ItemGroup>
 
   <ItemGroup>

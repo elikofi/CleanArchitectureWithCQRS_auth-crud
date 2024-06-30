@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
+using Application.Authentication.Common;
 
 
 namespace Infrastructure.Authentication
@@ -20,7 +21,7 @@ namespace Infrastructure.Authentication
             this.dateTimeProvider = dateTimeProvider;
         }
 
-        public string GenerateToken(User user)
+        public string GenerateToken(UserDTO user)
         {
             var signingCredentials = new SigningCredentials(
                 new SymmetricSecurityKey(
