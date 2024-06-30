@@ -46,8 +46,7 @@
               "RelativeToolTip": "Application\\Authentication\\UserManagement\\Queries\\GetUserById\\GetUserByIdQueryValidator.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T13:58:07.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T13:58:07.162Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "Application\\Authentication\\UserManagement\\Queries\\GetUserById\\GetUserByIdQueryHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T16:26:52.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T16:26:52.252Z"
             },
             {
               "$type": "Document",
@@ -72,8 +70,7 @@
               "RelativeToolTip": "Application\\Authentication\\UserManagement\\Queries\\GetUserById\\GetUserByIdQuery.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T16:23:32.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T16:23:32.068Z"
             },
             {
               "$type": "Document",
@@ -85,8 +82,7 @@
               "RelativeToolTip": "CleanArchCQRS.API\\Controllers\\AuthController.cs",
               "ViewState": "AQIAACIAAAAAAAAAAAAuwDkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T14:31:06.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T14:31:06.427Z"
             },
             {
               "$type": "Document",
@@ -96,7 +92,7 @@
               "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\Persistence\\IUserRepository.cs",
               "ToolTip": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\Application\\Common\\Interfaces\\Persistence\\IUserRepository.cs",
               "RelativeToolTip": "Application\\Common\\Interfaces\\Persistence\\IUserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T19:09:15.364Z",
               "EditorCaption": ""
@@ -111,8 +107,7 @@
               "RelativeToolTip": "Infrastructure\\Repository\\Users\\UserRepository.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAAAAsAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T07:46:00.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T07:46:00.841Z"
             }
           ]
         }
