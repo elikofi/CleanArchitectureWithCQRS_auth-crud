@@ -12,7 +12,7 @@ namespace Application.Common.Interfaces.Persistence
         //Task<User> LoginAsync(string UserName, string Password);
         Task<UserDTO> LoginAsync(string UserName, string Password);
         User? GetUserByEmail(string email);
-        Task<User> GetUserByIdAsync(string Id); 
+        Task<UserDTO> GetUserByIdAsync(string Id); 
 
 
         //role management

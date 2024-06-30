@@ -17,7 +17,7 @@ namespace CleanArchCQRS.API.Controllers
     [ApiController]
     public class AuthController(ISender mediator, IMapper mapper, IUserRepository userRepository) : ApiController
     {
-        //Register
+        //REGISTER
         [HttpPost("RegisterUser")]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterUserRequest request)
         {
@@ -31,7 +31,7 @@ namespace CleanArchCQRS.API.Controllers
 
         }
 
-        //Login
+        //LOGIN
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody ] LoginRequest request)
         {
@@ -52,6 +52,7 @@ namespace CleanArchCQRS.API.Controllers
             return Ok(seedRoles);
         }
 
+        //GET A USER
         [HttpGet("GetUserById")]
         public async Task<IActionResult> GetUserByUserId(GetUserByIdQuery Id)
         {
@@ -59,7 +60,7 @@ namespace CleanArchCQRS.API.Controllers
             if(user is { })
             {
                 return user.Match(
-                    user => Ok(mapper.Map<User>(user)), errors => Problem(errors));
+                    user => Ok(mapper.Map<UserDTO>(user)), errors => Problem(errors));
             }
             return NotFound();
         }

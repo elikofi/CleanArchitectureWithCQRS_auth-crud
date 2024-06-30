@@ -119,12 +119,18 @@ namespace Infrastructure.Repository.Users
             throw new Exception();
         }
 
-        public async Task<User> GetUserByIdAsync(string Id)
+        public async Task<UserDTO> GetUserByIdAsync(string Id)
         {
             var user = await userManager.FindByIdAsync(Id);
             if (user == null)
                 return null!;
-            return user;
+            return new UserDTO(
+                Id: user.Id,
+                FirstName: user.FirstName,
+                LastName: user.LastName,
+                UserName: user.UserName!,
+                Email: user.Email!
+                );
         }
     }
 }
