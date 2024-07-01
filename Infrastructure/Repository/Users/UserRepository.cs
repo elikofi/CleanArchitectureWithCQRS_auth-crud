@@ -132,5 +132,10 @@ namespace Infrastructure.Repository.Users
                 Email: user.Email!
                 );
         }
+
+        public Task<IEnumerable<UserDTO>> GetAllUsers()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

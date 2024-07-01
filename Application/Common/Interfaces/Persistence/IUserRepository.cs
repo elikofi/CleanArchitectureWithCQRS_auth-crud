@@ -1,5 +1,4 @@
-﻿
-using Application.Authentication.Common;
+﻿using Application.Authentication.Common;
 using Domain.Entity;
 
 
@@ -8,11 +7,12 @@ namespace Application.Common.Interfaces.Persistence
 {
     public interface IUserRepository
     {
+        //User Management
         Task<string> RegisterAsync(User user, string role);
-        //Task<User> LoginAsync(string UserName, string Password);
         Task<UserDTO> LoginAsync(string UserName, string Password);
         User? GetUserByEmail(string email);
-        Task<UserDTO> GetUserByIdAsync(string Id); 
+        Task<UserDTO> GetUserByIdAsync(string Id);
+        Task<IEnumerable<UserDTO>> GetAllUsers();
 
 
         //role management
