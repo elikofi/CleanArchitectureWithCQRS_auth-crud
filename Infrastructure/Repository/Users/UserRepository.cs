@@ -134,17 +134,18 @@ namespace Infrastructure.Repository.Users
                 );
         }
 
-        public async Task<List<UserDTO>> GetAllUsersAsync()
+        public async Task<List<UserDto>> GetAllUsersAsync()
         {
-            var listUsers = await context.Users.ToListAsync();
-            
-            return new List<UserDTO>
+            var listUsers =  context.Users.Select(u => new UserDto
             {
-                
-            };
+                FirstName = u.FirstName,
+                LastName = u.LastName,
+                UserName = u.UserName!,
+                Email = u.Email!
+            }).ToList();
                 
 
-
+            return listUsers!;   
             
         }
     }

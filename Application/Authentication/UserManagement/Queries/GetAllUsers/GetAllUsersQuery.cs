@@ -9,5 +9,5 @@ using System.Threading.Tasks;
 
 namespace Application.Authentication.UserManagement.Queries.GetAllUsers
 {
-    public record GetAllUsersQuery() : IRequest<List<UserDTO>>;
+    public record GetAllUsersQuery() : IRequest<List<UserDto>>;
 }
