@@ -1,5 +1,6 @@
 ﻿using Application.Authentication.Common;
 using Application.Authentication.UserManagement.Commands.Register;
+using Application.Authentication.UserManagement.Queries.GetAllUsers;
 using Application.Authentication.UserManagement.Queries.GetUserById;
 using Application.Authentication.UserManagement.Queries.Login;
 using Application.Common.Interfaces.Persistence;
@@ -62,6 +63,19 @@ namespace CleanArchCQRS.API.Controllers
                 return user.Match(
                     user => Ok(mapper.Map<UserDTO>(user)), errors => Problem(errors));
             }
+            return NotFound();
+        }
+
+        //GET ALL USERS
+        [HttpGet("GetAllUsers")]
+        public async Task<IActionResult> GetAllAppUsers(GetAllUsersQuery query)
+        {
+            var users = await mediator.Send(query);
+            if(users is { })
+            {
+                return Ok(users);
+            }
+
             return NotFound();
         }
     }

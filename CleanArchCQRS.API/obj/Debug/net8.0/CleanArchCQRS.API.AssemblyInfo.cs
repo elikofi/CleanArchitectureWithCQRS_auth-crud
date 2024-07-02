@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CleanArchCQRS.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+beb68e7b2556165fa188dd4df77428c6ce7eeb39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fc5fc18474a73ff087be05025126ccf83907447")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleanArchCQRS.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleanArchCQRS.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

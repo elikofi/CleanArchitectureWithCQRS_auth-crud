@@ -4,15 +4,16 @@ using Application.Common.Interfaces.Persistence;
 using Domain.Entity;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 
 namespace Infrastructure.Repository.Users
 {
     public class UserRepository(
-        UserManager<User> userManager, 
-        RoleManager<IdentityRole> roleManager, 
-        DatabaseContext context, 
+        UserManager<User> userManager,
+        RoleManager<IdentityRole> roleManager,
+        DatabaseContext context,
         SignInManager<User> signInManager) : IUserRepository
     {
         public User? GetUserByEmail(string email)
@@ -51,37 +52,37 @@ namespace Infrastructure.Repository.Users
 
         public async Task<string> RegisterAsync(User user, string role)
         {
-			try
-			{
+            try
+            {
 
 
-				User newUser = new()
-				{
-					FirstName = user.FirstName,
-					LastName = user.LastName,
-					Email = user.Email,
-					UserName = user.UserName,
-					EmailConfirmed = true,
-					TwoFactorEnabled = false,
-					SecurityStamp = Guid.NewGuid().ToString()
+                User newUser = new()
+                {
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    UserName = user.UserName,
+                    EmailConfirmed = true,
+                    TwoFactorEnabled = false,
+                    SecurityStamp = Guid.NewGuid().ToString()
 
-				};
+                };
 
-				var registeredUser = await userManager.CreateAsync(newUser, user.PasswordHash!);
+                var registeredUser = await userManager.CreateAsync(newUser, user.PasswordHash!);
 
-				if(registeredUser.Succeeded)
-				{
-					await userManager.AddToRoleAsync(newUser, role);
-					return ConstantResponses.RegisteredSuccessfully ;
-				}
+                if (registeredUser.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(newUser, role);
+                    return ConstantResponses.RegisteredSuccessfully;
+                }
 
                 throw new Exception($"{ConstantResponses.FailedRegistration} {registeredUser.Errors.FirstOrDefault()?.Description}");
             }
-			catch (Exception)
-			{
+            catch (Exception)
+            {
 
-				throw;
-			}
+                throw;
+            }
         }
 
         public async Task<UserDTO> LoginAsync(string UserName, string Password)
@@ -91,7 +92,7 @@ namespace Infrastructure.Repository.Users
 
             if (signIn.Succeeded)
             {
-                if(user != null && await userManager.CheckPasswordAsync(user, Password))
+                if (user != null && await userManager.CheckPasswordAsync(user, Password))
                 {
                     var userRoles = await userManager.GetRolesAsync(user);
 
@@ -133,9 +134,18 @@ namespace Infrastructure.Repository.Users
                 );
         }
 
-        public Task<IEnumerable<UserDTO>> GetAllUsers()
+        public async Task<List<UserDTO>> GetAllUsersAsync()
         {
-            throw new NotImplementedException();
+            var listUsers = await context.Users.ToListAsync();
+            
+            return new List<UserDTO>
+            {
+                
+            };
+                
+
+
+            
         }
     }
 }
