@@ -136,19 +136,17 @@ namespace Infrastructure.Repository.Users
 
         public async Task<List<UserDto>> GetAllUsersAsync()
         {
-            await Task.CompletedTask;
-            var listUsers = context.Users.Select(u => new UserDto
+            var listUsers = await context.Users.Select(u => new UserDto
             {
                 Id = u.Id,
                 FirstName = u.FirstName,
                 LastName = u.LastName,
                 UserName = u.UserName!,
                 Email = u.Email!
-            }).ToList();
+            }).AsNoTracking().ToListAsync();
                 
 
-            return listUsers!;   
-            
+            return  listUsers;
         }
     }
 }
