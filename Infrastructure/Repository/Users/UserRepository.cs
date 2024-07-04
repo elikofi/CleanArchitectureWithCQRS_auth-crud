@@ -148,5 +148,25 @@ namespace Infrastructure.Repository.Users
 
             return  listUsers;
         }
+
+        public Task<string> MakeAdminAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<string> MakeSuperAdminAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<string> MakeSuperUserAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<object> GetUserRoles(string email)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
