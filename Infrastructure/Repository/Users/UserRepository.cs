@@ -134,7 +134,7 @@ namespace Infrastructure.Repository.Users
                 );
         }
 
-        public async Task<List<UserDto>> GetAllUsersAsync()
+        public async Task<IEnumerable<UserDto>> GetAllUsersAsync()
         {
             var listUsers = await context.Users.Select(u => new UserDto
             {
