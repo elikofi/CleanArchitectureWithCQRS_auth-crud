@@ -149,9 +149,24 @@ namespace Infrastructure.Repository.Users
             return  listUsers;
         }
 
-        public Task<string> MakeAdminAsync()
+        public async Task<string> MakeAdminAsync(UpdatePermissions model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var user = await userManager.FindByNameAsync(model.UserName);
+                if(user is null)
+                {
+                    return ConstantResponses.UsernameNotFound;
+                }
+
+                await userManager.AddToRoleAsync(user, UserRoles.ADMIN);
+                return $"{model.UserName}" + ConstantResponses.NewAdmin;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public Task<string> MakeSuperAdminAsync()

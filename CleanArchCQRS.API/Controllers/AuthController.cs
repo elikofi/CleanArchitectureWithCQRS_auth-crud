@@ -68,6 +68,7 @@ namespace CleanArchCQRS.API.Controllers
 
         //GET ALL USERS
         [HttpGet("GetAllUsers")]
+        []
         public async Task<IActionResult> GetAllAppUsers(GetAllUsersQuery query)
         {
             var users = await mediator.Send(query);
