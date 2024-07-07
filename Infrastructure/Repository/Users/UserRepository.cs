@@ -1,4 +1,5 @@
 ﻿using Application.Authentication.Common;
+using Application.Authentication.RoleManagement.Models;
 using Application.Common.Constants;
 using Application.Common.Interfaces.Persistence;
 using Domain.Entity;

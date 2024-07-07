@@ -7,18 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Authentication\RoleManagement\Queries\GetRoles\**" />
     <Compile Remove="Common\Exceptions\**" />
+    <EmbeddedResource Remove="Authentication\RoleManagement\Queries\GetRoles\**" />
     <EmbeddedResource Remove="Common\Exceptions\**" />
+    <None Remove="Authentication\RoleManagement\Queries\GetRoles\**" />
     <None Remove="Common\Exceptions\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Authentication\RoleManagement\Commands\MakeAdmin\" />
     <Folder Include="Authentication\RoleManagement\Commands\MakeSuperAdmin\" />
     <Folder Include="Authentication\RoleManagement\Commands\MakeSuperUser\" />
-    <Folder Include="Authentication\RoleManagement\Queries\GetRoles\" />
     <Folder Include="Authentication\RoleManagement\Commands\SeedRoles\" />
-    <Folder Include="Authentication\RoleManagement\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
