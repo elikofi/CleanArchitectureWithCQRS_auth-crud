@@ -1,4 +1,5 @@
-﻿using ErrorOr;
+﻿using Application.Authentication.RoleManagement.Models;
+using ErrorOr;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,5 +9,5 @@ using System.Threading.Tasks;
 
 namespace Application.Authentication.RoleManagement.Commands.MakeAdmin
 {
-    public record MakeAdminCommand(string Username) : IRequest<ErrorOr<string>>;
+    public record MakeAdminCommand(UpdatePermissions Username) : IRequest<ErrorOr<string>>;
 }

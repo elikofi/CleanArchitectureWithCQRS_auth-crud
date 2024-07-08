@@ -1,8 +1,10 @@
 ﻿using Application.Authentication.Common;
+using Application.Authentication.RoleManagement.Commands.MakeAdmin;
 using Application.Authentication.UserManagement.Commands.Register;
 using Application.Authentication.UserManagement.Queries.GetAllUsers;
 using Application.Authentication.UserManagement.Queries.GetUserById;
 using Application.Authentication.UserManagement.Queries.Login;
+using Application.Common.Constants;
 using Application.Common.Interfaces.Persistence;
 using Contracts.Authentication;
 using Domain.Entity;
@@ -68,7 +70,6 @@ namespace CleanArchCQRS.API.Controllers
 
         //GET ALL USERS
         [HttpGet("GetAllUsers")]
-        []
         public async Task<IActionResult> GetAllAppUsers(GetAllUsersQuery query)
         {
             var users = await mediator.Send(query);
@@ -78,6 +79,20 @@ namespace CleanArchCQRS.API.Controllers
             }
 
             return NotFound();
+        }
+
+        //ROLE MANAGEMENT.
+        //MAKE ADMIN COMMAND
+        [HttpPost("MakeAdmin")]
+        public async Task<IActionResult> MakeUserAdmin(MakeAdminCommand command)
+        {
+            var newAdmin = await mediator.Send(command);
+
+            if (newAdmin.Equals(ConstantResponses.UsernameNotFound))
+            {
+                return NotFound();
+            }
+            return Ok(newAdmin);
         }
     }
 }

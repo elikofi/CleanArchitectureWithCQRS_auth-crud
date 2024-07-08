@@ -1,4 +1,5 @@
-﻿using ErrorOr;
+﻿using Application.Common.Interfaces.Persistence;
+using ErrorOr;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Application.Authentication.RoleManagement.Commands.MakeAdmin
 {
-    public class MakeAdminCommandHandler : IRequestHandler<MakeAdminCommand, ErrorOr<string>>
+    public class MakeAdminCommandHandler(IUserRepository userRepository) : IRequestHandler<MakeAdminCommand, ErrorOr<string>>
     {
-        public async Task<ErrorOr<string>> Handle(MakeAdminCommand request, CancellationToken cancellationToken)
+        public async Task<ErrorOr<string>> Handle(MakeAdminCommand command, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await userRepository.MakeAdminAsync(command.Username);
         }
     }
 }
