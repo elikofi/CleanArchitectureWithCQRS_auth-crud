@@ -1,19 +1,18 @@
-﻿using Application.Common.Interfaces.Persistence;
+﻿using Application.Authentication.RoleManagement.Models;
+using Application.Common.Interfaces.Persistence;
 using ErrorOr;
+using MapsterMapper;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Authentication.RoleManagement.Commands.MakeAdmin
 {
-    public class MakeAdminCommandHandler(IUserRepository userRepository) : IRequestHandler<MakeAdminCommand, ErrorOr<string>>
+    public class MakeAdminCommandHandler(IUserRepository userRepository, IMapper mapper) : IRequestHandler<MakeAdminCommand, ErrorOr<string>>
     {
         public async Task<ErrorOr<string>> Handle(MakeAdminCommand command, CancellationToken cancellationToken)
         {
-            return await userRepository.MakeAdminAsync(command.Username);
+            var user = mapper.Map<UpdatePermissions>(command);
+
+            return await userRepository.MakeAdminAsync(user);
         }
     }
 }

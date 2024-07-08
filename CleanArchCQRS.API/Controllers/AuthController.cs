@@ -7,11 +7,9 @@ using Application.Authentication.UserManagement.Queries.Login;
 using Application.Common.Constants;
 using Application.Common.Interfaces.Persistence;
 using Contracts.Authentication;
-using Domain.Entity;
 using ErrorOr;
 using MapsterMapper;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchCQRS.API.Controllers
@@ -92,7 +90,8 @@ namespace CleanArchCQRS.API.Controllers
             {
                 return NotFound();
             }
-            return Ok(newAdmin);
+            return newAdmin.Match(
+                newAdmin => Ok(mapper.Map<string>(newAdmin)), errors => Problem(errors));
         }
     }
 }

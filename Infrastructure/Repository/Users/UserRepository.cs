@@ -154,14 +154,14 @@ namespace Infrastructure.Repository.Users
         {
             try
             {
-                var user = await userManager.FindByNameAsync(model.UserName);
+                var user = await userManager.FindByNameAsync(model.Username);
                 if(user is null)
                 {
                     return ConstantResponses.UsernameNotFound;
                 }
 
                 await userManager.AddToRoleAsync(user, UserRoles.ADMIN);
-                return $"{model.UserName}" + ConstantResponses.NewAdmin;
+                return $"{model.Username}" + ConstantResponses.NewAdmin;
             }
             catch (Exception)
             {
