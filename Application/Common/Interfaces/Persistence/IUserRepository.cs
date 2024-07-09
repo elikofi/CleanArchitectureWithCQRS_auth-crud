@@ -19,7 +19,7 @@ namespace Application.Common.Interfaces.Persistence
         //role management
         Task<string> SeedRoles();
         Task<string> MakeAdminAsync(UpdatePermissions model);
-        Task<string> MakeSuperAdminAsync();
+        Task<string> MakeSuperAdminAsync(UpdatePermissions model);
         Task<string> MakeSuperUserAsync();
         Task<object> GetUserRoles(string email);
 

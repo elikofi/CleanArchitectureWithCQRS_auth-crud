@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ErrorOr;
+using MediatR;
 
 namespace Application.Authentication.RoleManagement.Commands.MakeSuperAdmin
 {
-    internal class MakeSuperAdminCommand
-    {
-    }
+    public record MakeSuperAdminCommand(string Username) : IRequest<ErrorOr<string>>;
 }

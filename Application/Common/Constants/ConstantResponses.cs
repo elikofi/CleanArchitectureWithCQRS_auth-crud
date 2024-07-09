@@ -15,6 +15,7 @@ namespace Application.Common.Constants
         //Role management constants
         public const string UsernameNotFound = "The username provided doesn't exist.";
         public const string NewAdmin = " is now an Admin.";
+        public const string NewSuperAdmin = " is now a SuperAdmin.";
 
     }
 }

@@ -170,9 +170,23 @@ namespace Infrastructure.Repository.Users
             }
         }
 
-        public Task<string> MakeSuperAdminAsync()
+        public async Task<string> MakeSuperAdminAsync(UpdatePermissions model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var user = await userManager.FindByNameAsync(model.Username);
+                if (user is null)
+                {
+                    return ConstantResponses.UsernameNotFound;
+                }
+                await userManager.AddToRoleAsync(user, UserRoles.SUPERADMIN);
+                return $"{model.Username}" + ConstantResponses.NewSuperAdmin;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public Task<string> MakeSuperUserAsync()

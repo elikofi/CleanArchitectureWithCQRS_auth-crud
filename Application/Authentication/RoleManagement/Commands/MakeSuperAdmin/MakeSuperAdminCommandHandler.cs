@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.Authentication.RoleManagement.Models;
+using Application.Common.Interfaces.Persistence;
+using ErrorOr;
+using MapsterMapper;
+using MediatR;
 
 namespace Application.Authentication.RoleManagement.Commands.MakeSuperAdmin
 {
-    internal class MakeSuperAdminCommandHandler
+    public class MakeSuperAdminCommandHandler(IUserRepository userRepository, IMapper mapper) : IRequestHandler<MakeSuperAdminCommand, ErrorOr<string>>
     {
+        public async Task<ErrorOr<string>> Handle(MakeSuperAdminCommand command, CancellationToken cancellationToken)
+        {
+            var user =  mapper.Map<UpdatePermissions>(command);
+
+            return await userRepository.MakeSuperAdminAsync(user);
+        }
     }
 }

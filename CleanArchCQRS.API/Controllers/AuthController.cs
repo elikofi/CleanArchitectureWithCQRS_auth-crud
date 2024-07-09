@@ -71,7 +71,7 @@ namespace CleanArchCQRS.API.Controllers
         public async Task<IActionResult> GetAllAppUsers(GetAllUsersQuery query)
         {
             var users = await mediator.Send(query);
-            if(users is { })
+            if(users is not null)
             {
                 return Ok(users);
             }
@@ -88,10 +88,28 @@ namespace CleanArchCQRS.API.Controllers
 
             if (newAdmin.Equals(ConstantResponses.UsernameNotFound))
             {
-                return NotFound();
+                return newAdmin.Match(
+                newAdmin => NotFound(mapper.Map<string>(newAdmin)), errors => Problem(errors));
             }
             return newAdmin.Match(
                 newAdmin => Ok(mapper.Map<string>(newAdmin)), errors => Problem(errors));
         }
+
+        //MAKE SUPER ADMIN
+        [HttpPost("MakeSuperAdmin")]
+        public async Task<IActionResult> MakeUserSuperAdmin(MakeAdminCommand command)
+        {
+            var newSuperAdmin = await mediator.Send(command);
+
+            if (newSuperAdmin.Equals(ConstantResponses.UsernameNotFound))
+            {
+
+                return newSuperAdmin.Match(
+                    newSuperAdmin => NotFound(mapper.Map<string>(newSuperAdmin)), errors => Problem(errors));
+            }
+            return newSuperAdmin.Match(
+                newSuperAdmin => Ok(mapper.Map<string>(newSuperAdmin)), errors => Problem(errors));
+        }
     }
 }
+//check on getuserbyid
