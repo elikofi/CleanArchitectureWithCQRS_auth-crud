@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Authentication\RoleManagement\Commands\MakeSuperUser\" />
     <Folder Include="Authentication\RoleManagement\Commands\SeedRoles\" />
   </ItemGroup>
 
