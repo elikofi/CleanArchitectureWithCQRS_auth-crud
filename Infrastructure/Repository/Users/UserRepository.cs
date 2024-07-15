@@ -189,9 +189,23 @@ namespace Infrastructure.Repository.Users
             }
         }
 
-        public Task<string> MakeSuperUserAsync()
+        public async Task<string> MakeSuperUserAsync(UpdatePermissions model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var user = await userManager.FindByNameAsync(model.Username);
+                if(user is null)
+                {
+                    return ConstantResponses.UsernameNotFound;
+                }
+                await userManager.AddToRoleAsync(user, UserRoles.SUPERUSER);
+                return $"{model.Username}" + ConstantResponses.NewSuperUser;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public Task<object> GetUserRoles(string email)
