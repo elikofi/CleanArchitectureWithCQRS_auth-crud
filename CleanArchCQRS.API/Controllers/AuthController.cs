@@ -1,5 +1,6 @@
 ﻿using Application.Authentication.Common;
 using Application.Authentication.RoleManagement.Commands.MakeAdmin;
+using Application.Authentication.RoleManagement.Commands.MakeSuperAdmin;
 using Application.Authentication.UserManagement.Commands.Register;
 using Application.Authentication.UserManagement.Queries.GetAllUsers;
 using Application.Authentication.UserManagement.Queries.GetUserById;
@@ -82,7 +83,7 @@ namespace CleanArchCQRS.API.Controllers
         //ROLE MANAGEMENT.
         //MAKE ADMIN COMMAND
         [HttpPost("MakeAdmin")]
-        public async Task<IActionResult> MakeUserAdmin(MakeAdminCommand command)
+        public async Task<IActionResult> MakeUserAdmin(MakeSuperUserCommand command)
         {
             var newAdmin = await mediator.Send(command);
 
@@ -97,7 +98,7 @@ namespace CleanArchCQRS.API.Controllers
 
         //MAKE SUPER ADMIN
         [HttpPost("MakeSuperAdmin")]
-        public async Task<IActionResult> MakeUserSuperAdmin(MakeAdminCommand command)
+        public async Task<IActionResult> MakeUserSuperAdmin(MakeSuperAdminCommand command)
         {
             var newSuperAdmin = await mediator.Send(command);
 
@@ -109,6 +110,22 @@ namespace CleanArchCQRS.API.Controllers
             }
             return newSuperAdmin.Match(
                 newSuperAdmin => Ok(mapper.Map<string>(newSuperAdmin)), errors => Problem(errors));
+        }
+
+        //MAKE SUPER USER
+        [HttpPost("MakeSuperUser")]
+        public async Task<IActionResult> MakeUserSuperUser(MakeSuperUserCommand command)
+        {
+            var newSuperUser = await mediator.Send(command);
+
+            if (newSuperUser.Equals(ConstantResponses.UsernameNotFound))
+            {
+
+                return newSuperUser.Match(
+                    newSuperUser => NotFound(mapper.Map<string>(newSuperUser)), errors => Problem(errors));
+            }
+            return newSuperUser.Match(
+                newSuperUser => Ok(mapper.Map<string>(newSuperUser)), errors => Problem(errors));
         }
     }
 }

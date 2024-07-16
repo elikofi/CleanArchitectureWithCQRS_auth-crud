@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Authentication.RoleManagement.Commands.MakeAdmin
 {
-    public class MakeAdminCommandValidator : AbstractValidator<MakeAdminCommand>
+    public class MakeAdminCommandValidator : AbstractValidator<MakeSuperUserCommand>
     {
         public MakeAdminCommandValidator()
         {
