@@ -3,5 +3,5 @@ using MediatR;
 
 namespace Application.Authentication.RoleManagement.Commands.MakeAdmin
 {
-    public record MakeSuperUserCommand(string Username) : IRequest<ErrorOr<string>>;
+    public record MakeAdminCommand(string Username) : IRequest<ErrorOr<string>>;
 }

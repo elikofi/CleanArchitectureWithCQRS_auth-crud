@@ -1,6 +1,6 @@
 ﻿using Application.Authentication.Common;
-using Application.Authentication.RoleManagement.Commands.MakeAdmin;
 using Application.Authentication.RoleManagement.Commands.MakeSuperAdmin;
+using Application.Authentication.RoleManagement.Commands.MakeSuperUser;
 using Application.Authentication.UserManagement.Commands.Register;
 using Application.Authentication.UserManagement.Queries.GetAllUsers;
 using Application.Authentication.UserManagement.Queries.GetUserById;
