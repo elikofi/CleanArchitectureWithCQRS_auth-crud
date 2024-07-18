@@ -70,9 +70,9 @@ namespace CleanArchCQRS.API.Controllers
 
         //GET ALL USERS
         [HttpGet("GetAllUsers")]
-        public async Task<IActionResult> GetAllAppUsers(GetAllUsersQuery query)
+        public async Task<IActionResult> GetAllAppUsers()
         {
-            var users = await mediator.Send(query);
+            var users = await mediator.Send(new GetAllUsersQuery());
             if(users is not null)
             {
                 return Ok(users);
@@ -131,9 +131,9 @@ namespace CleanArchCQRS.API.Controllers
 
         //GET USER ROLES
         [HttpGet("GetUserRoles")]
-        public async Task<IActionResult> GetAllRoles(GetAllRolesQuery request)
+        public async Task<IActionResult> GetAllRoles()
         {
-            var roles = await mediator.Send(request);
+            var roles = await mediator.Send(new GetAllRolesQuery());
             return roles is not null 
                 ? Ok(roles) : BadRequest();
         }

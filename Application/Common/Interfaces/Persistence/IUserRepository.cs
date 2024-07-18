@@ -1,6 +1,7 @@
 ﻿using Application.Authentication.Common;
 using Application.Authentication.RoleManagement.Models;
 using Domain.Entity;
+using Microsoft.AspNetCore.Identity;
 
 
 
@@ -21,7 +22,7 @@ namespace Application.Common.Interfaces.Persistence
         Task<string> MakeAdminAsync(UpdatePermissions model);
         Task<string> MakeSuperAdminAsync(UpdatePermissions model);
         Task<string> MakeSuperUserAsync(UpdatePermissions model);
-        Task<IEnumerable<Roles>> GetRolesAsync();    
+        Task<IEnumerable<IdentityRole>> GetRolesAsync();    
 
 
         

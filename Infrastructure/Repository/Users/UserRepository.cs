@@ -209,9 +209,9 @@ namespace Infrastructure.Repository.Users
         }
 
         
-        public async Task<IEnumerable<Roles>> GetRolesAsync()
+        public async Task<IEnumerable<IdentityRole>> GetRolesAsync()
         {
-            return null;
+            return await roleManager.Roles.ToListAsync();
         }
     }
 }
