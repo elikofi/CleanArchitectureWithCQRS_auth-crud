@@ -208,9 +208,10 @@ namespace Infrastructure.Repository.Users
             }
         }
 
-        public Task<object> GetUserRoles(string email)
+        
+        public async Task<IEnumerable<Roles>> GetRolesAsync()
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }

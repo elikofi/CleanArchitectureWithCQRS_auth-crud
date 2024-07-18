@@ -21,7 +21,7 @@ namespace Application.Common.Interfaces.Persistence
         Task<string> MakeAdminAsync(UpdatePermissions model);
         Task<string> MakeSuperAdminAsync(UpdatePermissions model);
         Task<string> MakeSuperUserAsync(UpdatePermissions model);
-        Task<object> GetUserRoles(string email);
+        Task<IEnumerable<Roles>> GetRolesAsync();    
 
 
         

@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Authentication.RoleManagement.Queries
+namespace Application.Authentication.RoleManagement.Models
 {
-    internal class GetAllRoles
-    {
-    }
+    public record Roles(Guid Id, string RoleName);
 }

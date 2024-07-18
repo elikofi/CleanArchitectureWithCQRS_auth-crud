@@ -1,6 +1,7 @@
 ﻿using Application.Authentication.Common;
 using Application.Authentication.RoleManagement.Commands.MakeSuperAdmin;
 using Application.Authentication.RoleManagement.Commands.MakeSuperUser;
+using Application.Authentication.RoleManagement.Queries;
 using Application.Authentication.UserManagement.Commands.Register;
 using Application.Authentication.UserManagement.Queries.GetAllUsers;
 using Application.Authentication.UserManagement.Queries.GetUserById;
@@ -126,6 +127,15 @@ namespace CleanArchCQRS.API.Controllers
             }
             return newSuperUser.Match(
                 newSuperUser => Ok(mapper.Map<string>(newSuperUser)), errors => Problem(errors));
+        }
+
+        //GET USER ROLES
+        [HttpGet("GetUserRoles")]
+        public async Task<IActionResult> GetAllRoles(GetAllRolesQuery request)
+        {
+            var roles = await mediator.Send(request);
+            return roles is not null 
+                ? Ok(roles) : BadRequest();
         }
     }
 }
