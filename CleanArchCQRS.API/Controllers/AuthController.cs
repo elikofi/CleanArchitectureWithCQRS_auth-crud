@@ -13,6 +13,7 @@ using ErrorOr;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace CleanArchCQRS.API.Controllers
 {
@@ -61,10 +62,9 @@ namespace CleanArchCQRS.API.Controllers
         {
             var query = new GetUserByIdQuery(Id);
             var user = await mediator.Send(query);
-            if(user.Value.Id is not null)
+            if (user is not null)
             {
-                return user.Match(
-                    user => Ok(mapper.Map<UserDTO>(user)), errors => Problem(errors));
+                return Ok(user);
             }
             return NotFound();
         }

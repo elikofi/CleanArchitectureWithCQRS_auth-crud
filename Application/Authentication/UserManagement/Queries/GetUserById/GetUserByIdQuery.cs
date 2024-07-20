@@ -4,5 +4,5 @@ using MediatR;
 
 namespace Application.Authentication.UserManagement.Queries.GetUserById
 {
-    public record GetUserByIdQuery(string Id) : IRequest<ErrorOr<UserDTO>>;
+    public record GetUserByIdQuery(string Id) : IRequest<UserDTO>;
 }

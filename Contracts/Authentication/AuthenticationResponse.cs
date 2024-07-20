@@ -4,6 +4,8 @@ using Domain.Entity;
 namespace Contracts.Authentication
 {
     public record AuthenticationResponse(
-        UserDTO UserDTO,
+        string Id, 
+        string UserName,
+        string Email,
         string Token);
 }   
