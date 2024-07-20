@@ -18,7 +18,7 @@ namespace CleanArchCQRS.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController(ISender mediator, IMapper mapper, IUserRepository userRepository) : ApiController
+    public class AuthController(ISender mediator, IMapper mapper) : ApiController
     {
         //REGISTER
         [HttpPost("RegisterUser")]
@@ -48,19 +48,20 @@ namespace CleanArchCQRS.API.Controllers
         }
 
         //SEEDING ROLES.
-        [HttpPost("SeedRoles")]
-        public async Task<IActionResult> SeedRoles()
-        {
-            var seedRoles = await userRepository.SeedRoles();
-            return Ok(seedRoles);
-        }
+        //[HttpPost("SeedRoles")]
+        //public async Task<IActionResult> SeedRoles()
+        //{
+        //    var seedRoles = await userRepository.SeedRoles();
+        //    return Ok(seedRoles);
+        //}
 
         //GET A USER
         [HttpGet("GetUserById")]
-        public async Task<IActionResult> GetUserByUserId(GetUserByIdQuery Id)
+        public async Task<IActionResult> GetUserByUserId(string Id)
         {
-            var user = await mediator.Send(Id);
-            if(user is { })
+            var query = new GetUserByIdQuery(Id);
+            var user = await mediator.Send(query);
+            if(user.Value.Id is not null)
             {
                 return user.Match(
                     user => Ok(mapper.Map<UserDTO>(user)), errors => Problem(errors));

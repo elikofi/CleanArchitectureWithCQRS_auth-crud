@@ -7,16 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Authentication\RoleManagement\Commands\SeedRoles\**" />
     <Compile Remove="Authentication\RoleManagement\Queries\GetRoles\**" />
     <Compile Remove="Common\Exceptions\**" />
+    <EmbeddedResource Remove="Authentication\RoleManagement\Commands\SeedRoles\**" />
     <EmbeddedResource Remove="Authentication\RoleManagement\Queries\GetRoles\**" />
     <EmbeddedResource Remove="Common\Exceptions\**" />
+    <None Remove="Authentication\RoleManagement\Commands\SeedRoles\**" />
     <None Remove="Authentication\RoleManagement\Queries\GetRoles\**" />
     <None Remove="Common\Exceptions\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Authentication\RoleManagement\Commands\SeedRoles\" />
   </ItemGroup>
 
   <ItemGroup>
