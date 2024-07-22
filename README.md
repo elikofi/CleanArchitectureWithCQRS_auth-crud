@@ -115,6 +115,8 @@ The Contracts is also a class library where we have various records or classes f
 
 ## DOMAIN LAYER 
 
+The Domain layer is the class library where all the domain models are created. The core business entities are created in this layer. In this project, the core business model I used was the Blogs. Where I created the Blog entity with its parameters.
+
 ##
 
 
