@@ -112,6 +112,8 @@ Verrify from the project files above to see how I structured my Application Laye
 ## CONTRACT LAYER
 
 The Contracts is also a class library where we have various records or classes for our requests to be used as controller method parameters.
+So in this project, I created the Authentication contracts: AuthenticationResponse, which returns some of the User's details along side the token after a user logs in.
+I also had the LoginRequest which is a record which holds the user login details during login and then the RegisterUserRequest which also holds the user registration parameters during registration.
 
 ## DOMAIN LAYER 
 
