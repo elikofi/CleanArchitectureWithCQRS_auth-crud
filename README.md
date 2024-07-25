@@ -121,7 +121,7 @@ The Domain layer is the class library where all the domain models are created. T
 The folders created in the domain layer of this project are: Common, Entity and Repository. 
 The Common folder in this layer is used to house or encapsulate the Errors which may be associated with the domain entities( Blogs and Users ).
 The Entity folder in this layer contains the business entities which are the Blogs entity and then the User entity. Both of which are classes.
-The Repository folder in this layer contains the inteface for our business entity(Blog). NB: I could have added the interface for the other business entity(User) in this folder as well but I used a different approach for that. this interface for the Blog entity contains all the public abstractions for the entity.
+The Repository folder in this layer contains the inteface for our business entity(Blog). NB: I could have added the interface for the other business entity(User) in this folder as well but I used a different approach for that. this interface for the Blog entity contains all the public abstractions for the features of the entity.
 
 ##
 
