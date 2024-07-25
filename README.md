@@ -120,7 +120,8 @@ I also had the LoginRequest which is a record which holds the user login details
 The Domain layer is the class library where all the domain models are created. The core business entities are created in this layer. In this project, the core business model I used was the Blogs. Where I created the Blog entity with its parameters.
 The folders created in the domain layer of this project are: Common, Entity and Repository. 
 The Common folder in this layer is used to house or encapsulate the Errors which may be associated with the domain entities( Blogs and Users ).
-The 
+The Entity folder in this layer contains the business entities which are the Blogs entity and then the User entity. Both of which are classes.
+The Repository folder in this layer contains the inteface for our business entity(Blog). NB: I could have added the interface for the other business entity(User) in this folder as well but I used a different approach for that. this interface for the Blog entity contains all the public abstractions for the entity.
 
 ##
 
