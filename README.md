@@ -109,7 +109,7 @@ The Application Layer is the class library where we have these various definitio
 Verrify from the project files above to see how I structured my Application Layer in this project.
 
 
-## CONTRACT LAYER
+## CONTRACTS LAYER
 
 The Contracts is also a class library where we have various records or classes for our requests to be used as controller method parameters.
 So in this project, I created the Authentication contracts: AuthenticationResponse, which returns some of the User's details along side the token after a user logs in.
@@ -118,6 +118,9 @@ I also had the LoginRequest which is a record which holds the user login details
 ## DOMAIN LAYER 
 
 The Domain layer is the class library where all the domain models are created. The core business entities are created in this layer. In this project, the core business model I used was the Blogs. Where I created the Blog entity with its parameters.
+The folders created in the domain layer of this project are: Common, Entity and Repository. 
+The Common folder in this layer is used to house or encapsulate the Errors which may be associated with the domain entities( Blogs and Users ).
+The 
 
 ##
 
