@@ -127,7 +127,18 @@ The Repository folder in this layer contains the inteface for our business entit
 
 The Infrastructure layer is the layer where communication to the database happens. In this layer in this project, I created the following folders;
 Autentication, Data, Migrations, Repository and Services folders. 
-### Authentication Folder.
+
+### Authentication Folder
+This folder houses all the implementations of JWT and its settings.
+### Data Folder
+The Data folder houses the DatabaseContext class for the application.
+### Migrations Folder
+The Migrations folder is made up of all EF Core migrations ever made to the application. It also has the model snapshot of the main entity created in the Database.
+### Repository Folder
+This folder encapsulates all the implementations of interfaces for the User entity and the Blog entity. All the logic for these entities happen in this folder.
+### Services Folder
+This folder has implementation of a service I used in this project which is the DateTime Provider service.
+
 
 
 
