@@ -7,10 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services
     .AddApplication()
-    .AddInfrastructure(builder.Configuration);
-
-//builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
-
+    .AddInfrastructure(builder.Configuration)
+    .AddHealthChecks();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -38,5 +36,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHealthChecks("/api/health");
 
 app.Run();

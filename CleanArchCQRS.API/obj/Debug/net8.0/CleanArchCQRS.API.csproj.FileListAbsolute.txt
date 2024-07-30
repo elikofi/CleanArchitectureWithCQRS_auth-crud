@@ -687,3 +687,6 @@ C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\Clea
 C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\obj\Debug\net8.0\CleanArchCQRS.API.pdb
 C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\obj\Debug\net8.0\CleanArchCQRS.API.genruntimeconfig.cache
 C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\obj\Debug\net8.0\ref\CleanArchCQRS.API.dll
+C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2B3781B-C176-4F9D-900A-7A9C1991904F}|TestProject1\\TestProject1.csproj|c:\\users\\elijahamoako\\desktop\\my projects\\cleanarchitecturewithcqrs\u0026mapster\\cleanarchitecturewithcqrs_auth-crud\\testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2B3781B-C176-4F9D-900A-7A9C1991904F}|TestProject1\\TestProject1.csproj|solutionrelative:testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|c:\\users\\elijahamoako\\desktop\\my projects\\cleanarchitecturewithcqrs\u0026mapster\\cleanarchitecturewithcqrs_auth-crud\\cleanarchcqrs.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|solutionrelative:cleanarchcqrs.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\TestProject1\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "TestProject1\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\TestProject1\\UnitTest1.cs",
-              "RelativeToolTip": "TestProject1\\UnitTest1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAaAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Program.cs",
+              "RelativeDocumentMoniker": "CleanArchCQRS.API\\Program.cs",
+              "ToolTip": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Program.cs",
+              "RelativeToolTip": "CleanArchCQRS.API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T17:22:02.076Z",
+              "WhenOpened": "2024-07-30T09:36:02.957Z",
               "EditorCaption": ""
             }
           ]
