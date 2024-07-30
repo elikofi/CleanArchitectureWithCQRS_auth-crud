@@ -125,6 +125,9 @@ The Repository folder in this layer contains the inteface for our business entit
 
 ## INFRASTRUCTURE LAYER
 
+The Infrastructure layer is the layer where communication to the database happens. In this layer in this project, I created the following folders;
+Autentication, Data, Migrations, Repository and Services folders. 
+### Authentication Folder.
 
 
 
