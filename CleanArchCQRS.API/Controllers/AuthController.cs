@@ -13,14 +13,20 @@ using ErrorOr;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 
 namespace CleanArchCQRS.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController(ISender mediator, IMapper mapper) : ApiController
+    public class AuthController(ISender mediator, IMapper mapper, IMemoryCache cache, ILogger<UserDto> logger) : ApiController
     {
+        private const string UsersCacheKey = "UsersList";
+
+
+
+
         //REGISTER
         [HttpPost("RegisterUser")]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterUserRequest request)
@@ -73,7 +79,24 @@ namespace CleanArchCQRS.API.Controllers
         [HttpGet("GetAllUsers")]
         public async Task<IActionResult> GetAllAppUsers()
         {
-            var users = await mediator.Send(new GetAllUsersQuery());
+            if (cache.TryGetValue(UsersCacheKey, out IEnumerable<UserDto>? users))
+            {
+                logger.LogInformation("users found in cache.");
+            }
+            else
+            {
+                logger.LogInformation("Users not found in cache.");
+                users = await mediator.Send(new GetAllUsersQuery());
+
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromSeconds(60))
+                    .SetAbsoluteExpiration(TimeSpan.FromHours(1))
+                    .SetPriority(CacheItemPriority.Normal);
+
+                cache.Set(UsersCacheKey, users, cacheEntryOptions);
+            }
+
+            
             if(users is not null)
             {
                 return Ok(users);

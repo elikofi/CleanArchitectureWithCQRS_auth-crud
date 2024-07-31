@@ -199,7 +199,8 @@ namespace Infrastructure.Repository.Users
                     return ConstantResponses.UsernameNotFound;
                 }
                 await userManager.AddToRoleAsync(user, UserRoles.SUPERUSER);
-                return $"{model.Username}" + ConstantResponses.NewSuperUser;
+                return model.Username + ConstantResponses.NewSuperUser;
+
             }
             catch (Exception)
             {
