@@ -24,7 +24,7 @@ namespace CleanArchCQRS.API.Controllers
     {
         private const string UsersCacheKey = "UsersList";
 
-
+        private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);
 
 
         //REGISTER
@@ -34,6 +34,8 @@ namespace CleanArchCQRS.API.Controllers
             var user = mapper.Map<RegisterUserCommand>(request);
 
             ErrorOr<string> authResult = await mediator.Send(user);
+
+            cache.Remove(UsersCacheKey);
 
             return authResult.Match(
                 authResult => Ok(mapper.Map<string>(authResult)),
@@ -79,31 +81,52 @@ namespace CleanArchCQRS.API.Controllers
         [HttpGet("GetAllUsers")]
         public async Task<IActionResult> GetAllAppUsers()
         {
+            // Check if users are in cache
             if (cache.TryGetValue(UsersCacheKey, out IEnumerable<UserDto>? users))
             {
-                logger.LogInformation("users found in cache.");
+                logger.LogInformation("Users found in cache.");
             }
             else
             {
-                logger.LogInformation("Users not found in cache.");
-                users = await mediator.Send(new GetAllUsersQuery());
+                //semaphore to ensure thread safety
+                await semaphore.WaitAsync();
+                try
+                {
+                    // Check cache again after acquiring semaphore
+                    if (!cache.TryGetValue(UsersCacheKey, out users))
+                    {
+                        logger.LogInformation("Users not found in cache.");
 
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromSeconds(60))
-                    .SetAbsoluteExpiration(TimeSpan.FromHours(1))
-                    .SetPriority(CacheItemPriority.Normal);
+                        users = await mediator.Send(new GetAllUsersQuery());
 
-                cache.Set(UsersCacheKey, users, cacheEntryOptions);
+                        var cacheEntryOptions = new MemoryCacheEntryOptions()
+                            .SetSlidingExpiration(TimeSpan.FromSeconds(60))
+                            .SetAbsoluteExpiration(TimeSpan.FromHours(1))
+                            .SetPriority(CacheItemPriority.Normal)
+                            .SetSize(1);
+
+                        cache.Set(UsersCacheKey, users, cacheEntryOptions);
+                    }
+                    else
+                    {
+                        logger.LogInformation("Users found in cache.");
+                    }
+                }
+                finally
+                {
+                    // Release semaphore in all cases
+                    semaphore.Release();
+                }
             }
 
-            
-            if(users is not null)
+            if (users != null && users.Any())
             {
                 return Ok(users);
             }
 
             return NotFound();
         }
+
 
         //ROLE MANAGEMENT.
         //MAKE ADMIN COMMAND

@@ -25,7 +25,10 @@ builder.Host.UseSerilog((context, configuration) =>
     configuration.ReadFrom.Configuration(context.Configuration));
 
 //caching
-builder.Services.AddMemoryCache();
+builder.Services.AddMemoryCache(opt =>
+{
+    opt.SizeLimit = 1024;
+});
 
 var app = builder.Build();
 
