@@ -139,6 +139,10 @@ This folder encapsulates all the implementations of interfaces for the User enti
 ### Services Folder
 This folder has implementation of a service I used in this project which is the DateTime Provider service.
 
+## API LAYER
+
+The API Layer is where we have all our controllers or endpoints at. This layer encapsulates the Mappings for our project, controllers, appsettings and other configurations in it and finally our HealthChecks for checking the health of the whole project.
+The Program.cs class is also found in this layer. We do all our registrations in the Program.cs class of the API layer. Dependency Injection services, Identity services, middleware, routing, caching, logging and health check services are all registered in this layer in the Program.cs class.
 
 
 
