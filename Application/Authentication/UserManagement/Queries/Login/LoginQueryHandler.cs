@@ -11,10 +11,7 @@ namespace Application.Authentication.UserManagement.Queries.Login
     {
         public async Task<Result<AuthenticationResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
         {
-            //if (userRepository.GetUserByUsername(query.UserName) is null)
-            //{
-            //    return Result<AuthenticationResult>.ErrorResult(Errors.WrongUsername);
-            //}
+            
             var signIn = await userRepository.LoginAsync(query.UserName, query.Password);
 
             var token = tokenGenerator.GenerateToken(signIn);

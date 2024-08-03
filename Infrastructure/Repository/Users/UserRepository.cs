@@ -2,6 +2,7 @@
 using Application.Authentication.RoleManagement.Models;
 using Application.Common.Constants;
 using Application.Common.Interfaces.Persistence;
+using Domain.Common.Errors;
 using Domain.Entity;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
@@ -60,29 +61,33 @@ namespace Infrastructure.Repository.Users
         {
             try
             {
-
-
-                User newUser = new()
+                var userExists = await userManager.FindByEmailAsync(user.Email!);
+                if (userExists == null)
                 {
-                    FirstName = user.FirstName,
-                    LastName = user.LastName,
-                    Email = user.Email,
-                    UserName = user.UserName,
-                    EmailConfirmed = true,
-                    TwoFactorEnabled = false,
-                    SecurityStamp = Guid.NewGuid().ToString()
 
-                };
+                    User newUser = new()
+                    {
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Email = user.Email,
+                        UserName = user.UserName,
+                        EmailConfirmed = true,
+                        TwoFactorEnabled = false,
+                        SecurityStamp = Guid.NewGuid().ToString()
 
-                var registeredUser = await userManager.CreateAsync(newUser, user.PasswordHash!);
+                    };
 
-                if (registeredUser.Succeeded)
-                {
-                    await userManager.AddToRoleAsync(newUser, role);
-                    return ConstantResponses.RegisteredSuccessfully;
+                    var registeredUser = await userManager.CreateAsync(newUser, user.PasswordHash!);
+
+                    if (registeredUser.Succeeded)
+                    {
+                        await userManager.AddToRoleAsync(newUser, role);
+                        return ConstantResponses.RegisteredSuccessfully;
+                    }
+                    throw new Exception($"{ConstantResponses.FailedRegistration} {registeredUser.Errors.FirstOrDefault()?.Description}");
                 }
+                throw new InvalidOperationException(Errors.DuplicateEmail);
 
-                throw new Exception($"{ConstantResponses.FailedRegistration} {registeredUser.Errors.FirstOrDefault()?.Description}");
             }
             catch (Exception)
             {
@@ -93,17 +98,13 @@ namespace Infrastructure.Repository.Users
 
         public async Task<UserDTO> LoginAsync(string UserName, string Password)
         {
-            var user = await userManager.FindByNameAsync(UserName);
-            if (user == null)
-            {
-                throw new InvalidOperationException("Wrong username");
-            }
-            
+            var user = await userManager.FindByNameAsync(UserName) ?? throw new InvalidOperationException(Errors.WrongUsername);
+
             var checkPassword = await userManager.CheckPasswordAsync(user, Password);
 
             if (!checkPassword)
             {
-                throw new InvalidOperationException("Incorrect password.");
+                throw new InvalidOperationException(Errors.IncorrectPassword);
             }
 
 
@@ -136,7 +137,7 @@ namespace Infrastructure.Repository.Users
                     );
                 }
             }
-            throw new InvalidOperationException("User not found");
+            throw new InvalidOperationException(Errors.SignInFailure);
         }
 
         public async Task<UserDTO> GetUserByIdAsync(string Id)

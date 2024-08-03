@@ -14,11 +14,6 @@ namespace Application.Authentication.UserManagement.Commands.Register
     {
         public async Task<Result<string>> Handle(RegisterUserCommand command , CancellationToken cancellationToken)
         {
-            if (userRepository.GetUserByEmail(command.Email) is { })
-            {
-                return Result<string>.ErrorResult(Errors.DuplicateEmail);
-            }
-
             var user = mapper.Map<User>(command);
 
             var newUser = await userRepository.RegisterAsync(user, UserRoles.USER);
