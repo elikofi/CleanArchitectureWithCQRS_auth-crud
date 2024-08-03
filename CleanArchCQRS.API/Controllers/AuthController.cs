@@ -34,14 +34,15 @@ namespace CleanArchCQRS.API.Controllers
         {
             var user = mapper.Map<RegisterUserCommand>(request);
 
-            ErrorOr<string> authResult = await mediator.Send(user);
+            var authResult = await mediator.Send(user);
 
             cache.Remove(UsersCacheKey);
 
-            return authResult.Match(
-                authResult => Ok(mapper.Map<string>(authResult)),
-                errors => Problem(errors));
-
+            if (authResult.Success is false)
+            {
+                return BadRequest(authResult);
+            }
+            return Ok(authResult);
         }
 
         //LOGIN
