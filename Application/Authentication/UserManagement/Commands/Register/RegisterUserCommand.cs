@@ -1,8 +1,5 @@
-﻿
-using Application.Common.Results;
+﻿using Application.Common.Results;
 using MediatR;
-
-
 
 
 namespace Application.Authentication.UserManagement.Commands.Register

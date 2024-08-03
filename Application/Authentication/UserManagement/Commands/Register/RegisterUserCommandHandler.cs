@@ -16,14 +16,12 @@ namespace Application.Authentication.UserManagement.Commands.Register
         {
             if (userRepository.GetUserByEmail(command.Email) is { })
             {
-                return Result<string>.ErrorResult("Email already exists.");
+                return Result<string>.ErrorResult(Errors.DuplicateEmail);
             }
+
             var user = mapper.Map<User>(command);
 
             var newUser = await userRepository.RegisterAsync(user, UserRoles.USER);
-
-            //var token = jwtTokenGenerator.GenerateToken(newUser);
-
 
             return Result<string>.SuccessResult(newUser);
         }

@@ -38,6 +38,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+else
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
 //HealthCheck Middleware
 app.MapHealthChecks("/api/health", new HealthCheckOptions()
 {
@@ -48,6 +53,10 @@ app.MapHealthChecks("/api/health", new HealthCheckOptions()
 app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
+
+//exception handling
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
 
 app.UseAuthentication();
 

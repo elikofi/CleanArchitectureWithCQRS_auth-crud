@@ -53,9 +53,11 @@ namespace CleanArchCQRS.API.Controllers
 
             var signInResult = await mediator.Send(query);
 
-            return signInResult.Match(
-                signInResult => Ok(mapper.Map<AuthenticationResult>(signInResult)),
-                errors => Problem(errors));
+            if (signInResult.Success is false)
+            {
+                return BadRequest(signInResult.ErrorMessage);
+            }
+            return Ok(signInResult);
         }
 
         //SEEDING ROLES.

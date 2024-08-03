@@ -12,10 +12,10 @@ namespace Application.Blogs.Commands.CreateBlog
         public async Task<ErrorOr<Blog>> Handle(CreateBlogCommand command, CancellationToken cancellationToken)
         {
             //await Task.CompletedTask;
-            if (blogRepository.GetByName(command.Name) is not null)
-            {
-                return Errors.BlogError.DuplicateBlogName;
-            }
+            //if (blogRepository.GetByName(command.Name) is not null)
+            //{
+            //    return Errors.BlogError.DuplicateBlogName;
+            //}
 
             var blog = mapper.Map<Blog>(command);
 
