@@ -15,13 +15,14 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace CleanArchCQRS.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class BlogController(IMediator mediator, IMapper mapper) : ApiController
     {
 
         [HttpGet("GetBlogById")]
+        [Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> GetBlogById(GetBlogByIdRequest request)
         {
             var command = mapper.Map<GetBlogByIdQuery>(request);

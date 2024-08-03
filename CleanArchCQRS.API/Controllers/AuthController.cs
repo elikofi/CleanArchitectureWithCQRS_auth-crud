@@ -12,6 +12,7 @@ using Contracts.Authentication;
 using ErrorOr;
 using MapsterMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
@@ -79,6 +80,7 @@ namespace CleanArchCQRS.API.Controllers
 
         //GET ALL USERS
         [HttpGet("GetAllUsers")]
+        [Authorize(Roles = "SUPERUSER")]
         public async Task<IActionResult> GetAllAppUsers()
         {
             // Check if users are in cache

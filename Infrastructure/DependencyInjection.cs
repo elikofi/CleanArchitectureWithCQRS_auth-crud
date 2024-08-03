@@ -54,7 +54,11 @@ namespace Infrastructure
 
             services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 
-            services.AddAuthentication(defaultScheme: JwtBearerDefaults.AuthenticationScheme)
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
                     .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,

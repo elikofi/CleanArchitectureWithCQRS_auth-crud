@@ -48,7 +48,8 @@ app.MapHealthChecks("/api/health", new HealthCheckOptions()
 app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
- 
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

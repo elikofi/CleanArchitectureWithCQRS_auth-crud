@@ -21,6 +21,11 @@ namespace Infrastructure.Repository.Users
         {
             return context.Users.SingleOrDefault(u => u.Email == email);
         }
+
+        public User? GetUserByUsername(string username)
+        {
+            return context.Users.SingleOrDefault(u => u.UserName == username);
+        }
         public async Task<string> SeedRoles()
         {
             try
@@ -118,7 +123,7 @@ namespace Infrastructure.Repository.Users
                     );
                 }
             }
-            throw new Exception();
+            throw new InvalidOperationException("User not found");
         }
 
         public async Task<UserDTO> GetUserByIdAsync(string Id)

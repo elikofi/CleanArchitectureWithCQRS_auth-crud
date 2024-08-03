@@ -1,5 +1,5 @@
-﻿using Application.Authentication.Common;
-using ErrorOr;
+﻿
+using Application.Common.Results;
 using MediatR;
 
 
@@ -13,6 +13,6 @@ namespace Application.Authentication.UserManagement.Commands.Register
 		string Email,
 		string UserName,
 		string PasswordHash
-		) : IRequest<ErrorOr<string>>;
+		) : IRequest<Result<string>>;
 }
 

@@ -15,6 +15,7 @@ namespace Application.Common.Interfaces.Persistence
         User? GetUserByEmail(string email);
         Task<UserDTO> GetUserByIdAsync(string Id);
         Task<IEnumerable<UserDto>> GetAllUsersAsync();
+        User? GetUserByUsername(string UserName);
 
 
         //role management

@@ -1,8 +1,8 @@
 ﻿using Application.Authentication.Common;
 using Application.Common.Interfaces.Persistence;
+using Application.Common.Results;
 using Domain.Common.Errors;
 using Domain.Entity;
-using ErrorOr;
 using MapsterMapper;
 using MediatR;
 
@@ -10,13 +10,13 @@ namespace Application.Authentication.UserManagement.Commands.Register
 {
     public class RegisterUserCommandHandler(
                                             IUserRepository userRepository, 
-                                            IMapper mapper) : IRequestHandler<RegisterUserCommand, ErrorOr<string>>
+                                            IMapper mapper) : IRequestHandler<RegisterUserCommand, Result<string>>
     {
-        public async Task<ErrorOr<string>> Handle(RegisterUserCommand command , CancellationToken cancellationToken)
+        public async Task<Result<string>> Handle(RegisterUserCommand command , CancellationToken cancellationToken)
         {
             if (userRepository.GetUserByEmail(command.Email) is { })
             {
-                return Errors.UserError.DuplicateEmail;
+                return Result<string>.ErrorResult("Email already exists.");
             }
             var user = mapper.Map<User>(command);
 
@@ -25,7 +25,7 @@ namespace Application.Authentication.UserManagement.Commands.Register
             //var token = jwtTokenGenerator.GenerateToken(newUser);
 
 
-            return newUser.ToString();
+            return Result<string>.SuccessResult(newUser);
         }
     }
 
