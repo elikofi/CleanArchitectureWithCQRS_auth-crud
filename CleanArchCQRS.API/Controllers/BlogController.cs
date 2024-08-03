@@ -9,11 +9,15 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Contracts.Blogs;
 using Application.Blogs.Commands.DeleteBlog;
+using Microsoft.AspNetCore.Authorization;
+using Application.Authentication.Common;
+using Microsoft.IdentityModel.Tokens;
 
 namespace CleanArchCQRS.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BlogController(IMediator mediator, IMapper mapper) : ApiController
     {
 
@@ -27,9 +31,15 @@ namespace CleanArchCQRS.API.Controllers
         }
 
         [HttpGet("GetAllBlogs")]
+        [Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> GetAllBlogs()
         {
-            return Ok(await mediator.Send(new GetBlogsQuery()));
+            var blogList = await mediator.Send(new GetBlogsQuery());
+            if (blogList.IsNullOrEmpty())
+            {
+                return NotFound();
+            }
+            return Ok(blogList);
         }
 
         [HttpPost("CreateNewBlog")]

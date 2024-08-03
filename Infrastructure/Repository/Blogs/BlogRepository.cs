@@ -45,7 +45,13 @@ namespace Infrastructure.Repository.Blogs
 
         public async Task<List<Blog>> GetAllBlogsAsync()
         {
-            return await context.Blogs.ToListAsync();
+            var blogList = await context.Blogs.ToListAsync();
+            if(blogList != null)
+            {
+                return blogList;
+            }
+            return blogList ?? new();
+
         }
 
         public async Task<Blog> GetByIdAsync(Guid id)

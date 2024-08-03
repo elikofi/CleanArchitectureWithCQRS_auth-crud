@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|c:\\users\\elijahamoako\\desktop\\my projects\\cleanarchitecturewithcqrs\u0026mapster\\cleanarchitecturewithcqrs_auth-crud\\cleanarchcqrs.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|solutionrelative:cleanarchcqrs.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|c:\\users\\elijahamoako\\desktop\\my projects\\cleanarchitecturewithcqrs\u0026mapster\\cleanarchitecturewithcqrs_auth-crud\\cleanarchcqrs.api\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|solutionrelative:cleanarchcqrs.api\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|c:\\users\\elijahamoako\\desktop\\my projects\\cleanarchitecturewithcqrs\u0026mapster\\cleanarchitecturewithcqrs_auth-crud\\cleanarchcqrs.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59A8F6D5-C738-43EF-AE12-94D2A69DCE71}|CleanArchCQRS.API\\CleanArchCQRS.API.csproj|solutionrelative:cleanarchcqrs.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D111AA4E-47E8-437E-8113-D898ED66FF42}|Infrastructure\\Infrastructure.csproj|c:\\users\\elijahamoako\\desktop\\my projects\\cleanarchitecturewithcqrs\u0026mapster\\cleanarchitecturewithcqrs_auth-crud\\infrastructure\\repository\\blogs\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D111AA4E-47E8-437E-8113-D898ED66FF42}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\blogs\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Program.cs",
-              "RelativeDocumentMoniker": "CleanArchCQRS.API\\Program.cs",
-              "ToolTip": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Program.cs",
-              "RelativeToolTip": "CleanArchCQRS.API\\Program.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAwwBcAAAAyAAAA",
+              "Title": "BlogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\Repository\\Blogs\\BlogRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Blogs\\BlogRepository.cs",
+              "ToolTip": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\Repository\\Blogs\\BlogRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Blogs\\BlogRepository.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwDMAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T14:41:42.687Z",
+              "WhenOpened": "2024-08-03T06:28:43.462Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "CleanArchCQRS.API\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "CleanArchCQRS.API\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAEoAAAAAIwAAAAAWwHgAAAAAAAAA",
+              "Title": "BlogController.cs",
+              "DocumentMoniker": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\BlogController.cs",
+              "RelativeDocumentMoniker": "CleanArchCQRS.API\\Controllers\\BlogController.cs",
+              "ToolTip": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS\u0026Mapster\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\Controllers\\BlogController.cs",
+              "RelativeToolTip": "CleanArchCQRS.API\\Controllers\\BlogController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAowCEAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T14:25:32.927Z",
+              "WhenOpened": "2024-08-03T06:22:56.338Z",
               "EditorCaption": ""
             }
           ]
