@@ -49,7 +49,7 @@ public class ExceptionHandlingMiddleware
         context.Response.ContentType = "application/json";
         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-        var result = JsonConvert.SerializeObject(new { error = "An error occurred while processing your request." });
+        var result = JsonConvert.SerializeObject(new { error = exception.Message });
         return context.Response.WriteAsync(result);
     }
 }

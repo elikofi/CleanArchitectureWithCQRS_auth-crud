@@ -94,6 +94,19 @@ namespace Infrastructure.Repository.Users
         public async Task<UserDTO> LoginAsync(string UserName, string Password)
         {
             var user = await userManager.FindByNameAsync(UserName);
+            if (user == null)
+            {
+                throw new InvalidOperationException("Wrong username");
+            }
+            
+            var checkPassword = await userManager.CheckPasswordAsync(user, Password);
+
+            if (!checkPassword)
+            {
+                throw new InvalidOperationException("Incorrect password.");
+            }
+
+
             var signIn = await signInManager.PasswordSignInAsync(user!, Password, false, true);
 
             if (signIn.Succeeded)
