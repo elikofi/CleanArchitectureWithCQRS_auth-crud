@@ -12,10 +12,8 @@ namespace Application.Common.Interfaces.Persistence
         //User Management
         Task<string> RegisterAsync(User user, string role);
         Task<UserDTO> LoginAsync(string UserName, string Password); 
-        User? GetUserByEmail(string email);
         Task<UserDTO> GetUserByIdAsync(string Id);
         Task<IEnumerable<UserDto>> GetAllUsersAsync();
-        User? GetUserByUsername(string UserName);
 
 
         //role management

@@ -18,15 +18,6 @@ namespace Infrastructure.Repository.Users
         DatabaseContext context,
         SignInManager<User> signInManager) : IUserRepository
     {
-        public User? GetUserByEmail(string email)
-        {
-            return context.Users.SingleOrDefault(u => u.Email == email);
-        }
-
-        public User? GetUserByUsername(string username)
-        {
-            return context.Users.SingleOrDefault(u => u.UserName == username);
-        }
         public async Task<string> SeedRoles()
         {
             try
@@ -98,46 +89,55 @@ namespace Infrastructure.Repository.Users
 
         public async Task<UserDTO> LoginAsync(string UserName, string Password)
         {
-            var user = await userManager.FindByNameAsync(UserName) ?? throw new InvalidOperationException(Errors.WrongUsername);
-
-            var checkPassword = await userManager.CheckPasswordAsync(user, Password);
-
-            if (!checkPassword)
+            try
             {
-                throw new InvalidOperationException(Errors.IncorrectPassword);
-            }
+                var user = await userManager.FindByNameAsync(UserName) ?? throw new InvalidOperationException(Errors.WrongUsername);
 
+                var checkPassword = await userManager.CheckPasswordAsync(user, Password);
 
-            var signIn = await signInManager.PasswordSignInAsync(user!, Password, false, true);
-
-            if (signIn.Succeeded)
-            {
-                if (user != null && await userManager.CheckPasswordAsync(user, Password))
+                if (!checkPassword)
                 {
-                    var userRoles = await userManager.GetRolesAsync(user);
+                    throw new InvalidOperationException(Errors.IncorrectPassword);
+                }
 
-                    var authClaims = new List<Claim>
+
+                var signIn = await signInManager.PasswordSignInAsync(user!, Password, false, true);
+
+                if (signIn.Succeeded)
+                {
+                    if (user != null && await userManager.CheckPasswordAsync(user, Password))
+                    {
+                        var userRoles = await userManager.GetRolesAsync(user);
+
+                        var authClaims = new List<Claim>
                     {
                         new(ClaimTypes.Name, user.UserName!),
                         new(ClaimTypes.NameIdentifier, user.Id),
                     };
 
-                    foreach (var userRole in userRoles)
-                    {
-                        authClaims.Add(new Claim(ClaimTypes.Role, userRole));
-                    }
+                        foreach (var userRole in userRoles)
+                        {
+                            authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+                        }
 
-                    return new UserDTO
-                    (
-                        Id: user.Id,
-                        FirstName: user.FirstName,
-                        LastName: user.LastName,
-                        UserName: user.UserName!,
-                        Email: user.Email!
-                    );
+                        return new UserDTO
+                        (
+                            Id: user.Id,
+                            FirstName: user.FirstName,
+                            LastName: user.LastName,
+                            UserName: user.UserName!,
+                            Email: user.Email!
+                        );
+                    }
                 }
+                throw new InvalidOperationException(Errors.SignInFailure);
             }
-            throw new InvalidOperationException(Errors.SignInFailure);
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+           
         }
 
         public async Task<UserDTO> GetUserByIdAsync(string Id)

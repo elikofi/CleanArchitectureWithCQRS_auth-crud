@@ -1,17 +1,19 @@
 ﻿using Application.Authentication.Common;
 using Application.Common.Interfaces.Persistence;
-using ErrorOr;
+using Application.Common.Results;
 using MediatR;
 
 namespace Application.Authentication.UserManagement.Queries.GetUserById
 {
     public class GetUserByIdQueryHandler(
         IUserRepository userRepository
-        ) : IRequestHandler<GetUserByIdQuery, UserDTO>
+        ) : IRequestHandler<GetUserByIdQuery, Result<UserDTO>>
     {
-        public async Task<UserDTO> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
+        public async Task<Result<UserDTO>> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
         {
-            return await userRepository.GetUserByIdAsync( request.Id );
+            var user = await userRepository.GetUserByIdAsync( request.Id );
+
+            return Result<UserDTO>.SuccessResult( user );
         }
     }
 }
