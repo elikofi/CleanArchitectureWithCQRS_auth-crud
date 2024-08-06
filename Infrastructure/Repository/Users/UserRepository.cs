@@ -7,6 +7,7 @@ using Domain.Entity;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System.Security.Claims;
 
 
@@ -16,7 +17,8 @@ namespace Infrastructure.Repository.Users
         UserManager<User> userManager,
         RoleManager<IdentityRole> roleManager,
         DatabaseContext context,
-        SignInManager<User> signInManager) : IUserRepository
+        SignInManager<User> signInManager,
+        ILogger<UserDTO> logger) : IUserRepository
     {
         public async Task<string> SeedRoles()
         {
@@ -132,12 +134,17 @@ namespace Infrastructure.Repository.Users
                 }
                 throw new InvalidOperationException(Errors.SignInFailure);
             }
+            catch (InvalidOperationException ex)
+            {
+                logger.LogError(ex, Errors.SignInFailure);
+                throw; 
+            }
             catch (Exception ex)
             {
-
+                logger.LogError(ex, Errors.SignInFailure);
                 throw new Exception(ex.Message);
             }
-           
+
         }
 
         public async Task<UserDTO> GetUserByIdAsync(string Id)
