@@ -1,22 +1,16 @@
-﻿using Domain.Entity;
-using Domain.Repository;
-using ErrorOr;
-using Mapster;
-using MapsterMapper;
+﻿using Application.Common.Interfaces.Persistence;
+using Application.Common.Results;
+using Domain.Entity;
 using MediatR;
 
 namespace Application.Blogs.Queries.GetAllBlogs
 {
-    public class GetBlogsQueryHandler(IBlogRepository blogRepository, IMapper mapper) : IRequestHandler<GetBlogsQuery, List<BlogsModel>>
+    public class GetBlogsQueryHandler(IBlogRepository blogRepository) : IRequestHandler<GetBlogsQuery, Result<IEnumerable<Blog>>>
     {
 
-        public async Task<List<BlogsModel>> Handle(GetBlogsQuery request, CancellationToken cancellationToken)
+        public async Task<Result<IEnumerable<Blog>>> Handle(GetBlogsQuery request, CancellationToken cancellationToken)
         {
-            var blogs = await blogRepository.GetAllBlogsAsync();
-
-           var blogsModels = mapper.Map<List<BlogsModel>>(blogs);
-            return blogsModels;
-
+            return await blogRepository.GetAllBlogsAsync();
         }
 
     }

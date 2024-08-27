@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pRBFhsdnxsY=",
+  "dgSpecHash": "4G6PRpnaDNQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS&Mapster\\CleanArchitectureWithCQRS_auth-crud\\CleanArchCQRS.API\\CleanArchCQRS.API.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,6 @@
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\aspnetcore.healthchecks.uris\\8.0.1\\aspnetcore.healthchecks.uris.8.0.1.nupkg.sha512",
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\autofac\\8.0.0\\autofac.8.0.0.nupkg.sha512",
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
-    "C:\\Users\\ElijahAmoako\\.nuget\\packages\\erroror\\2.0.1\\erroror.2.0.1.nupkg.sha512",
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.2\\fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\fractions\\7.2.1\\fractions.7.2.1.nupkg.sha512",

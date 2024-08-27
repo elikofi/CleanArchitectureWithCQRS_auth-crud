@@ -17,6 +17,13 @@ namespace Application.Common.Constants
         //Users
         public const string NoUsersInDB = "There are currently no users in the database.";
 
+        //Blog responses.
 
+        public const string UnableToCreateBlog = "Error occured, unable to create blog.";
+        public const string UnableToDeleteBlog = "Error occured, unable to delete blog.";
+        public const string UnableToUpdateBlog = "Error occured, unable to update blog.";
+        public const string UnableToGetBlog = "Error occured, unable to get blog.";
+        public const string EmptyBlogList = "There are currently no blogs in the database.";
+        public const string BlogNotFound = "Blog not found.";
     }
 }

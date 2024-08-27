@@ -1,20 +1,18 @@
-﻿using Domain.Entity;
-using Domain.Repository;
-using ErrorOr;
+﻿using Application.Common.Interfaces.Persistence;
+using Application.Common.Results;
+using Domain.Entity;
 using MapsterMapper;
 using MediatR;
 
 namespace Application.Blogs.Commands.UpdateBlog
 {
-    public class UpdateBlogCommandHandler(IBlogRepository blogRepository, IMapper mapper) : IRequestHandler<UpdateBlogCommand, ErrorOr<bool>>
+    public class UpdateBlogCommandHandler(IBlogRepository blogRepository, IMapper mapper) : IRequestHandler<UpdateBlogCommand, Result<bool>>
     {
-        public async Task<ErrorOr<bool>> Handle(UpdateBlogCommand command, CancellationToken cancellationToken)
+        public async Task<Result<bool>> Handle(UpdateBlogCommand command, CancellationToken cancellationToken)
         {
             var blog = mapper.Map<Blog>(command);
 
-            var updatedBlog = await blogRepository.UpdateAsync(blog);
-
-            return updatedBlog;
+            return await blogRepository.UpdateAsync(blog);
         }
     }
 }

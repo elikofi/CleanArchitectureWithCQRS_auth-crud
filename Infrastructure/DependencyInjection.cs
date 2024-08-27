@@ -2,7 +2,6 @@
 using Application.Common.Interfaces.Persistence;
 using Application.Common.Interfaces.Services;
 using Domain.Entity;
-using Domain.Repository;
 using Infrastructure.Authentication;
 using Infrastructure.Data;
 using Infrastructure.Repository.Blogs;

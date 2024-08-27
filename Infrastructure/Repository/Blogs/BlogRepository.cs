@@ -1,65 +1,88 @@
-﻿using Domain.Entity;
-using Domain.Repository;
+﻿using Application.Common.Constants;
+using Application.Common.Interfaces.Persistence;
+using Application.Common.Results;
+using Domain.Entity;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Repository.Blogs
 {
-    public class BlogRepository(DatabaseContext context) : IBlogRepository
+    public class BlogRepository(DatabaseContext context, ILogger<Blog> logger) : IBlogRepository
     {
-        public async Task<Blog> CreateAsync(Blog blog)
+        public async Task<Result<Blog>> CreateAsync(Blog blog)
         {
             try
             {
                 await context.Blogs.AddAsync(blog);
-                await context.SaveChangesAsync();
-                return blog;
+                var result = await context.SaveChangesAsync();
+                if(result > 0)
+                {
+                    return Result<Blog>.SuccessResult(blog);
+                }
+                else
+                {
+                    return Result<Blog>.ErrorResult(ConstantResponses.UnableToCreateBlog);
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                logger.LogError(ex, ConstantResponses.UnableToCreateBlog);
                 throw;
             }
         }
 
-        public async Task<bool> DeleteAsync(Guid id)
+        public async Task<Result<bool>> DeleteAsync(Guid id)
         {
             try
             {
                 var blog = await context.Blogs.FindAsync(id);
 
-                if (blog is { })
+                if (blog is not null)
                 {
                     context.Blogs.Remove(blog);
                     context.SaveChanges();
-                    return true;
-                }
-                return false;
-            }
-            catch (Exception)
-            {
 
+                    return Result<bool>.SuccessResult(true);
+                }
+                return Result<bool>.ErrorResult(ConstantResponses.UnableToDeleteBlog);
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, ConstantResponses.UnableToDeleteBlog);
                 throw;
             }
         }
 
-        public async Task<List<Blog>> GetAllBlogsAsync()
+        public async Task<Result<IEnumerable<Blog>>> GetAllBlogsAsync()
         {
-            var blogList = await context.Blogs.ToListAsync();
-            if(blogList != null)
+            try
             {
-                return blogList;
-            }
-            return blogList ?? new();
+                var blogList = await context.Blogs.ToListAsync();
+                if (blogList != null)
+                {
+                    return Result<IEnumerable<Blog>>.SuccessResult(blogList);
+                }
+                return Result<IEnumerable<Blog>>.ErrorResult(ConstantResponses.EmptyBlogList);
 
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, ConstantResponses.UnableToGetBlog);
+                throw;
+            }
         }
 
-        public async Task<Blog> GetByIdAsync(Guid id)
+        public async Task<Result<Blog>> GetByIdAsync(Guid id)
         {
             var blog = await context.Blogs
                 .AsNoTracking()
                 .FirstOrDefaultAsync(x => x.Id == id);
-            return blog!;
+            if (blog == null)
+            {
+                return Result<Blog>.ErrorResult(ConstantResponses.BlogNotFound);
+            }
+            return Result<Blog> .SuccessResult(blog);
         }
 
         public Blog? GetByName(string name)
@@ -67,22 +90,25 @@ namespace Infrastructure.Repository.Blogs
             return context.Blogs.SingleOrDefault(x => x.Name == name);
         }
 
-        public async Task<bool> UpdateAsync(Blog blog)
+        public async Task<Result<bool>> UpdateAsync(Blog blog)
         {
             try
             {
-                if (blog is { })
+                var result = await context.Blogs.FindAsync(blog.Id);
+
+                if (result is not null)
                 {
                     context.Blogs.Update(blog);
                     await context.SaveChangesAsync();
-                    return true;
-                }
-                throw new ArgumentNullException(nameof(blog), "Blog object cannot be null.");
 
+                    return Result<bool>.SuccessResult(true);
+                }
+
+                return Result<bool>.ErrorResult(ConstantResponses.UnableToUpdateBlog);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
+                logger.LogError(ex, ConstantResponses.UnableToUpdateBlog);   
                 throw;
             }
         }

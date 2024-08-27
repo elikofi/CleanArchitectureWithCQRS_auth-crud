@@ -2,32 +2,35 @@
 using Application.Blogs.Commands.UpdateBlog;
 using Application.Blogs.Queries.GetAllBlogs;
 using Application.Blogs.Queries.GetBlogById;
-using Domain.Entity;
-using ErrorOr;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Contracts.Blogs;
 using Application.Blogs.Commands.DeleteBlog;
 using Microsoft.AspNetCore.Authorization;
-using Application.Authentication.Common;
-using Microsoft.IdentityModel.Tokens;
 
 namespace CleanArchCQRS.API.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogController(IMediator mediator, IMapper mapper) : ApiController
+    public class BlogController(IMediator mediator, IMapper mapper) : ControllerBase
     {
 
         [HttpGet("GetBlogById")]
         [Authorize(Roles = "ADMIN")]
-        public async Task<IActionResult> GetBlogById(GetBlogByIdRequest request)
+        public async Task<IActionResult> GetBlogById(Guid Id)
         {
-            var command = mapper.Map<GetBlogByIdQuery>(request);
-            var req = await mediator.Send(command);
-            return req.Match(req => Ok(mapper.Map<BlogsModel>(req)), errors => Problem(errors));
+            var query = new GetBlogByIdQuery(Id);
+
+            var blog = await mediator.Send(query);
+
+            if(blog.Success is false)
+            {
+                return NotFound(blog.ErrorMessage);
+            }
+
+            return Ok(blog);
             
         }
 
@@ -36,9 +39,9 @@ namespace CleanArchCQRS.API.Controllers
         public async Task<IActionResult> GetAllBlogs()
         {
             var blogList = await mediator.Send(new GetBlogsQuery());
-            if (blogList.IsNullOrEmpty())
+            if (blogList.Success is false)
             {
-                return NotFound();
+                return NotFound(blogList.ErrorMessage);
             }
             return Ok(blogList);
         }
@@ -50,9 +53,14 @@ namespace CleanArchCQRS.API.Controllers
             {
                 var command = mapper.Map<CreateBlogCommand>(request);
 
-                ErrorOr<Blog> blog = await mediator.Send(command);
+                var blog = await mediator.Send(command);
 
-                return blog.Match(blog => Ok(mapper.Map<Blog>(blog)), errors => Problem(errors));
+                if(blog.Success is true)
+                {
+                    return Ok(blog);
+                }
+                return BadRequest(blog.ErrorMessage);
+                
             }
 
             return BadRequest();
@@ -66,9 +74,13 @@ namespace CleanArchCQRS.API.Controllers
             {
                 var command = mapper.Map<UpdateBlogCommand>(request);
 
-                ErrorOr<bool> updateBlog = await mediator.Send(command);
-                 
-                return updateBlog.Match(updateBlog => Ok(mapper.Map<bool>(updateBlog)), errors => Problem(errors));
+                var updateBlog = await mediator.Send(command);
+                
+                if(updateBlog.Success is true)
+                {
+                    return Ok(updateBlog.Success);
+                }
+                return BadRequest(updateBlog.ErrorMessage);
 
             }
             return BadRequest();
@@ -78,10 +90,14 @@ namespace CleanArchCQRS.API.Controllers
         {
             var command = mapper.Map<DeleteBlogCommand>(request);
 
-            ErrorOr<bool> deletedBlog = await mediator.Send(command);
+            var deletedBlog = await mediator.Send(command);
 
-
-            return deletedBlog.Match(deletedBlog => Ok(mapper.Map<bool>(deletedBlog)), errors => Problem(errors));
+            if (deletedBlog.Success is true)
+            {
+                return Ok();
+            }
+            
+            return BadRequest();
         }
     }
 }

@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace Contracts.Blogs
 {
-    public record GetBlogByIdRequest(Guid Id);
+    public record GetBlogByIdRequest(string Id);
 }

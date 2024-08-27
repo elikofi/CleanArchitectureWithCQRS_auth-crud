@@ -548,7 +548,6 @@ C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\Clea
 C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\CleanArchCQRS.API.pdb
 C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\Autofac.dll
 C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
-C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\ErrorOr.dll
 C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\ElijahAmoako\Desktop\My Projects\CleanArchitectureWithCQRS&Mapster\CleanArchitectureWithCQRS_auth-crud\CleanArchCQRS.API\bin\Debug\net8.0\Humanizer.dll
