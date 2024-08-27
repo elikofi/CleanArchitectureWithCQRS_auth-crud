@@ -1,4 +1,5 @@
 ﻿using Application.Authentication.Common;
+using Application.Authentication.RoleManagement.Commands.MakeAdmin;
 using Application.Authentication.RoleManagement.Commands.MakeSuperAdmin;
 using Application.Authentication.RoleManagement.Commands.MakeSuperUser;
 using Application.Authentication.RoleManagement.Queries;
@@ -6,16 +7,13 @@ using Application.Authentication.UserManagement.Commands.Register;
 using Application.Authentication.UserManagement.Queries.GetAllUsers;
 using Application.Authentication.UserManagement.Queries.GetUserById;
 using Application.Authentication.UserManagement.Queries.Login;
-using Application.Common.Constants;
-using Application.Common.Interfaces.Persistence;
+using Application.Common.Results;
 using Contracts.Authentication;
-using ErrorOr;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.IdentityModel.Tokens;
 
 namespace CleanArchCQRS.API.Controllers
 {
@@ -25,7 +23,7 @@ namespace CleanArchCQRS.API.Controllers
     {
         private const string UsersCacheKey = "UsersList";
 
-        private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);
+        private static readonly SemaphoreSlim semaphore = new(1, 1);
 
 
         //REGISTER
@@ -40,7 +38,7 @@ namespace CleanArchCQRS.API.Controllers
 
             if (authResult.Success is false)
             {
-                return BadRequest(authResult);
+                return BadRequest(authResult.ErrorMessage);
             }
             return Ok(authResult);
         }
@@ -74,11 +72,11 @@ namespace CleanArchCQRS.API.Controllers
         {
             var query = new GetUserByIdQuery(Id);
             var user = await mediator.Send(query);
-            if (user is not null)
+            if (user.Success is false)
             {
-                return Ok(user);
+                return BadRequest(user.ErrorMessage);
             }
-            return NotFound();
+            return Ok(user);
         }
 
         //GET ALL USERS
@@ -87,7 +85,7 @@ namespace CleanArchCQRS.API.Controllers
         public async Task<IActionResult> GetAllAppUsers()
         {
             // Check if users are in cache
-            if (cache.TryGetValue(UsersCacheKey, out IEnumerable<UserDto>? users))
+            if (cache.TryGetValue(UsersCacheKey, out Result<IEnumerable<UserDTO>>? users))
             {
                 logger.LogInformation("Users found in cache.");
             }
@@ -124,29 +122,28 @@ namespace CleanArchCQRS.API.Controllers
                 }
             }
 
-            if (users != null && users.Any())
+            if (users!.Data is null)
             {
-                return Ok(users);
+                return NotFound(users.ErrorMessage);
             }
 
-            return NotFound();
+            return Ok(users);
         }
 
 
         //ROLE MANAGEMENT.
         //MAKE ADMIN COMMAND
         [HttpPost("MakeAdmin")]
-        public async Task<IActionResult> MakeUserAdmin(MakeSuperUserCommand command)
+        public async Task<IActionResult> MakeUserAdmin(MakeAdminCommand command)
         {
             var newAdmin = await mediator.Send(command);
 
-            if (newAdmin.Equals(ConstantResponses.UsernameNotFound))
+            if (newAdmin.Success is false)
             {
-                return newAdmin.Match(
-                newAdmin => NotFound(mapper.Map<string>(newAdmin)), errors => Problem(errors));
+                return BadRequest(newAdmin.ErrorMessage);
             }
-            return newAdmin.Match(
-                newAdmin => Ok(mapper.Map<string>(newAdmin)), errors => Problem(errors));
+            return Ok(newAdmin);
+
         }
 
         //MAKE SUPER ADMIN
@@ -155,14 +152,11 @@ namespace CleanArchCQRS.API.Controllers
         {
             var newSuperAdmin = await mediator.Send(command);
 
-            if (newSuperAdmin.Equals(ConstantResponses.UsernameNotFound))
+            if (newSuperAdmin.Success is false)
             {
-
-                return newSuperAdmin.Match(
-                    newSuperAdmin => NotFound(mapper.Map<string>(newSuperAdmin)), errors => Problem(errors));
+                return BadRequest(newSuperAdmin.ErrorMessage);
             }
-            return newSuperAdmin.Match(
-                newSuperAdmin => Ok(mapper.Map<string>(newSuperAdmin)), errors => Problem(errors));
+            return Ok(newSuperAdmin);
         }
 
         //MAKE SUPER USER
@@ -171,14 +165,12 @@ namespace CleanArchCQRS.API.Controllers
         {
             var newSuperUser = await mediator.Send(command);
 
-            if (newSuperUser.Equals(ConstantResponses.UsernameNotFound))
+            if (newSuperUser.Success is false)
             {
 
-                return newSuperUser.Match(
-                    newSuperUser => NotFound(mapper.Map<string>(newSuperUser)), errors => Problem(errors));
+                return BadRequest(newSuperUser.ErrorMessage);
             }
-            return newSuperUser.Match(
-                newSuperUser => Ok(mapper.Map<string>(newSuperUser)), errors => Problem(errors));
+            return Ok(newSuperUser);
         }
 
         //GET USER ROLES
@@ -191,4 +183,3 @@ namespace CleanArchCQRS.API.Controllers
         }
     }
 }
-//check on getuserbyid

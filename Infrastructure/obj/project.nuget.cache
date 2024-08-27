@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Leg5YbltZwE=",
+  "dgSpecHash": "7UhmkN8ooS0=",
   "success": true,
   "projectFilePath": "C:\\Users\\ElijahAmoako\\Desktop\\My Projects\\CleanArchitectureWithCQRS&Mapster\\CleanArchitectureWithCQRS_auth-crud\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -12,9 +12,9 @@
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
-    "C:\\Users\\ElijahAmoako\\.nuget\\packages\\mediatr\\12.3.0\\mediatr.12.3.0.nupkg.sha512",
+    "C:\\Users\\ElijahAmoako\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\ElijahAmoako\\.nuget\\packages\\mediatr.extensions.autofac.dependencyinjection\\12.0.0\\mediatr.extensions.autofac.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\ElijahAmoako\\.nuget\\packages\\mediatr.extensions.autofac.dependencyinjection\\12.1.0\\mediatr.extensions.autofac.dependencyinjection.12.1.0.nupkg.sha512",
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.3.0\\microsoft.aspnet.webapi.core.5.3.0.nupkg.sha512",
     "C:\\Users\\ElijahAmoako\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

@@ -2,6 +2,7 @@
 using Application.Authentication.RoleManagement.Models;
 using Application.Common.Constants;
 using Application.Common.Interfaces.Persistence;
+using Application.Common.Results;
 using Domain.Common.Errors;
 using Domain.Entity;
 using Infrastructure.Data;
@@ -50,7 +51,7 @@ namespace Infrastructure.Repository.Users
 
 
 
-        public async Task<string> RegisterAsync(User user, string role)
+        public async Task<Result<string>> RegisterAsync(User user, string role)
         {
             try
             {
@@ -75,11 +76,11 @@ namespace Infrastructure.Repository.Users
                     if (registeredUser.Succeeded)
                     {
                         await userManager.AddToRoleAsync(newUser, role);
-                        return ConstantResponses.RegisteredSuccessfully;
+                        return Result<string>.SuccessResult(ConstantResponses.RegisteredSuccessfully);
                     }
-                    throw new Exception($"{ConstantResponses.FailedRegistration} {registeredUser.Errors.FirstOrDefault()?.Description}");
+                    return Result<string>.ErrorResult($"{ConstantResponses.FailedRegistration} {registeredUser.Errors.FirstOrDefault()?.Description}");
                 }
-                throw new InvalidOperationException(Errors.DuplicateEmail);
+                return Result<string>.ErrorResult(Errors.DuplicateEmail);
 
             }
             catch (Exception)
@@ -89,17 +90,21 @@ namespace Infrastructure.Repository.Users
             }
         }
 
-        public async Task<UserDTO> LoginAsync(string UserName, string Password)
+        public async Task<Result<UserDTO>> LoginAsync(string UserName, string Password)
         {
             try
             {
-                var user = await userManager.FindByNameAsync(UserName) ?? throw new InvalidOperationException(Errors.WrongUsername);
+                var user = await userManager.FindByNameAsync(UserName);
+                if(user is null)
+                {
+                    return Result<UserDTO>.ErrorResult(Errors.WrongUsername);
+                }
 
                 var checkPassword = await userManager.CheckPasswordAsync(user, Password);
 
                 if (!checkPassword)
                 {
-                    throw new InvalidOperationException(Errors.IncorrectPassword);
+                    return Result<UserDTO>.ErrorResult(Errors.IncorrectPassword);
                 }
 
 
@@ -122,72 +127,89 @@ namespace Infrastructure.Repository.Users
                             authClaims.Add(new Claim(ClaimTypes.Role, userRole));
                         }
 
-                        return new UserDTO
+                        return Result<UserDTO>.SuccessResult( new UserDTO
                         (
                             Id: user.Id,
                             FirstName: user.FirstName,
                             LastName: user.LastName,
                             UserName: user.UserName!,
-                            Email: user.Email!
+                            Email: user.Email!)
                         );
                     }
                 }
-                throw new InvalidOperationException(Errors.SignInFailure);
+                return Result<UserDTO>.ErrorResult(Errors.SignInFailure);
             }
-            catch (InvalidOperationException ex)
-            {
-                logger.LogError(ex, Errors.SignInFailure);
-                throw; 
-            }
+            //catch (InvalidOperationException ex)
+            //{
+            //    logger.LogError(ex, Errors.SignInFailure);
+            //    throw; 
+            //}
             catch (Exception ex)
             {
                 logger.LogError(ex, Errors.SignInFailure);
-                throw new Exception(ex.Message);
+                throw;
             }
 
         }
 
-        public async Task<UserDTO> GetUserByIdAsync(string Id)
+        public async Task<Result<UserDTO>> GetUserByIdAsync(string Id)
         {
             var user = await userManager.FindByIdAsync(Id);
             if (user == null)
-                return null!;
-            return new UserDTO(
-                Id: user.Id,
-                FirstName: user.FirstName,
-                LastName: user.LastName,
-                UserName: user.UserName!,
-                Email: user.Email!
+            {
+                return Result<UserDTO>.ErrorResult(ConstantResponses.UserNotFound);
+            }
+            return Result<UserDTO>.SuccessResult(
+                new UserDTO(
+                    Id: user.Id,
+                    FirstName: user.FirstName,
+                    LastName: user.LastName,
+                    UserName: user.UserName!,
+                    Email: user.Email!)
                 );
         }
 
-        public async Task<IEnumerable<UserDto>> GetAllUsersAsync()
+        public async Task<Result<IEnumerable<UserDTO>>> GetAllUsersAsync()
         {
-            var listUsers = await context.Users.Select(u => new UserDto
+            try
             {
-                Id = u.Id,
-                FirstName = u.FirstName,
-                LastName = u.LastName,
-                UserName = u.UserName!,
-                Email = u.Email!
-            }).AsNoTracking().ToListAsync();
-                
+                var listUsers = await context.Users
+                .AsNoTracking()
+                .Select(u => new UserDTO(
+                    u.Id,
+                    u.FirstName,
+                    u.LastName,
+                    u.UserName ?? string.Empty,
+                    u.Email ?? string.Empty
+                ))
+                .ToListAsync();
 
-            return  listUsers;
+                if (!listUsers.Any())
+                {
+                    return Result<IEnumerable<UserDTO>>.ErrorResult(ConstantResponses.NoUsersInDB);
+                }
+
+                return Result<IEnumerable<UserDTO>>.SuccessResult(listUsers);
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
+                throw;
+            }
         }
 
-        public async Task<string> MakeAdminAsync(UpdatePermissions model)
+        public async Task<Result<string>> MakeAdminAsync(UpdatePermissions model)
         {
             try
             {
                 var user = await userManager.FindByNameAsync(model.Username);
                 if(user is null)
                 {
-                    return ConstantResponses.UsernameNotFound;
+                    return Result<string>.ErrorResult( ConstantResponses.UsernameNotFound);
                 }
 
                 await userManager.AddToRoleAsync(user, UserRoles.ADMIN);
-                return $"{model.Username}" + ConstantResponses.NewAdmin;
+                return Result<string>.SuccessResult($"{model.Username}" + ConstantResponses.NewAdmin);
             }
             catch (Exception)
             {
@@ -196,17 +218,18 @@ namespace Infrastructure.Repository.Users
             }
         }
 
-        public async Task<string> MakeSuperAdminAsync(UpdatePermissions model)
+        public async Task<Result<string>> MakeSuperAdminAsync(UpdatePermissions model)
         {
             try
             {
                 var user = await userManager.FindByNameAsync(model.Username);
                 if (user is null)
                 {
-                    return ConstantResponses.UsernameNotFound;
+                    return Result<string>.ErrorResult(ConstantResponses.UsernameNotFound);
                 }
                 await userManager.AddToRoleAsync(user, UserRoles.SUPERADMIN);
-                return $"{model.Username}" + ConstantResponses.NewSuperAdmin;
+
+                return Result<string>.SuccessResult($"{model.Username}" + ConstantResponses.NewSuperAdmin);
             }
             catch (Exception)
             {
@@ -215,17 +238,17 @@ namespace Infrastructure.Repository.Users
             }
         }
 
-        public async Task<string> MakeSuperUserAsync(UpdatePermissions model)
+        public async Task<Result<string>> MakeSuperUserAsync(UpdatePermissions model)
         {
             try
             {
                 var user = await userManager.FindByNameAsync(model.Username);
                 if(user is null)
                 {
-                    return ConstantResponses.UsernameNotFound;
+                    return Result<string>.ErrorResult(ConstantResponses.UsernameNotFound);
                 }
                 await userManager.AddToRoleAsync(user, UserRoles.SUPERUSER);
-                return model.Username + ConstantResponses.NewSuperUser;
+                return Result<string>.SuccessResult(model.Username + ConstantResponses.NewSuperUser);
 
             }
             catch (Exception)
@@ -236,9 +259,11 @@ namespace Infrastructure.Repository.Users
         }
 
         
-        public async Task<IEnumerable<IdentityRole>> GetRolesAsync()
+        public async Task<Result<IEnumerable<IdentityRole>>> GetRolesAsync()
         {
-            return await roleManager.Roles.ToListAsync();
+            var roles = await roleManager.Roles.ToListAsync();
+
+            return Result<IEnumerable<IdentityRole>>.SuccessResult(roles);
         }
     }
 }

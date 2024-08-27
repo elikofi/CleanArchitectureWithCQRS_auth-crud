@@ -21,5 +21,4 @@ namespace Application.Common.Results
             return new Result<T> { Success = false, ErrorMessage = errorMessage };
         }
     }
-
 }

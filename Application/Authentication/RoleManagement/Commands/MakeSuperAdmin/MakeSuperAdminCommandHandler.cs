@@ -1,14 +1,15 @@
 ﻿using Application.Authentication.RoleManagement.Models;
 using Application.Common.Interfaces.Persistence;
-using ErrorOr;
+using Application.Common.Results;
 using MapsterMapper;
 using MediatR;
 
 namespace Application.Authentication.RoleManagement.Commands.MakeSuperAdmin
 {
-    public class MakeSuperAdminCommandHandler(IUserRepository userRepository, IMapper mapper) : IRequestHandler<MakeSuperAdminCommand, ErrorOr<string>>
+    public class MakeSuperAdminCommandHandler(IUserRepository userRepository, IMapper mapper) : 
+        IRequestHandler<MakeSuperAdminCommand, Result<string>>
     {
-        public async Task<ErrorOr<string>> Handle(MakeSuperAdminCommand command, CancellationToken cancellationToken)
+        public async Task<Result<string>> Handle(MakeSuperAdminCommand command, CancellationToken cancellationToken)
         {
             var user =  mapper.Map<UpdatePermissions>(command);
 

@@ -12,8 +12,8 @@
           "FluentValidation": "11.9.2",
           "FluentValidation.DependencyInjectionExtensions": "11.9.2",
           "Mapster": "7.4.0",
-          "MediatR": "12.3.0",
-          "MediatR.Extensions.Autofac.DependencyInjection": "12.0.0",
+          "MediatR": "12.4.0",
+          "MediatR.Extensions.Autofac.DependencyInjection": "12.1.0",
           "Microsoft.AspNet.WebApi.Core": "5.3.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
@@ -81,7 +81,7 @@
           }
         }
       },
-      "MediatR/12.3.0": {
+      "MediatR/12.4.0": {
         "dependencies": {
           "MediatR.Contracts": "2.0.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
@@ -89,7 +89,7 @@
         "runtime": {
           "lib/net6.0/MediatR.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.3.0.0"
+            "fileVersion": "12.4.0.0"
           }
         }
       },
@@ -101,15 +101,15 @@
           }
         }
       },
-      "MediatR.Extensions.Autofac.DependencyInjection/12.0.0": {
+      "MediatR.Extensions.Autofac.DependencyInjection/12.1.0": {
         "dependencies": {
           "Autofac": "8.0.0",
-          "MediatR": "12.3.0"
+          "MediatR": "12.4.0"
         },
         "runtime": {
           "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.0.0"
+            "assemblyVersion": "12.1.0.0",
+            "fileVersion": "12.1.0.0"
           }
         }
       },
@@ -828,7 +828,7 @@
       "Domain/1.0.0": {
         "dependencies": {
           "ErrorOr": "2.0.1",
-          "MediatR": "12.3.0",
+          "MediatR": "12.4.0",
           "Microsoft.Extensions.Identity.Stores": "8.0.6"
         },
         "runtime": {
@@ -885,12 +885,12 @@
       "path": "mapster.core/1.2.1",
       "hashPath": "mapster.core.1.2.1.nupkg.sha512"
     },
-    "MediatR/12.3.0": {
+    "MediatR/12.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-DuXRw/qux2n7pTRPond4WK9XImO+30TZrGPCeOmjYIXDWokpjZQDFRsdZMoP0WqWU7inC4m0D+Zbu5dSc4z6NQ==",
-      "path": "mediatr/12.3.0",
-      "hashPath": "mediatr.12.3.0.nupkg.sha512"
+      "sha512": "sha512-s8xhhvsTQqt7jI1XeVqcniiph/QoRmJb1qxVgk7UFpAgOzpzZ0VTl8zV+lFJgxISVqZuJRjmxF+P3AuHyelCrg==",
+      "path": "mediatr/12.4.0",
+      "hashPath": "mediatr.12.4.0.nupkg.sha512"
     },
     "MediatR.Contracts/2.0.1": {
       "type": "package",
@@ -899,12 +899,12 @@
       "path": "mediatr.contracts/2.0.1",
       "hashPath": "mediatr.contracts.2.0.1.nupkg.sha512"
     },
-    "MediatR.Extensions.Autofac.DependencyInjection/12.0.0": {
+    "MediatR.Extensions.Autofac.DependencyInjection/12.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cyLHAmsAaST4hw+r9AOFtS8VQAdLjQbQqN97t9+90ifSPFsGdlmiTc1MP7ow68dJHRtS36BpcoKuvHN1R4P5+g==",
-      "path": "mediatr.extensions.autofac.dependencyinjection/12.0.0",
-      "hashPath": "mediatr.extensions.autofac.dependencyinjection.12.0.0.nupkg.sha512"
+      "sha512": "sha512-2W8iMYR4/87PCIEuSKetRYiRs1NA84japkMxEsBWNfbOQsftLt91s9PZayjqw+shh9A9QqJR2fr378PmsR4BOA==",
+      "path": "mediatr.extensions.autofac.dependencyinjection/12.1.0",
+      "hashPath": "mediatr.extensions.autofac.dependencyinjection.12.1.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/6.0.0": {
       "type": "package",

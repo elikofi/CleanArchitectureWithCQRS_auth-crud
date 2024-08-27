@@ -11,9 +11,7 @@ namespace Application.Authentication.UserManagement.Queries.GetUserById
     {
         public async Task<Result<UserDTO>> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
         {
-            var user = await userRepository.GetUserByIdAsync( request.Id );
-
-            return Result<UserDTO>.SuccessResult( user );
+            return await userRepository.GetUserByIdAsync( request.Id );
         }
     }
 }
