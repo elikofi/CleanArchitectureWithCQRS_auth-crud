@@ -3,7 +3,7 @@
 #### This is a simple CRUD application in .NET 8 where I took advantage of some archtectual styles and design patterns. This project uses Clean architecture which is paired with domain driven design. Also, the main design pattern used in this project is the CQRS also known as the Command Query Responsibility Segregation.
 
 ## Why Clean Architecture?
-I'm using CA because it has some amazing benefits such as separation of concerns (different laters of the software application handle different responsibilities) which helps in making the software understandable, testable, maintainable and easier to develop. It also organises the code into layers with clear responsibilities, reducing dependencies and increasing flexibility and robustness. Dependencies in CA happen inward and this ensures that low-level modules do not depend on high-level modules. In CA, there are mainly four different layers.
+I'm using CA because it has some amazing benefits such as separation of concerns (different layers of the software application handle different responsibilities) which helps in making the software understandable, testable, maintainable and easier to develop. It also organises the code into layers with clear responsibilities, reducing dependencies and increasing flexibility and robustness. Dependencies in CA happen inward and this ensures that low-level modules do not depend on high-level modules. In CA, there are mainly four different layers.
 
 ### Layers in Clean Architecture.
 
