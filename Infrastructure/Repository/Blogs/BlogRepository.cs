@@ -1,6 +1,7 @@
 ﻿using Application.Common.Constants;
 using Application.Common.Interfaces.Persistence;
 using Application.Common.Results;
+using Domain.Common.Errors;
 using Domain.Entity;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,13 @@ namespace Infrastructure.Repository.Blogs
         {
             try
             {
+                var exists = await context.Blogs.AnyAsync(b => b.Name == blog.Name);
+
+                if (exists)
+                {
+                    return Result<Blog>.ErrorResult(Errors.DuplicateBlogName);
+                }
+
                 await context.Blogs.AddAsync(blog);
                 var result = await context.SaveChangesAsync();
                 if(result > 0)
