@@ -1,5 +1,4 @@
 ﻿using Application.Authentication.Common;
-using Domain.Entity;
 
 namespace Application.Common.Interfaces.Authentication
 {

@@ -84,14 +84,12 @@ namespace CleanArchCQRS.API.Controllers
         [Authorize(Roles = "SUPERUSER")]
         public async Task<IActionResult> GetAllAppUsers()
         {
-            // Check if users are in cache
             if (cache.TryGetValue(UsersCacheKey, out Result<IEnumerable<UserDTO>>? users))
             {
                 logger.LogInformation("Users found in cache.");
             }
             else
             {
-                //semaphore to ensure thread safety
                 await semaphore.WaitAsync();
                 try
                 {
@@ -117,7 +115,6 @@ namespace CleanArchCQRS.API.Controllers
                 }
                 finally
                 {
-                    // Release semaphore in all cases
                     semaphore.Release();
                 }
             }

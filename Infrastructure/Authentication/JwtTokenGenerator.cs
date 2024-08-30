@@ -1,6 +1,5 @@
 ﻿using Application.Common.Interfaces.Authentication;
 using Application.Common.Interfaces.Services;
-using Domain.Entity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
