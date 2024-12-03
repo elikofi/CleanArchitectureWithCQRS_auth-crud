@@ -1,65 +1,122 @@
 # Clean Architecture with CQRS, Mapster and MediatR.
 
-#### This is a simple CRUD application in .NET 8 where I took advantage of some archtectual styles and design patterns. This project uses Clean architecture which is paired with domain driven design. Also, the main design pattern used in this project is the CQRS also known as the Command Query Responsibility Segregation.
+#### This project is a CRUD application built with .NET 8, leveraging established architectural styles and design patterns. It implements Clean Architecture in combination with Domain-Driven Design (DDD) principles. The primary design pattern utilized is Command Query Responsibility Segregation (CQRS), ensuring a clear separation between write and read operations.
 
 ## Why Clean Architecture?
-I'm using CA because it has some amazing benefits such as separation of concerns (different layers of the software application handle different responsibilities) which helps in making the software understandable, testable, maintainable and easier to develop. It also organises the code into layers with clear responsibilities, reducing dependencies and increasing flexibility and robustness. Dependencies in CA happen inward and this ensures that low-level modules do not depend on high-level modules. In CA, there are mainly four different layers.
+Clean Architecture (CA) is employed in this project due to its significant advantages, such as promoting separation of concerns. Each layer of the application is assigned specific responsibilities, enhancing its clarity, testability, maintainability, and overall development efficiency. 
+
+By structuring code into distinct layers with well-defined roles, Clean Architecture reduces dependencies, increases flexibility, and improves robustness. Dependency flow in CA is directed inward, ensuring that lower-level modules remain independent of higher-level modules. The architecture is organized into four primary layers, each with a specific focus and role.
 
 ### Layers in Clean Architecture.
 
-* Infrastructure Layer
-    This layer has dependency on the Application layer and this layer also communicates with the database.
-    The infrastructure layer is a class library in the main solution explorer which can contain these classes or folders.
-    Folders/Classes:
-    * Data folder where the database context class is created to communicate with the database.
-    * Migration folder for all the entity framework core migrations for the application.
-    * Repository folder where all the implementations of the interfaces created in the domain layer for the domain entity will be done.
-    * Dependency Injection class where all the DI configurations will be done.
-    * All nuget packages for database communications should be installed. Here are the ones I used:
-        * EntityFrameworkCore, EFCore.Tools, Microsoft.Extensions.Configuration.Abstractions, Npgsql, Npgsql.EFCore.PostgreSQL.
+### Infrastructure Layer
 
+The **Infrastructure Layer** is responsible for interacting with external systems and has a dependency on the **Application Layer**. It serves as the communication bridge with the database and implements various services required by the application. This layer is represented as a class library in the solution structure and typically includes the following folders and classes:
 
-* Application Layer
-    The application layer is the only layer that has dependency on the domain layer.
-    The application layer is a class library in the main solution explorer which can contain these classes or folders.
-    Folders/Classes:
-    * Commands and Queries folders or classes for the business entities.
-    * Common folder where shared classes can be created in. Examples of such classes are; Mappings, exceptions and Behaviours.
-    * * Dependency Injection class where all the DI configurations will be done.
-    * All nuget packages for mappings and dependency injection should be installed here. Here are the ones I used:
-        * FluentValidation.DependencyInjectionExtensions, Mapster, MediatR, Microsoft.Extensinos.DI.Abstractions.  
+#### Key Components:
+- **Data Folder**: Contains the database context class, facilitating communication with the database.
+- **Migrations Folder**: Stores Entity Framework Core migrations for managing database schema changes.
+- **Repository Folder**: Hosts implementations of the repository interfaces defined in the **Domain Layer**, managing persistence operations for domain entities.
+- **Dependency Injection (DI) Class**: Centralizes DI configurations for services used throughout the application.
 
+#### Required NuGet Packages:
+To enable database communication and related functionality, the following NuGet packages are installed:
+- `Microsoft.EntityFrameworkCore`
+- `Microsoft.EntityFrameworkCore.Tools`
+- `Microsoft.Extensions.Configuration.Abstractions`
+- `Npgsql` (PostgreSQL driver for .NET)
+- `Npgsql.EntityFrameworkCore.PostgreSQL` (EF Core provider for PostgreSQL)
 
-* Domain Layer
-    * This layer is the inner-most layer in the clean architecture structure and doesn't have dependency on any other layer.
-    * It is also a class library which contains all the Business Entities, interfaces, value objects, domain errors and domain events.
-    * Depending on your usecase, you can install the Microsoft.Extensions.Identity.Stores nuget package.
- 
-* API Layer
-    * This layer acts as a bridge between the outside world and the application's core business logic and it converts data from external sources (like HTTP requests) into a format that the inner layers can process and vice versa.
-    * The API layer handles requests, calls the use cases for handling the logic, and then handles the formatting of the responses.
-    * Controllers: are found in this layer and they are responsible for routing incoming requests to the appropriate handler, parse input data and validate it, invokes the relevant use case with the parsed data, and then preparing and sending the response back to the client.
- 
+This layer ensures a clean separation of concerns by isolating infrastructure-specific details and dependencies, aligning with the principles of Clean Architecture.
+
+### Application Layer
+
+The **Application Layer** depends solely on the **Domain Layer** and encapsulates the core business use cases and logic. It is implemented as a class library within the solution and typically contains the following folders and classes:
+
+#### Key Components:
+- **Commands and Queries**: Organized folders or classes for handling business logic related to specific operations on business entities, aligning with the CQRS pattern.
+- **Common Folder**: Contains shared classes such as:
+  - **Mappings**: For mapping configurations between different objects.
+  - **Exceptions**: Custom exceptions for business rules.
+  - **Behaviors**: Middleware-like constructs to handle cross-cutting concerns, such as logging or validation.
+- **Dependency Injection (DI) Class**: Centralizes DI configurations for application services.
+
+#### Required NuGet Packages:
+The following packages are used for mapping and dependency injection functionalities:
+- `FluentValidation.DependencyInjectionExtensions`
+- `Mapster`
+- `MediatR`
+- `Microsoft.Extensions.DependencyInjection.Abstractions`
+
+### Domain Layer
+
+The **Domain Layer** represents the core of the application and operates independently, without dependencies on any other layer. It is also a class library that contains the foundational elements of the business logic:
+
+#### Key Components:
+- **Business Entities**: Represent the domain objects and their rules.
+- **Interfaces**: Define contracts for services and repositories.
+- **Value Objects**: Immutable objects representing concepts in the domain.
+- **Domain Errors**: Enumerations or classes to encapsulate domain-specific error conditions.
+- **Domain Events**: Encapsulate changes or actions occurring within the domain.
+
+#### Optional Dependencies:
+Depending on the use case, the `Microsoft.Extensions.Identity.Stores` NuGet package can be included for identity-related functionalities.
+
+### API Layer
+
+The **API Layer** serves as the entry point for external interactions and acts as a bridge between the application's core business logic and the outside world. It processes incoming requests and formats responses appropriately. 
+
+#### Key Responsibilities:
+- **Request Handling**: Receives and validates HTTP requests, converting input data into a format understood by the core layers.
+- **Business Logic Invocation**: Invokes appropriate use cases from the **Application Layer** to handle requests.
+- **Response Formatting**: Formats and returns the output as HTTP responses.
+
+#### Key Component:
+- **Controllers**: These handle the following tasks:
+  - Routing incoming requests to the appropriate handlers.
+  - Parsing and validating input data.
+  - Invoking relevant use cases with parsed data.
+  - Preparing and sending the response back to the client.
+
+This layered structure ensures clear separation of responsibilities, promoting scalability, maintainability, and testability in alignment with Clean Architecture principles.
 
 
 ## Why CQRS?
-CQRS, which is Command Query Responsibility Segregation is a design pattern which enables developers to group all database commands (data modification) into a folder and all queries (reading of data) into another folder to reduce complexity, improve security, make data models flexible, enhance testing, optimize performance, separation of concerns and then improve scalability.
 
+Command Query Responsibility Segregation (CQRS) is a design pattern that separates data modification (commands) from data retrieval (queries) into distinct paths, organized into separate folders. This separation offers several advantages:  
+
+- **Reduced Complexity**: Simplifies the understanding and management of application logic by isolating read and write concerns.  
+- **Improved Security**: Segregates the pathways for commands and queries, allowing tailored security measures for each.  
+- **Flexibility in Data Models**: Enables the use of optimized models for reading and writing data.  
+- **Enhanced Testing**: Isolates logic for easier unit and integration testing.  
+- **Performance Optimization**: Allows independent optimization of read and write operations.  
+- **Separation of Concerns**: Promotes clean code by distinctly managing different responsibilities.  
+- **Scalability**: Supports horizontal scaling by independently handling read and write loads.
 
 ## Why MediatR and Mapster?
-MediatR is used to manage commands, queries and notifications/Events which in turn helps in organizing the code in a clean, maintainable and testable manner.
-Mapster is used for object mapping where we can map the DTO to the entity for data manipulation in the software.
 
+- **MediatR**: Facilitates the management of commands, queries, and notifications/events, ensuring clean, maintainable, and testable code organization. By decoupling components, it simplifies the flow of control and reduces dependencies.  
+- **Mapster**: Provides efficient object mapping, enabling the transformation of Data Transfer Objects (DTOs) to entities and vice versa. This simplifies data manipulation and promotes consistency across the application.
 
+## Setting Up the Project Using Visual Studio (Windows)
 
-## Setting Up The Project using Visual Studio for Windows.
-* Create an empty solution.
-* Add API project to the solution. Framework I used in this project is .NET8
-* Add four new class libraries to the solution namely: application, domain, contracts and infrastructure.
-* Install the various nuget packages needed for each class library and also set up the project references.
+1. **Create an Empty Solution**: Start by creating a new solution in Visual Studio.  
+2. **Add an API Project**: Create an API project as the entry point. Use the .NET 8 framework for this implementation.  
+3. **Add Class Libraries**: Add four class libraries to the solution: `Application`, `Domain`, `Contracts`, and `Infrastructure`.  
+4. **Install Required NuGet Packages**: Install the necessary NuGet packages for each class library based on their roles.  
+5. **Set Up Project References**: Configure the project references to maintain the dependency flow in accordance with Clean Architecture principles.
 
-### References.
-In clean architecture, the outmost projects reference the innermost projects, hence, the domain layer which is the innermost project has no project reference. The Application Layer, which is directly outside the Domain Layer has a project reference to the Domain Layer, the Infrastructure Layer, which is directly outside the Application Layer has a project reference to the Application Layer, the Contracts Layer which is also directly outside the Application Layer also has direct reference to the Application Layer. Note: The Infrastructure Layer and the Contracts Layer form the Presentation Layer of the Clean Architecture Project. Finally, the API Layer, is the main layer which will interact with the outside world and serve as a bridge between the outside world and the business logic: hence, it will have references to the Infrastructure, Application and Contracts Layers of the Project.
+## References in Clean Architecture
+
+In Clean Architecture, dependencies flow inward, with outer layers referencing inner layers:  
+
+1. **Domain Layer**: The innermost layer, which contains core business logic, has no references to other layers.  
+2. **Application Layer**: Depends only on the **Domain Layer** and defines use cases.  
+3. **Infrastructure Layer**: Relies on the **Application Layer** to provide implementations for external dependencies like database interactions.  
+4. **Contracts Layer**: Also references the **Application Layer** and contains definitions for shared contracts and DTOs. Note: The **Infrastructure** and **Contracts Layers** together form the **Presentation Layer** in this architecture.  
+5. **API Layer**: The outermost layer, responsible for interacting with external clients, references the **Application**, **Infrastructure**, and **Contracts Layers**. It serves as a bridge between the outside world and the business logic.
+
+By adhering to this reference hierarchy, Clean Architecture ensures modularity, maintainability, and clear separation of concerns.
 
 
 ## Setting up the project Using Visual Studio Code and the donet CLI.
@@ -96,84 +153,86 @@ In clean architecture, the outmost projects reference the innermost projects, he
 Once the project is running, you are good to go.
 Now let's talk about the project into details step by step and once class library at a time. We are going to start with the Application Layer class library.
 
-## APPLICATION LAYER
-
-The Application Layer is the class library where we have these various definitions in our project;
-
-* Use Cases
-* Commands and Queries
-* External Interfaces
-* Custom Exceptions
-* Mappings
-* Custom Errors
-Verrify from the project files above to see how I structured my Application Layer in this project.
 
 
-## CONTRACTS LAYER
+### Enhanced Explanations
 
-The Contracts is also a class library where we have various records or classes for our requests to be used as controller method parameters.
-So in this project, I created the Authentication contracts: AuthenticationResponse, which returns some of the User's details along side the token after a user logs in.
-I also had the LoginRequest which is a record which holds the user login details during login and then the RegisterUserRequest which also holds the user registration parameters during registration.
+---
 
-## DOMAIN LAYER 
+### Application Layer
 
-The Domain layer is the class library where all the domain models are created. The core business entities are created in this layer. In this project, the core business model I used was the Blogs. Where I created the Blog entity with its parameters.
-The folders created in the domain layer of this project are: Common, Entity and Repository. 
-The Common folder in this layer is used to house or encapsulate the Errors which may be associated with the domain entities( Blogs and Users ).
-The Entity folder in this layer contains the business entities which are the Blogs entity and then the User entity. Both of which are classes.
-The Repository folder in this layer contains the inteface for our business entity(Blog). NB: I could have added the interface for the other business entity(User) in this folder as well but I used a different approach for that. this interface for the Blog entity contains all the public abstractions for the features of the entity.
+The **Application Layer** is a core part of the Clean Architecture, responsible for implementing the use cases that orchestrate the application’s business logic. It serves as the boundary where the core logic interacts with external concerns (like the **Infrastructure Layer**) via well-defined interfaces. Here are the key components:
 
-## INFRASTRUCTURE LAYER
+- **Use Cases**: Encapsulate business-specific actions, ensuring all rules for a particular feature are consistently applied. For example, creating a blog post or authenticating a user.
+- **Commands and Queries**: Follow the CQRS design pattern to separate write operations (commands) from read operations (queries). This enhances scalability, performance, and code clarity.
+- **External Interfaces**: Define the contracts (via interfaces) for interacting with external systems, databases, or services, ensuring dependency inversion.
+- **Custom Exceptions**: Contain exceptions specific to application logic, such as validation or authorization errors, to provide clear feedback when business rules are violated.
+- **Mappings**: Define mappings between domain entities and DTOs (Data Transfer Objects), ensuring clean separation between the **Domain Layer** and the external API.
+- **Custom Errors**: Represent domain-agnostic errors that are not tied to a particular entity but are still critical for application behavior, such as "Record Not Found."
 
-The Infrastructure layer is the layer where communication to the database happens. In this layer in this project, I created the following folders;
-Autentication, Data, Migrations, Repository and Services folders. 
+This layer depends on the **Domain Layer** but does not depend on the **Infrastructure Layer**, maintaining a clear separation of concerns.
 
-### Authentication Folder
-This folder houses all the implementations of JWT and its settings.
-### Data Folder
-The Data folder houses the DatabaseContext class for the application.
-### Migrations Folder
-The Migrations folder is made up of all EF Core migrations ever made to the application. It also has the model snapshot of the main entity created in the Database.
-### Repository Folder
-This folder encapsulates all the implementations of interfaces for the User entity and the Blog entity. All the logic for these entities happen in this folder.
-### Services Folder
-This folder has implementation of a service I used in this project which is the DateTime Provider service.
+---
 
-## API LAYER
+### Contracts Layer
 
-The API Layer is where we have all our controllers or endpoints at. This layer encapsulates the Mappings for our project, controllers, appsettings and other configurations in it and finally our HealthChecks for checking the health of the whole project.
-The Program.cs class is also found in this layer. We do all our registrations in the Program.cs class of the API layer. Dependency Injection services, Identity services, middleware, routing, caching, logging and health check services are all registered in this layer in the Program.cs class.
+The **Contracts Layer** acts as a communication bridge between the **API Layer** and the **Application Layer**. It provides strongly typed structures, ensuring that data passed into the application is consistent and validated. Key components include:
 
+- **Request Models**: Define the structure for incoming data from client requests. For instance:
+  - `LoginRequest`: Encapsulates user login credentials.
+  - `RegisterUserRequest`: Holds data for user registration, such as email, username, and password.
+- **Response Models**: Specify the format of data sent back to the client. For example:
+  - `AuthenticationResponse`: Returns user details along with a token post-authentication.
 
+This layer promotes reusability and reduces duplication by decoupling the API contracts from the application logic.
 
+---
 
+### Domain Layer
 
+The **Domain Layer** is the heart of the application and contains the core business logic and rules. This layer is completely isolated, ensuring it has no dependencies on external concerns. Key features include:
 
+- **Entities**: Represent the core data structures of the application. For instance:
+  - `Blog`: A class representing blog attributes (e.g., title, content, author).
+  - `User`: A class encapsulating user details.
+- **Value Objects**: Immutable, self-validating types used to represent concepts like email addresses or monetary amounts.
+- **Common Folder**: Houses domain-related constructs like custom errors (e.g., validation errors).
+- **Repositories**: Define abstractions (interfaces) for data persistence without exposing database-specific details.
+  - For example, the `IBlogRepository` interface defines CRUD operations for blogs without tying them to a database.
 
+This layer emphasizes domain-driven design principles, ensuring that business rules and logic are centralized and testable.
 
+---
 
+### Infrastructure Layer
 
+The **Infrastructure Layer** supports the application by handling technical concerns such as database operations, authentication, and external services. Its components include:
 
+- **Authentication Folder**: Implements JWT authentication, including token generation, validation, and configuration settings.
+- **Data Folder**: Contains the `DatabaseContext` class, which uses Entity Framework Core to interact with the database.
+- **Migrations Folder**: Manages EF Core migrations, tracking schema changes and maintaining database snapshots.
+- **Repository Folder**: Implements interfaces defined in the **Domain Layer**, providing concrete data access logic for entities like `Blog` and `User`.
+- **Services Folder**: Encapsulates reusable services, such as a `DateTimeProvider` for consistent time-related operations.
 
+This layer depends on the **Application Layer**, ensuring a unidirectional flow of dependencies.
 
+---
 
+### API Layer
 
+The **API Layer** is the entry point of the application, exposing endpoints to the external world. It bridges external requests with internal application logic. Components include:
 
+- **Controllers**: Define endpoints that map HTTP requests to use cases in the **Application Layer**.
+- **Mappings**: Facilitate transformations between API contracts (DTOs) and domain entities.
+- **Configurations**: 
+  - `appsettings.json`: Contains configuration data such as database connection strings, logging settings, and JWT keys.
+  - `Program.cs`: Configures middleware, dependency injection, routing, logging, caching, and health checks.
+- **Health Checks**: Provide insights into the application's operational status, helping monitor system health.
 
+The **API Layer** orchestrates all interactions, ensuring that external concerns are cleanly separated from the core logic. It depends on the **Application Layer**, **Contracts Layer**, and **Infrastructure Layer**.
 
+---
 
+### Conclusion
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This layered architecture enforces strong separation of concerns, making the application easier to maintain, test, and scale. Each layer plays a distinct role, ensuring the system remains robust and flexible as requirements evolve.
