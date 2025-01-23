@@ -4,52 +4,56 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Net;
 
-public class ExceptionHandlingMiddleware
+namespace Application.Common.Exceptions
 {
-    private readonly RequestDelegate _next;
-    private readonly ILogger<ExceptionHandlingMiddleware> _logger;
-
-    public ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger)
+    public class ExceptionHandlingMiddleware
     {
-        _next = next;
-        _logger = logger;
-    }
 
-    public async Task InvokeAsync(HttpContext context)
-    {
-        try
+        private readonly RequestDelegate _next;
+        private readonly ILogger<ExceptionHandlingMiddleware> _logger;
+
+        public ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger)
         {
-            await _next(context);
+            _next = next;
+            _logger = logger;
         }
-        catch (ValidationException ex)
+
+        public async Task InvokeAsync(HttpContext context)
         {
-            _logger.LogError(ex, "Validation exception occurred.");
-            await HandleValidationExceptionAsync(context, ex);
+            try
+            {
+                await _next(context);
+            }
+            catch (ValidationException ex)
+            {
+                _logger.LogError(ex, "Validation exception occurred.");
+                await HandleValidationExceptionAsync(context, ex);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An unhandled exception occurred.");
+                await HandleExceptionAsync(context, ex);
+            }
         }
-        catch (Exception ex)
+
+        private static Task HandleValidationExceptionAsync(HttpContext context, ValidationException exception)
         {
-            _logger.LogError(ex, "An unhandled exception occurred.");
-            await HandleExceptionAsync(context, ex);
+            context.Response.ContentType = "application/json";
+            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+
+            var errors = exception.Errors.Select(e => new { e.PropertyName, e.ErrorMessage }).ToList();
+            var result = JsonConvert.SerializeObject(new { errors });
+
+            return context.Response.WriteAsync(result);
         }
-    }
 
-    private static Task HandleValidationExceptionAsync(HttpContext context, ValidationException exception)
-    {
-        context.Response.ContentType = "application/json";
-        context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+        private static Task HandleExceptionAsync(HttpContext context, Exception exception)
+        {
+            context.Response.ContentType = "application/json";
+            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-        var errors = exception.Errors.Select(e => new { e.PropertyName, e.ErrorMessage }).ToList();
-        var result = JsonConvert.SerializeObject(new { errors });
-
-        return context.Response.WriteAsync(result);
-    }
-
-    private static Task HandleExceptionAsync(HttpContext context, Exception exception)
-    {
-        context.Response.ContentType = "application/json";
-        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-
-        var result = JsonConvert.SerializeObject(new { error = exception.Message });
-        return context.Response.WriteAsync(result);
+            var result = JsonConvert.SerializeObject(new { error = exception.Message });
+            return context.Response.WriteAsync(result);
+        }
     }
 }

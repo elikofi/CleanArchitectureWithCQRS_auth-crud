@@ -7,6 +7,7 @@ using Application.Authentication.UserManagement.Commands.Register;
 using Application.Authentication.UserManagement.Queries.GetAllUsers;
 using Application.Authentication.UserManagement.Queries.GetUserById;
 using Application.Authentication.UserManagement.Queries.Login;
+using Application.Common.Interfaces.Persistence;
 using Application.Common.Results;
 using Contracts.Authentication;
 using MapsterMapper;
@@ -19,7 +20,7 @@ namespace CleanArchCQRS.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController(ISender mediator, IMapper mapper, IMemoryCache cache, ILogger<UserDto> logger) : ControllerBase
+    public class AuthController(ISender mediator, IMapper mapper, IMemoryCache cache, ILogger<UserDto> logger, IUserRepository userRepository) : ControllerBase
     {
         private const string UsersCacheKey = "UsersList";
 
@@ -59,12 +60,12 @@ namespace CleanArchCQRS.API.Controllers
         }
 
         //SEEDING ROLES.
-        //[HttpPost("SeedRoles")]
-        //public async Task<IActionResult> SeedRoles()
-        //{
-        //    var seedRoles = await userRepository.SeedRoles();
-        //    return Ok(seedRoles);
-        //}
+        [HttpPost("SeedRoles")]
+        public async Task<IActionResult> SeedRoles()
+        {
+            var seedRoles = await userRepository.SeedRoles();
+            return Ok(seedRoles);
+        }
 
         //GET A USER
         [HttpGet("GetUserById")]

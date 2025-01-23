@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "cFJ2sUm/H9AiIPxAfLvM/7HkChBrdCvt73NiHNk5JR8=",
+  "Hash": "xzn7F3joXoOfqkZlbeTnVNTVFRl42CRZF11/W4GbB7Y=",
   "Source": "CleanArchCQRS.API",
   "BasePath": "_content/CleanArchCQRS.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

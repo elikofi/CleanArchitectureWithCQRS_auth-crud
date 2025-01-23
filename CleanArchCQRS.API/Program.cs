@@ -1,4 +1,5 @@
 using Application;
+using Application.Common.Exceptions;
 using CleanArchCQRS.API.HealthChecks;
 using HealthChecks.UI.Client;
 using Infrastructure;
